@@ -7,8 +7,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{font-family:'Nunito',sans-serif;font-size:15px;line-height:1.75;background:#fff;color:#1a1a2e;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{font-family:'Nunito',sans-serif;font-size:15px;line-height:1.75;background:#fff;color:#1a1a2e;overflow-x:hidden;}
 
 /* ── THEMES PAR ONGLET ── */
 /* Bacque : corail chaud */
@@ -41,7 +41,7 @@ body{background:var(--bg);}
 .tbtn.on{color:var(--A);border-bottom-color:var(--A);}
 
 /* ── SECTION ── */
-.sec{display:none;padding:32px 20px 80px;max-width:1080px;margin:0 auto;}
+.sec{display:none;padding:32px 16px 80px;max-width:1080px;margin:0 auto;overflow-x:hidden;}
 .sec.on{display:block;}
 
 /* ── TITLES ── */
@@ -49,7 +49,7 @@ body{background:var(--bg);}
 .sh2{font-size:1rem;font-weight:800;color:var(--A);margin:18px 0 10px;display:flex;align-items:center;gap:8px;}
 
 /* ── CARD ── */
-.card{background:var(--card);border:1.5px solid var(--brd);border-radius:16px;padding:22px 24px;margin-bottom:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);}
+.card{background:var(--card);border:1.5px solid var(--brd);border-radius:16px;padding:22px 24px;margin-bottom:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);overflow:hidden;}
 .ct{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--A);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
 
 /* ── HIGHLIGHTS ── */
@@ -61,8 +61,8 @@ body{background:var(--bg);}
 .hli{border-left:4px solid var(--A);background:color-mix(in srgb,var(--A) 10%,white);border-radius:10px;padding:14px 18px;margin:12px 0;font-weight:700;}
 
 /* ── GRIDS ── */
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px;min-width:0;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;min-width:0;}
 .g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;}
 @media(max-width:700px){.g2,.g3,.g4{grid-template-columns:1fr;}}
 
@@ -101,8 +101,8 @@ tr:hover td{background:var(--sur);}
 .fh{font-size:.68rem;color:var(--B);margin-top:7px;}
 
 /* ── SCHEMA BOX ── */
-.sb{background:var(--sur);border:1.5px solid var(--brd);border-radius:14px;padding:16px;margin:12px 0;overflow-x:auto;text-align:center;}
-.sb svg{max-width:100%;height:auto;}
+.sb{background:var(--sur);border:1.5px solid var(--brd);border-radius:14px;padding:12px;margin:12px 0;overflow:hidden;text-align:center;width:100%;box-sizing:border-box;}
+.sb svg{width:100%;max-width:100%;height:auto;display:block;}
 
 /* ── MISC ── */
 .sep{height:1px;background:var(--brd);margin:22px 0;}
@@ -113,6 +113,49 @@ strong{color:var(--C);}
 .mu{color:var(--mu);font-size:.84rem;}
 .chip{display:inline-block;background:color-mix(in srgb,var(--A) 14%,white);color:var(--A);border-radius:20px;padding:2px 10px;font-size:.75rem;font-weight:800;margin:1px;}
 .big{font-size:1.1rem;font-weight:900;color:var(--A);}
+
+/* ══ PROB & ANNALES PANELS ══ */
+body.t7,body.t8{--bg:#f8f7ff;--card:#fff;--sur:#f0eeff;--brd:#d4c8ff;--A:#4b3aaa;--B:#7c68d8;--C:#362a80;--txt:#1a1630;--mu:#6050a0;--hdr:linear-gradient(130deg,#4b3aaa,#362a80 50%,#6348c8);}
+.prob-wrap,.ann-wrap{padding:28px 20px 80px;max-width:960px;margin:0 auto;}
+.prob-wrap h2,.ann-wrap h2{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;color:var(--A);margin-bottom:6px;}
+.prob-wrap > p,.ann-wrap > p{font-size:.88rem;color:var(--mu);margin-bottom:18px;}
+.info-box{background:var(--sur);border:1.5px solid var(--brd);border-radius:12px;padding:11px 16px;margin-bottom:18px;font-size:.85rem;color:var(--txt);}
+.tc{background:var(--card);border:1.5px solid var(--brd);border-radius:14px;padding:16px 20px;margin-bottom:12px;box-shadow:0 2px 10px rgba(0,0,0,.05);}
+.tc-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;gap:12px;}
+.tc-name{font-size:.95rem;font-weight:900;color:var(--txt);}
+.tc-prof{font-size:.78rem;color:var(--mu);margin-top:2px;}
+.pb{font-size:.75rem;font-weight:900;padding:3px 12px;border-radius:20px;white-space:nowrap;}
+.pb-h{background:#dcfce7;color:#15803d;}
+.pb-m{background:#fef3c7;color:#92400e;}
+.pb-l{background:#fee2e2;color:#b91c1c;}
+.bar-bg{background:#ede9ff;border-radius:4px;height:7px;margin-top:9px;}
+.bar-f{height:7px;border-radius:4px;}
+.bh{background:#22c55e;}.bm{background:#f59e0b;}.bl{background:#ef4444;}
+.tc-meta{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;}
+.tc-meta span{font-size:.76rem;color:var(--mu);}
+.tc-note{font-size:.78rem;color:var(--mu);margin-top:7px;font-style:italic;line-height:1.5;}
+.ac{background:var(--card);border:1.5px solid var(--brd);border-radius:14px;padding:16px 20px;margin-bottom:12px;box-shadow:0 2px 10px rgba(0,0,0,.05);}
+.ac-yr{font-size:.7rem;font-weight:900;color:var(--mu);text-transform:uppercase;letter-spacing:.8px;margin-bottom:7px;}
+.ac-prof{display:inline-block;background:var(--sur);color:var(--mu);font-size:.72rem;padding:2px 9px;border-radius:20px;margin-right:4px;margin-bottom:6px;font-weight:800;}
+.ac-q{font-size:.83rem;color:var(--txt);padding:5px 0;border-bottom:1px solid var(--sur);line-height:1.5;}
+.ac-q:last-child{border-bottom:none;}
+.ac-q.repris{border-left:3px solid #f59e0b;padding-left:8px;}
+.s2b{background:#fef3c7;color:#92400e;font-size:.7rem;padding:2px 9px;border-radius:20px;font-weight:900;}
+.frow{display:flex;gap:6px;margin-bottom:16px;flex-wrap:wrap;}
+.fb{font-size:.75rem;padding:4px 13px;border:1.5px solid var(--brd);border-radius:20px;background:none;cursor:pointer;color:var(--mu);font-family:'Nunito',sans-serif;font-weight:800;}
+.fb.on{background:var(--sur);color:var(--A);border-color:var(--A);}
+
+/* ── SVG RESPONSIVE FIX ── */
+.sb{overflow:hidden !important;}
+.sb svg{display:block;width:100% !important;max-width:100% !important;}
+svg text{font-family:'Nunito',sans-serif;}
+<style>
+/* ══ GLOBAL OVERFLOW FIX ══ */
+*{box-sizing:border-box;}
+html,body{overflow-x:hidden;max-width:100vw;}
+.sec,.card,.sb,.hl,.hl2,.hlr,.hlg,.hlw,.hli,.g2,.g3,.g4,.kv-g,.path,.fc-g{overflow:hidden;min-width:0;}
+.sb svg{width:100%!important;max-width:100%!important;height:auto!important;display:block;}
+svg{max-width:100%;overflow:visible;}
 </style>
 </head>
 <body class="t1">
@@ -130,6 +173,8 @@ strong{color:var(--C);}
     <button class="tbtn" onclick="go('s4',3)">💧 Soulet · Soif & Alimentation</button>
     <button class="tbtn" onclick="go('s5',4)">🔬 Haelewyn · Schizo & Anxiété</button>
     <button class="tbtn" onclick="go('s6',5)">🧠 Bardou · Neurodégénérescence</button>
+    <button class="tbtn" onclick="go('s7',6)">📊 Probabilités</button>
+    <button class="tbtn" onclick="go('s8',7)">📋 Annales</button>
   </div>
 </div>
 
@@ -181,7 +226,7 @@ strong{color:var(--C);}
 <div class="sh">🩺 Sémiologie — Les 5 dimensions du TDC</div>
 
 <div class="sb">
-<svg viewBox="0 0 760 290" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
+<svg viewBox="0 0 760 310" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
   <text x="380" y="22" text-anchor="middle" font-size="14" font-weight="900" fill="#e84d2a">SÉMIOLOGIE DU TROUBLE DÉPRESSIF CARACTÉRISÉ</text>
   <!-- Centre -->
   <ellipse cx="380" cy="148" rx="64" ry="44" fill="#e84d2a" fill-opacity=".15" stroke="#e84d2a" stroke-width="2.5"/>
@@ -280,7 +325,7 @@ strong{color:var(--C);}
 <div class="card">
   <div class="ct">📋 5 catégories comportementales évaluées (Planchez et al., 2019)</div>
   <div class="sb">
-  <svg viewBox="0 0 760 190" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
+  <svg viewBox="0 0 760 190" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
     <text x="380" y="18" text-anchor="middle" font-size="13" font-weight="900" fill="#e84d2a">ÉVALUATION COMPORTEMENTALE CHEZ LE RONGEUR</text>
     <!-- 5 colonnes -->
     <rect x="10" y="30" width="136" height="148" rx="12" fill="#fff0ea" stroke="#e84d2a" stroke-width="2"/>
@@ -349,7 +394,7 @@ strong{color:var(--C);}
 <div class="card">
   <div class="ct">⚡ Impuissance Apprise — Protocole Seligman & Maier</div>
   <div class="sb">
-  <svg viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
+  <svg viewBox="0 0 760 220" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
     <text x="380" y="18" text-anchor="middle" font-size="13" font-weight="900" fill="#e84d2a">PROTOCOLE IMPUISSANCE APPRISE (chiens / souris)</text>
     <!-- Phase 1 -->
     <text x="190" y="40" text-anchor="middle" font-size="11" font-weight="800" fill="#e84d2a">PHASE 1</text>
@@ -397,7 +442,7 @@ strong{color:var(--C);}
 <div class="card">
   <div class="ct">⚗️ Cascade BDNF — Voie des antidépresseurs</div>
   <div class="sb">
-  <svg viewBox="0 0 760 200" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
+  <svg viewBox="0 0 760 200" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
     <defs>
       <marker id="ar1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#e84d2a"/></marker>
       <marker id="arg" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#22c55e"/></marker>
@@ -453,31 +498,31 @@ strong{color:var(--C);}
 <div class="card">
   <div class="ct">🧠 3 structures cérébrales impactées</div>
   <div class="sb">
-  <svg viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
-    <text x="380" y="22" text-anchor="middle" font-size="14" font-weight="900" fill="#e84d2a">CERVEAU &amp; DÉPRESSION</text>
-    <!-- Silhouette cerveau -->
-    <ellipse cx="380" cy="140" rx="190" ry="100" fill="#fff0ea" stroke="#e84d2a" stroke-width="2"/>
-    <!-- CPF -->
-    <ellipse cx="210" cy="110" rx="70" ry="45" fill="#f7845a" fill-opacity=".4" stroke="#e84d2a" stroke-width="2"/>
-    <text x="210" y="104" text-anchor="middle" font-size="11" font-weight="800" fill="#c93818">Cortex Préfrontal</text>
-    <text x="210" y="118" text-anchor="middle" font-size="9" fill="#2a120a">↓ Volume · ↓ Activité</text>
-    <text x="210" y="130" text-anchor="middle" font-size="8" fill="#2a120a">↓ Neurogenèse · ↓ Gliales</text>
-    <!-- Hippocampe -->
-    <ellipse cx="380" cy="175" rx="60" ry="35" fill="#fef3c7" fill-opacity=".8" stroke="#f59e0b" stroke-width="2"/>
-    <text x="380" y="170" text-anchor="middle" font-size="11" font-weight="800" fill="#92400e">Hippocampe</text>
-    <text x="380" y="184" text-anchor="middle" font-size="9" fill="#2a120a">↓ Volume · ↓ Neurogenèse</text>
-    <!-- Amygdale -->
-    <ellipse cx="500" cy="120" rx="60" ry="38" fill="#e84d2a" fill-opacity=".18" stroke="#c93818" stroke-width="2"/>
-    <text x="500" y="114" text-anchor="middle" font-size="11" font-weight="800" fill="#c93818">Amygdale</text>
-    <text x="500" y="128" text-anchor="middle" font-size="9" fill="#2a120a">Hyperactivité ⚠</text>
+  <svg viewBox="0 0 820 320" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+    <text x="410" y="24" text-anchor="middle" font-size="14" font-weight="900" fill="#e84d2a">CERVEAU &amp; DÉPRESSION</text>
+    <!-- Grande ellipse cerveau -->
+    <ellipse cx="410" cy="168" rx="255" ry="125" fill="#fff0ea" stroke="#e84d2a" stroke-width="2"/>
+    <!-- CPF — bien à gauche mais entièrement dans la grande ellipse -->
+    <ellipse cx="300" cy="140" rx="95" ry="62" fill="#f7845a" fill-opacity=".35" stroke="#e84d2a" stroke-width="2"/>
+    <text x="300" y="128" text-anchor="middle" font-size="12" font-weight="800" fill="#c93818">Cortex Préfrontal</text>
+    <text x="300" y="146" text-anchor="middle" font-size="9.5" fill="#2a120a">↓ Volume · ↓ Activité</text>
+    <text x="300" y="160" text-anchor="middle" font-size="9.5" fill="#2a120a">↓ Neurogenèse · ↓ Gliales</text>
+    <!-- Hippocampe — centré dans la grande ellipse -->
+    <ellipse cx="410" cy="210" rx="80" ry="46" fill="#fef3c7" fill-opacity=".95" stroke="#f59e0b" stroke-width="2"/>
+    <text x="410" y="204" text-anchor="middle" font-size="12" font-weight="800" fill="#92400e">Hippocampe</text>
+    <text x="410" y="220" text-anchor="middle" font-size="9.5" fill="#2a120a">↓ Volume · ↓ Neurogenèse</text>
+    <!-- Amygdale — bien à droite -->
+    <ellipse cx="540" cy="148" rx="82" ry="52" fill="#e84d2a" fill-opacity=".15" stroke="#c93818" stroke-width="2"/>
+    <text x="540" y="142" text-anchor="middle" font-size="12" font-weight="800" fill="#c93818">Amygdale</text>
+    <text x="540" y="158" text-anchor="middle" font-size="9.5" fill="#2a120a">Hyperactivité ⚠</text>
+    <!-- Légendes — bien en dehors des ellipses -->
+    <text x="118" y="232" text-anchor="middle" font-size="9" fill="#9a4830">CPF : mémoire travail,</text>
+    <text x="118" y="246" text-anchor="middle" font-size="9" fill="#9a4830">décision, planification</text>
+    <text x="700" y="210" text-anchor="middle" font-size="9" fill="#9a4830">Amygdale : peur,</text>
+    <text x="700" y="224" text-anchor="middle" font-size="9" fill="#9a4830">émotions, irritabilité</text>
+    <text x="410" y="270" text-anchor="middle" font-size="9" fill="#9a4830">Hippocampe : mémoire épisodique &amp; sémantique</text>
     <!-- Balance -->
-    <text x="380" y="230" text-anchor="middle" font-size="11" font-weight="800" fill="#e84d2a">Balance : CPF ↓ ←⚖→ Amygdale ↑ = État dépressif</text>
-    <!-- Légendes -->
-    <text x="60" y="200" font-size="8.5" fill="#9a4830">CPF : mémoire travail,</text>
-    <text x="60" y="212" font-size="8.5" fill="#9a4830">décision, planification</text>
-    <text x="560" y="178" font-size="8.5" fill="#9a4830">Amygdale : peur,</text>
-    <text x="560" y="190" font-size="8.5" fill="#9a4830">émotions, irritabilité</text>
-    <text x="295" y="218" font-size="8.5" fill="#9a4830">Hippocampe : mémoire épisodique &amp; sémantique</text>
+    <text x="410" y="306" text-anchor="middle" font-size="12" font-weight="800" fill="#e84d2a">Balance : CPF ↓ ←⚖→ Amygdale ↑ = État dépressif</text>
   </svg>
   </div>
   <div class="g3">
@@ -490,7 +535,7 @@ strong{color:var(--C);}
 <div class="card">
   <div class="ct">🧬 Gène 5-HTTLPR — Transporteur de la Sérotonine</div>
   <div class="sb">
-  <svg viewBox="0 0 760 200" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
+  <svg viewBox="0 0 760 200" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
     <text x="380" y="18" text-anchor="middle" font-size="13" font-weight="900" fill="#e84d2a">GÈNE 5-HTTLPR × ÉVÉNEMENTS DE VIE STRESSANTS</text>
     <!-- Allèles -->
     <rect x="20" y="30" width="160" height="80" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
@@ -522,30 +567,40 @@ strong{color:var(--C);}
 <div class="card">
   <div class="ct">💊 Évolution clinique & Traitement</div>
   <div class="sb">
-  <svg viewBox="0 0 760 100" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
-    <defs><marker id="arr0" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#e84d2a"/></marker></defs>
-    <rect x="10" y="25" width="110" height="55" rx="10" fill="#fff5f5" stroke="#ef4444" stroke-width="2"/>
-    <text x="65" y="49" text-anchor="middle" font-size="9.5" font-weight="900" fill="#b91c1c">EDM</text>
-    <text x="65" y="63" text-anchor="middle" font-size="8.5" fill="#7f1d1d">diagnostiqué</text>
-    <line x1="120" y1="52" x2="145" y2="52" stroke="#e84d2a" stroke-width="2" marker-end="url(#arr0)"/>
-    <rect x="145" y="20" width="145" height="65" rx="10" fill="#fff0ea" stroke="#e84d2a" stroke-width="2"/>
-    <text x="217" y="44" text-anchor="middle" font-size="10" font-weight="900" fill="#e84d2a">ATTAQUE</text>
-    <text x="217" y="59" text-anchor="middle" font-size="8.5" fill="#2a120a">6-12 semaines</text>
-    <text x="217" y="74" text-anchor="middle" font-size="8" fill="#9a4830">Atteindre la rémission</text>
-    <line x1="290" y1="52" x2="315" y2="52" stroke="#e84d2a" stroke-width="2" marker-end="url(#arr0)"/>
-    <rect x="315" y="20" width="155" height="65" rx="10" fill="#fff0ea" stroke="#f7845a" stroke-width="2"/>
-    <text x="392" y="44" text-anchor="middle" font-size="10" font-weight="900" fill="#e84d2a">CONSOLIDATION</text>
-    <text x="392" y="59" text-anchor="middle" font-size="8.5" fill="#2a120a">16-20 semaines</text>
-    <text x="392" y="74" text-anchor="middle" font-size="8" fill="#9a4830">Éviter les rechutes</text>
-    <line x1="470" y1="52" x2="495" y2="52" stroke="#e84d2a" stroke-width="2" marker-end="url(#arr0)"/>
-    <rect x="495" y="20" width="155" height="65" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
-    <text x="572" y="44" text-anchor="middle" font-size="10" font-weight="900" fill="#065f46">MAINTENANCE</text>
-    <text x="572" y="59" text-anchor="middle" font-size="8.5" fill="#064e3b">Si ≥3 EDM / 4 ans</text>
-    <text x="572" y="74" text-anchor="middle" font-size="8" fill="#064e3b">Prévenir les récidives</text>
-    <text x="680" y="35" font-size="10" font-weight="800" fill="#e84d2a">Durée totale</text>
-    <text x="680" y="50" font-size="10" font-weight="800" fill="#e84d2a">: 4 à 9 mois</text>
-    <text x="680" y="72" font-size="8.5" fill="#9a4830">Rémission complète</text>
-    <text x="680" y="84" font-size="8.5" fill="#9a4830">ou partielle</text>
+  <svg viewBox="0 0 820 115" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+    <defs><marker id="arT2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><polygon points="0 0,10 4,0 8" fill="#e84d2a"/></marker></defs>
+    <!-- EDM -->
+    <rect x="10" y="28" width="112" height="58" rx="10" fill="#fff5f5" stroke="#ef4444" stroke-width="2"/>
+    <text x="66" y="52" text-anchor="middle" font-size="10" font-weight="900" fill="#b91c1c">EDM</text>
+    <text x="66" y="67" text-anchor="middle" font-size="8.5" fill="#7f1d1d">Diagnostiqué</text>
+    <text x="66" y="80" text-anchor="middle" font-size="8" fill="#7f1d1d">→ traitement</text>
+    <line x1="122" y1="57" x2="148" y2="57" stroke="#e84d2a" stroke-width="2" marker-end="url(#arT2)"/>
+    <!-- Phase 1 Attaque -->
+    <rect x="148" y="22" width="158" height="70" rx="10" fill="#fff0ea" stroke="#e84d2a" stroke-width="2"/>
+    <text x="227" y="44" text-anchor="middle" font-size="10" font-weight="900" fill="#e84d2a">1. ATTAQUE</text>
+    <text x="227" y="58" text-anchor="middle" font-size="8.5" fill="#2a120a">6 – 12 semaines</text>
+    <text x="227" y="72" text-anchor="middle" font-size="8" fill="#9a4830">Objectif : rémission</text>
+    <text x="227" y="84" text-anchor="middle" font-size="8" fill="#9a4830">(disparition symptômes)</text>
+    <line x1="306" y1="57" x2="332" y2="57" stroke="#e84d2a" stroke-width="2" marker-end="url(#arT2)"/>
+    <!-- Phase 2 Consolidation -->
+    <rect x="332" y="22" width="168" height="70" rx="10" fill="#fff0ea" stroke="#f7845a" stroke-width="2"/>
+    <text x="416" y="44" text-anchor="middle" font-size="10" font-weight="900" fill="#e84d2a">2. CONSOLIDATION</text>
+    <text x="416" y="58" text-anchor="middle" font-size="8.5" fill="#2a120a">16 – 20 semaines</text>
+    <text x="416" y="72" text-anchor="middle" font-size="8" fill="#9a4830">Objectif : éviter rechutes</text>
+    <text x="416" y="84" text-anchor="middle" font-size="8" fill="#9a4830">(même épisode)</text>
+    <line x1="500" y1="57" x2="526" y2="57" stroke="#e84d2a" stroke-width="2" marker-end="url(#arT2)"/>
+    <!-- Phase 3 Maintenance -->
+    <rect x="526" y="22" width="168" height="70" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+    <text x="610" y="44" text-anchor="middle" font-size="10" font-weight="900" fill="#065f46">3. MAINTENANCE</text>
+    <text x="610" y="58" text-anchor="middle" font-size="8.5" fill="#064e3b">Si ≥ 3 EDM / 4 ans</text>
+    <text x="610" y="72" text-anchor="middle" font-size="8" fill="#064e3b">Objectif : prévenir récidives</text>
+    <text x="610" y="84" text-anchor="middle" font-size="8" fill="#064e3b">(nouvel épisode)</text>
+    <!-- Durée totale -->
+    <rect x="706" y="22" width="108" height="70" rx="10" fill="#ede5ff" stroke="#c4a8ff" stroke-width="1.5"/>
+    <text x="760" y="44" text-anchor="middle" font-size="9" font-weight="900" fill="#5010b0">Durée totale</text>
+    <text x="760" y="58" text-anchor="middle" font-size="10" font-weight="900" fill="#e84d2a">4 à 9 mois</text>
+    <text x="760" y="73" text-anchor="middle" font-size="8" fill="#9a4830">Rémission complète</text>
+    <text x="760" y="85" text-anchor="middle" font-size="8" fill="#9a4830">ou partielle</text>
   </svg>
   </div>
   <div class="hl"><strong>Lien dépression ↔ douleur :</strong> La 5-HT et la NA sont impliquées dans la régulation de l'humeur ET dans la régulation de la perception de la douleur via les voies descendantes qui modulent les signaux médullaires. D'où les expressions somatiques douloureuses dans la dépression.</div>
@@ -581,68 +636,105 @@ strong{color:var(--C);}
     <div>
       <div class="sh2">⚡ A. Catécholamines</div>
       <div class="sb">
-        <svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;font-family:Nunito,sans-serif;">
-          <defs><marker id="arD" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#e84d2a"/></marker></defs>
-          <text x="260" y="16" text-anchor="middle" font-size="11" font-weight="900" fill="#e84d2a">VOIE DE BIOSYNTHÈSE — CATÉCHOLAMINES</text>
-          <!-- Tyrosine -->
-          <rect x="10" y="30" width="110" height="44" rx="9" fill="#fff0ea" stroke="#e84d2a" stroke-width="2"/>
-          <text x="65" y="52" text-anchor="middle" font-size="10" font-weight="800" fill="#e84d2a">Tyrosine</text>
-          <text x="65" y="66" text-anchor="middle" font-size="8" fill="#2a120a">(Acide aminé)</text>
-          <line x1="120" y1="52" x2="158" y2="52" stroke="#e84d2a" stroke-width="2" marker-end="url(#arD)"/>
-          <text x="139" y="44" text-anchor="middle" font-size="7.5" fill="#9a4830">Hydroxylase</text>
-          <!-- DOPA -->
-          <rect x="158" y="30" width="90" height="44" rx="9" fill="#fff0ea" stroke="#f7845a" stroke-width="2"/>
-          <text x="203" y="52" text-anchor="middle" font-size="10" font-weight="800" fill="#e84d2a">DOPA</text>
-          <line x1="248" y1="52" x2="286" y2="52" stroke="#e84d2a" stroke-width="2" marker-end="url(#arD)"/>
-          <text x="267" y="44" text-anchor="middle" font-size="7.5" fill="#9a4830">Décarboxylase</text>
-          <!-- Dopamine -->
-          <rect x="286" y="22" width="100" height="60" rx="9" fill="#e84d2a" fill-opacity=".15" stroke="#e84d2a" stroke-width="2.5"/>
-          <text x="336" y="48" text-anchor="middle" font-size="11" font-weight="900" fill="#e84d2a">Dopamine</text>
-          <text x="336" y="64" text-anchor="middle" font-size="8" fill="#2a120a">Plaisir · Récompense</text>
-          <text x="336" y="75" text-anchor="middle" font-size="8" fill="#2a120a">Motivation · Motricité</text>
-          <line x1="336" y1="82" x2="336" y2="100" stroke="#f7845a" stroke-width="2" marker-end="url(#arD)"/>
-          <text x="352" y="96" font-size="7.5" fill="#9a4830">Dopamine</text>
-          <text x="352" y="107" font-size="7.5" fill="#9a4830">β-hydroxylase</text>
-          <!-- Noradrénaline -->
-          <rect x="266" y="100" width="140" height="44" rx="9" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
-          <text x="336" y="122" text-anchor="middle" font-size="10" font-weight="800" fill="#92400e">Noradrénaline</text>
-          <text x="336" y="136" text-anchor="middle" font-size="8" fill="#78350f">→ Adrénaline (PNMT)</text>
-          <!-- 4 voies DA -->
-          <text x="25" y="110" font-size="9" font-weight="800" fill="#e84d2a">4 voies DA :</text>
-          <text x="10" y="124" font-size="8" fill="#2a120a">A · Nigrostriée (motricité)</text>
-          <text x="10" y="136" font-size="8" fill="#2a120a">B · Mésolimbique (symptômes +)</text>
-          <text x="10" y="148" font-size="8" fill="#dc2626" font-weight="700">C · Mésocorticale (symptômes -)</text>
-          <text x="10" y="160" font-size="8" fill="#2a120a">D · Tubéro-infundibulaire (hormones)</text>
-          <text x="10" y="178" font-size="8" fill="#9a4830" font-style="italic">Altérations voies C (hypodopa) et B (hyperdopa)</text>
-          <text x="10" y="190" font-size="8" fill="#9a4830" font-style="italic">dans la dépression (méso-corticale/méso-limbique)</text>
-        </svg>
+        <svg viewBox="0 0 680 130" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+  <defs>
+    <marker id="arC" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><polygon points="0 0,10 4,0 8" fill="#e84d2a"/></marker>
+    <marker id="arCd" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><polygon points="0 0,10 4,0 8" fill="#f7845a"/></marker>
+  </defs>
+  <text x="340" y="16" text-anchor="middle" font-size="11" font-weight="900" fill="#e84d2a">VOIE DE BIOSYNTHÈSE — CATÉCHOLAMINES</text>
+
+  <!-- Tyrosine x=10..130 -->
+  <rect x="10" y="28" width="120" height="52" rx="10" fill="#fff0ea" stroke="#e84d2a" stroke-width="2"/>
+  <text x="70" y="52" text-anchor="middle" font-size="10" font-weight="800" fill="#e84d2a">Tyrosine</text>
+  <text x="70" y="68" text-anchor="middle" font-size="8.5" fill="#2a120a">(Acide aminé)</text>
+
+  <!-- Flèche 1 : 130→220 = 90px -->
+  <line x1="130" y1="54" x2="216" y2="54" stroke="#e84d2a" stroke-width="2.5" marker-end="url(#arC)"/>
+  <text x="173" y="46" text-anchor="middle" font-size="8" fill="#9a4830">Hydroxylase</text>
+
+  <!-- DOPA x=220..340 -->
+  <rect x="220" y="28" width="120" height="52" rx="10" fill="#fff0ea" stroke="#f7845a" stroke-width="2"/>
+  <text x="280" y="52" text-anchor="middle" font-size="10" font-weight="800" fill="#e84d2a">DOPA</text>
+  <text x="280" y="68" text-anchor="middle" font-size="8.5" fill="#2a120a">(L-DOPA)</text>
+
+  <!-- Flèche 2 : 340→430 = 90px -->
+  <line x1="340" y1="54" x2="426" y2="54" stroke="#e84d2a" stroke-width="2.5" marker-end="url(#arC)"/>
+  <text x="383" y="46" text-anchor="middle" font-size="8" fill="#9a4830">Décarboxylase</text>
+
+  <!-- Dopamine x=430..580 -->
+  <rect x="430" y="18" width="150" height="68" rx="10" fill="#e84d2a" fill-opacity=".15" stroke="#e84d2a" stroke-width="2.5"/>
+  <text x="505" y="44" text-anchor="middle" font-size="12" font-weight="900" fill="#e84d2a">Dopamine</text>
+  <text x="505" y="60" text-anchor="middle" font-size="8.5" fill="#2a120a">Plaisir · Récompense</text>
+  <text x="505" y="74" text-anchor="middle" font-size="8.5" fill="#2a120a">Motivation · Motricité</text>
+
+  <!-- Flèche bas : 86→118 = 32px -->
+  <line x1="505" y1="86" x2="505" y2="114" stroke="#f7845a" stroke-width="2.5" marker-end="url(#arCd)"/>
+  <text x="535" y="103" font-size="8" fill="#9a4830">DA β-hydroxylase</text>
+
+  <!-- Noradrénaline x=430..580 -->
+  <rect x="430" y="114" width="150" height="12" rx="0" fill="none"/>
+</svg>
+<svg viewBox="0 0 680 54" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;margin-top:-1px;">
+  <rect x="430" y="2" width="150" height="50" rx="10" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="505" y="24" text-anchor="middle" font-size="11" font-weight="800" fill="#92400e">Noradrénaline</text>
+  <text x="505" y="40" text-anchor="middle" font-size="8.5" fill="#78350f">→ Adrénaline (PNMT)</text>
+</svg>
+<div style="margin-top:10px;font-size:13px;color:var(--txt);">
+  <p style="font-weight:800;color:var(--A);margin-bottom:6px;">4 voies DA :</p>
+  <p>A · Nigrostriée (motricité)</p>
+  <p>B · Mésolimbique (symptômes +)</p>
+  <p style="color:#dc2626;font-weight:700;">C · Mésocorticale (symptômes -)</p>
+  <p>D · Tubéro-infundibulaire (hormones)</p>
+  <p style="font-style:italic;color:var(--mu);margin-top:6px;">Altérations voies C (hypodopa) et B (hyperdopa) dans la dépression</p>
+</div>
+</div>
       </div>
       <div class="hl"><strong>Voie noradrénergique :</strong> Tyrosine → Noradrénaline. Part du <em>Locus Coeruleus</em> → amygdale, hippocampe, cortex sensoriel, thalamus, hypothalamus. ↑ symptômes sous médicaments noradrénergiques.</div>
     </div>
     <div>
       <div class="sh2">🌀 B. Tryptamines (Sérotonine)</div>
       <div class="sb">
-        <svg viewBox="0 0 340 130" xmlns="http://www.w3.org/2000/svg" style="max-width:340px;font-family:Nunito,sans-serif;">
-          <defs><marker id="arS" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#c93818"/></marker></defs>
-          <text x="170" y="14" text-anchor="middle" font-size="10" font-weight="900" fill="#e84d2a">BIOSYNTHÈSE SÉROTONINE</text>
-          <rect x="10" y="22" width="90" height="38" rx="8" fill="#fff0ea" stroke="#e84d2a" stroke-width="1.5"/>
-          <text x="55" y="40" text-anchor="middle" font-size="9" font-weight="800" fill="#e84d2a">Tryptophane</text>
-          <text x="55" y="52" text-anchor="middle" font-size="7.5" fill="#2a120a">(Acide aminé)</text>
-          <line x1="100" y1="41" x2="128" y2="41" stroke="#e84d2a" stroke-width="1.5" marker-end="url(#arS)"/>
-          <text x="114" y="35" text-anchor="middle" font-size="7" fill="#9a4830">Hydroxylase</text>
-          <rect x="128" y="22" width="70" height="38" rx="8" fill="#fff0ea" stroke="#f7845a" stroke-width="1.5"/>
-          <text x="163" y="41" text-anchor="middle" font-size="9" font-weight="800" fill="#e84d2a">5-HTP</text>
-          <line x1="198" y1="41" x2="226" y2="41" stroke="#e84d2a" stroke-width="1.5" marker-end="url(#arS)"/>
-          <text x="212" y="35" text-anchor="middle" font-size="7" fill="#9a4830">Décarboxylase</text>
-          <rect x="226" y="14" width="100" height="54" rx="8" fill="#e84d2a" fill-opacity=".15" stroke="#e84d2a" stroke-width="2"/>
-          <text x="276" y="38" text-anchor="middle" font-size="10" font-weight="900" fill="#e84d2a">Sérotonine</text>
-          <text x="276" y="52" text-anchor="middle" font-size="7.5" fill="#2a120a">Émotions · Anxiété</text>
-          <text x="276" y="63" text-anchor="middle" font-size="7.5" fill="#2a120a">Sommeil · Appétit</text>
-          <text x="15" y="85" font-size="8.5" font-weight="800" fill="#e84d2a">Corps cellulaires = Noyaux du Raphé</text>
-          <text x="15" y="98" font-size="8" fill="#2a120a">Mésencéphale · Bulbe · Pont</text>
-          <text x="15" y="110" font-size="8" fill="#2a120a">Contrôlent l'ATV (cellules dopaminergiques)</text>
-          <text x="15" y="122" font-size="8" fill="#9a4830" font-style="italic">Les monoamines s'auto-contrôlent entre elles</text>
-        </svg>
+        <svg viewBox="0 0 680 90" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+  <defs>
+    <marker id="arS" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><polygon points="0 0,10 4,0 8" fill="#c93818"/></marker>
+  </defs>
+  <text x="340" y="16" text-anchor="middle" font-size="11" font-weight="900" fill="#e84d2a">BIOSYNTHÈSE SÉROTONINE</text>
+
+  <!-- Tryptophane x=10..140 -->
+  <rect x="10" y="28" width="130" height="52" rx="10" fill="#fff0ea" stroke="#e84d2a" stroke-width="2"/>
+  <text x="75" y="52" text-anchor="middle" font-size="10" font-weight="800" fill="#e84d2a">Tryptophane</text>
+  <text x="75" y="68" text-anchor="middle" font-size="8.5" fill="#2a120a">(Acide aminé)</text>
+
+  <!-- Flèche 1 : 140→230 = 90px -->
+  <line x1="140" y1="54" x2="226" y2="54" stroke="#e84d2a" stroke-width="2.5" marker-end="url(#arS)"/>
+  <text x="183" y="46" text-anchor="middle" font-size="8" fill="#9a4830">Hydroxylase</text>
+
+  <!-- 5-HTP x=230..370 -->
+  <rect x="230" y="28" width="140" height="52" rx="10" fill="#fff0ea" stroke="#f7845a" stroke-width="2"/>
+  <text x="300" y="58" text-anchor="middle" font-size="13" font-weight="800" fill="#e84d2a">5-HTP</text>
+
+  <!-- Flèche 2 : 370→460 = 90px -->
+  <line x1="370" y1="54" x2="456" y2="54" stroke="#e84d2a" stroke-width="2.5" marker-end="url(#arS)"/>
+  <text x="413" y="46" text-anchor="middle" font-size="8" fill="#9a4830">Décarboxylase</text>
+
+  <!-- Sérotonine x=460..660 -->
+  <rect x="460" y="18" width="200" height="68" rx="10" fill="#e84d2a" fill-opacity=".15" stroke="#e84d2a" stroke-width="2.5"/>
+  <text x="560" y="44" text-anchor="middle" font-size="12" font-weight="900" fill="#e84d2a">Sérotonine</text>
+  <text x="560" y="60" text-anchor="middle" font-size="8.5" fill="#2a120a">Émotions · Anxiété</text>
+  <text x="560" y="74" text-anchor="middle" font-size="8.5" fill="#2a120a">Sommeil · Appétit</text>
+</svg>
+<div style="margin-top:10px;font-size:13px;color:var(--txt);">
+  <p style="font-weight:800;color:var(--A);margin-bottom:4px;">Corps cellulaires = Noyaux du Raphé</p>
+  <p>Mésencéphale · Bulbe · Pont</p>
+  <p>Contrôlent l'ATV (cellules dopaminergiques)</p>
+  <p style="font-style:italic;color:var(--mu);margin-top:4px;">Les monoamines s'auto-contrôlent entre elles</p>
+</div>
+<div style="margin-top:10px;font-size:13px;color:var(--txt);">
+  <p style="font-weight:800;color:var(--A);margin-bottom:4px;">Corps cellulaires = Noyaux du Raphé</p>
+  <p>Mésencéphale · Bulbe · Pont</p>
+  <p>Contrôlent l'ATV (cellules dopaminergiques)</p>
+  <p style="font-style:italic;color:var(--mu);margin-top:4px;">Les monoamines s'auto-contrôlent entre elles</p>
+</div>
       </div>
       <div class="hl2"><strong>7 familles de récepteurs 5-HT :</strong> 5-HT₁ à 5-HT₇<br>
       Majorité = GPCR (couplés protéines G) · Exception : 5-HT₃ = canal ionique<br>
@@ -664,7 +756,7 @@ strong{color:var(--C);}
 <div class="card">
   <div class="ct">💊 ISRS et cascade P11 → BDNF</div>
   <div class="sb">
-    <svg viewBox="0 0 760 210" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
+    <svg viewBox="0 0 760 210" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
       <defs>
         <marker id="arC" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#e84d2a"/></marker>
         <marker id="arG" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#16a34a"/></marker>
@@ -701,10 +793,10 @@ strong{color:var(--C);}
       <!-- Dépression = inverse -->
       <rect x="10" y="108" width="740" height="92" rx="12" fill="#fff5f5" stroke="#ef4444" stroke-width="2"/>
       <text x="380" y="128" text-anchor="middle" font-size="10.5" font-weight="900" fill="#b91c1c">DANS LA DÉPRESSION — Cercle vicieux ↓P11</text>
-      <text x="380" y="146" text-anchor="middle" font-size="9" fill="#7f1d1d">↓ 5-HT dans fente synaptique → ↓ activation 5-HT₁B → ↓ Protéine P11 → ↓ recrutement 5-HT₁B membranaires</text>
+      <text x="380" y="146" text-anchor="middle" font-size="7.5" fill="#7f1d1d">↓ 5-HT dans fente synaptique → ↓ activation 5-HT₁B → ↓ Protéine P11 → ↓ recrutement 5-HT₁B membranaires</text>
       <text x="380" y="162" text-anchor="middle" font-size="9" fill="#7f1d1d">→ ↓ synthèse BDNF → ↓ neurogenèse/plasticité → Symptômes dépressifs ↑</text>
-      <text x="380" y="180" text-anchor="middle" font-size="8.5" fill="#9a4830" font-style="italic">NB : les cytokines (neuroinflammation) modulen aussi P11 → modulent l'adressage/maintien des récepteurs sérotoninergiques</text>
-      <text x="380" y="193" text-anchor="middle" font-size="8.5" fill="#9a4830">ISRS → ↑ 5-HT → ↑ activation 5-HT₁B → ↑ P11 → ↑ recrutement 5-HT₁B → ↑ BDNF → restauration</text>
+      <text x="380" y="180" text-anchor="middle" font-size="7.5" fill="#9a4830" font-style="italic">NB : les cytokines (neuroinflammation) modulen aussi P11 → modulent l'adressage/maintien des récepteurs sérotoninergiques</text>
+      <text x="380" y="193" text-anchor="middle" font-size="7.5" fill="#9a4830">ISRS → ↑ 5-HT → ↑ activation 5-HT₁B → ↑ P11 → ↑ recrutement 5-HT₁B → ↑ BDNF → restauration</text>
     </svg>
   </div>
   <div class="g2">
@@ -773,6 +865,210 @@ strong{color:var(--C);}
     <div class="fc-b"><div class="fd">Brain-Derived Neurotrophic Factor. ↑ par 5-HT/NA via AMPc/PKA/CREB. ↓ par cortisol (méthylation histone). Inhibe la neurogenèse hippocampique en état dépressif. Réversible sous traitement AD.</div></div>
   </div></div>
 </div>
+
+<div class="sh">🧬 Génétique de la dépression — Gène SERT &amp; interaction G×E</div>
+<div class="card">
+  <div class="ct">🔗 Le polymorphisme 5-HTTLPR (gène du transporteur SERT)</div>
+  <div class="hli">Le gène <strong>SLC6A4</strong> code pour le transporteur de la sérotonine (SERT). Il existe un polymorphisme dans sa région promotrice appelé <strong>5-HTTLPR</strong> avec deux allèles : <strong>L (Long)</strong> et <strong>S (Short)</strong>. L'allèle S réduit l'expression du transporteur → moins de recapture → hyperactivité sérotoninergique initiale mais désensibilisation à long terme.</div>
+  <div class="sb">
+  <svg viewBox="0 0 760 280" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+    <defs><marker id="arG1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#e84d2a"/></marker></defs>
+    <text x="380" y="18" text-anchor="middle" font-size="13" font-weight="900" fill="#e84d2a">POLYMORPHISME 5-HTTLPR — ALLÈLES &amp; CONSÉQUENCES</text>
+    <!-- Allèle L -->
+    <rect x="20" y="30" width="170" height="75" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="2.5"/>
+    <text x="105" y="55" text-anchor="middle" font-size="12" font-weight="900" fill="#15803d">Allèle L (Long)</text>
+    <text x="105" y="72" text-anchor="middle" font-size="9.5" fill="#064e3b">Expression SERT normale</text>
+    <text x="105" y="87" text-anchor="middle" font-size="9.5" fill="#064e3b">Recapture 5-HT normale</text>
+    <!-- Allèle S -->
+    <rect x="210" y="30" width="170" height="75" rx="12" fill="#fff5f5" stroke="#ef4444" stroke-width="2.5"/>
+    <text x="295" y="55" text-anchor="middle" font-size="12" font-weight="900" fill="#b91c1c">Allèle S (Short)</text>
+    <text x="295" y="72" text-anchor="middle" font-size="9.5" fill="#7f1d1d">↓ Expression SERT</text>
+    <text x="295" y="87" text-anchor="middle" font-size="9.5" fill="#7f1d1d">Hyperémotivité · ↑ Amygdale</text>
+    <!-- Enfants SS Battaglia 2005 -->
+    <rect x="20" y="125" width="360" height="55" rx="10" fill="#fff0ea" stroke="#f7845a" stroke-width="1.5"/>
+    <text x="200" y="148" text-anchor="middle" font-size="10" font-weight="800" fill="#e84d2a">Enfants SS — Battaglia et al. 2005</text>
+    <text x="200" y="163" text-anchor="middle" font-size="9" fill="#2a120a">Hypersensibles aux visages neutres ou agressifs</text>
+    <text x="200" y="176" text-anchor="middle" font-size="9" fill="#2a120a">(amplitude N400 amygdale plus élevée)</text>
+    <!-- Interaction G x E -->
+    <rect x="400" y="30" width="340" height="160" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+    <text x="570" y="54" text-anchor="middle" font-size="11" font-weight="900" fill="#92400e">Interaction Gène × Environnement</text>
+    <text x="570" y="73" text-anchor="middle" font-size="9.5" fill="#78350f">SLE = Stressful Life Events (événements de vie stressants)</text>
+    <line x1="400" y1="88" x2="740" y2="88" stroke="#f59e0b" stroke-width="1"/>
+    <text x="570" y="106" text-anchor="middle" font-size="11" font-weight="900" fill="#b91c1c">Femme SS + SLE → risque dépression × 8</text>
+    <text x="570" y="122" text-anchor="middle" font-size="11" font-weight="900" fill="#c93818">Homme SS + SLE → risque dépression × 4</text>
+    <line x1="400" y1="133" x2="740" y2="133" stroke="#f59e0b" stroke-width="1"/>
+    <text x="570" y="150" text-anchor="middle" font-size="9.5" fill="#78350f">Sans SLE : quasiment pas de risque même chez SS</text>
+    <text x="570" y="166" text-anchor="middle" font-size="10" font-weight="900" fill="#92400e">→ Le gène seul ne suffit pas !</text>
+    <!-- Arrow SS to interaction -->
+    <line x1="295" y1="105" x2="295" y2="120" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <!-- Conclusion -->
+    <rect x="20" y="200" width="720" height="60" rx="10" fill="#f6f1ff" stroke="#c4a8ff" stroke-width="1.5"/>
+    <text x="380" y="222" text-anchor="middle" font-size="10" font-weight="800" fill="#5010b0">Conclusion : dépression = trouble multifactoriel</text>
+    <text x="380" y="238" text-anchor="middle" font-size="7.5" fill="#170a30">Génotype SS → vulnérabilité biologique. Sans SLE : risque faible.</text>
+    <text x="380" y="253" text-anchor="middle" font-size="7.5" fill="#170a30">C'est l'INTERACTION gène × environnement qui détermine le risque.</text>
+  </svg>
+  </div>
+</div>
+
+<div class="sh">📈 Évolution clinique &amp; traitement — Les 3 phases</div>
+<div class="card">
+  <div class="ct">🗓️ Phases de traitement du trouble dépressif caractérisé</div>
+  <div class="sb">
+  <svg viewBox="0 0 760 115" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+    <defs><marker id="arT" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#e84d2a"/></marker></defs>
+    <!-- EDM -->
+    <rect x="10" y="28" width="105" height="56" rx="10" fill="#fff5f5" stroke="#ef4444" stroke-width="2"/>
+    <text x="62" y="51" text-anchor="middle" font-size="10" font-weight="900" fill="#b91c1c">EDM</text>
+    <text x="62" y="65" text-anchor="middle" font-size="8.5" fill="#7f1d1d">Diagnostiqué</text>
+    <text x="62" y="78" text-anchor="middle" font-size="8" fill="#7f1d1d">→ traitement</text>
+    <line x1="115" y1="56" x2="138" y2="56" stroke="#e84d2a" stroke-width="2" marker-end="url(#arT)"/>
+    <!-- Phase 1 -->
+    <rect x="138" y="22" width="148" height="68" rx="10" fill="#fff0ea" stroke="#e84d2a" stroke-width="2"/>
+    <text x="212" y="43" text-anchor="middle" font-size="10" font-weight="900" fill="#e84d2a">1. ATTAQUE</text>
+    <text x="212" y="57" text-anchor="middle" font-size="8.5" fill="#2a120a">6 – 12 semaines</text>
+    <text x="212" y="70" text-anchor="middle" font-size="8" fill="#9a4830">Objectif : rémission</text>
+    <text x="212" y="83" text-anchor="middle" font-size="8" fill="#9a4830">(disparition symptômes)</text>
+    <line x1="286" y1="56" x2="309" y2="56" stroke="#e84d2a" stroke-width="2" marker-end="url(#arT)"/>
+    <!-- Phase 2 -->
+    <rect x="309" y="22" width="158" height="68" rx="10" fill="#fff0ea" stroke="#f7845a" stroke-width="2"/>
+    <text x="388" y="43" text-anchor="middle" font-size="10" font-weight="900" fill="#e84d2a">2. CONSOLIDATION</text>
+    <text x="388" y="57" text-anchor="middle" font-size="8.5" fill="#2a120a">16 – 20 semaines</text>
+    <text x="388" y="70" text-anchor="middle" font-size="8" fill="#9a4830">Objectif : éviter rechutes</text>
+    <text x="388" y="83" text-anchor="middle" font-size="8" fill="#9a4830">(même épisode)</text>
+    <line x1="467" y1="56" x2="490" y2="56" stroke="#e84d2a" stroke-width="2" marker-end="url(#arT)"/>
+    <!-- Phase 3 -->
+    <rect x="490" y="22" width="158" height="68" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+    <text x="569" y="43" text-anchor="middle" font-size="10" font-weight="900" fill="#065f46">3. MAINTENANCE</text>
+    <text x="569" y="57" text-anchor="middle" font-size="8.5" fill="#064e3b">Si ≥ 3 EDM / 4 ans</text>
+    <text x="569" y="70" text-anchor="middle" font-size="8" fill="#064e3b">Objectif : prévenir récidives</text>
+    <text x="569" y="83" text-anchor="middle" font-size="8" fill="#064e3b">(nouvel épisode)</text>
+    <!-- Durée totale -->
+    <text x="670" y="42" text-anchor="middle" font-size="10" font-weight="800" fill="#e84d2a">Durée totale</text>
+    <text x="670" y="56" text-anchor="middle" font-size="10" font-weight="800" fill="#e84d2a">: 4 à 9 mois</text>
+    <text x="670" y="72" text-anchor="middle" font-size="8.5" fill="#9a4830">Rémission complète</text>
+    <text x="670" y="84" text-anchor="middle" font-size="8.5" fill="#9a4830">ou partielle</text>
+  </svg>
+  </div>
+  <div class="hl"><strong>Lien dépression ↔ douleur :</strong> La 5-HT et la NA sont impliquées dans la régulation de l'humeur ET dans la régulation de la perception de la douleur via les voies descendantes modulant les signaux médullaires. D'où les expressions somatiques douloureuses dans la dépression (et l'intérêt des IRSNA comme antidépresseurs).</div>
+</div>
+
+<div class="sh">🐕 Modèle d'impuissance apprise — Protocole Seligman &amp; Maier</div>
+<div class="card">
+  <div class="ct">📖 Définition &amp; principe</div>
+  <div class="hli">Un animal est <strong>impuissant</strong> face à une situation aversive si la probabilité de réagir est identique à la probabilité d'absence de réponse. <strong>L'impuissance n'est pas innée</strong> : elle résulte d'un apprentissage (conditionnement). Notion de cognition importante → l'individu perçoit que ses actes sont sans effet sur l'environnement → résignation, baisse de motivation.</div>
+  <div class="sb">
+  <svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+    <defs><marker id="arI" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><polygon points="0 0,10 4,0 8" fill="#e84d2a"/></marker></defs>
+    <text x="380" y="18" text-anchor="middle" font-size="12" font-weight="900" fill="#e84d2a">PROTOCOLE SELIGMAN &amp; MAIER — 2 PHASES</text>
+    <!-- PHASE 1 -->
+    <rect x="15" y="30" width="345" height="138" rx="12" fill="#fff0ea" stroke="#e84d2a" stroke-width="2"/>
+    <text x="187" y="50" text-anchor="middle" font-size="11" font-weight="900" fill="#e84d2a">PHASE 1 — Exposition aux chocs</text>
+    <!-- G1 -->
+    <rect x="28" y="60" width="98" height="96" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+    <text x="77" y="82" text-anchor="middle" font-size="9.5" font-weight="800" fill="#15803d">G1 — Contrôle</text>
+    <text x="77" y="98" text-anchor="middle" font-size="8.5" fill="#064e3b">Pas de choc</text>
+    <text x="77" y="112" text-anchor="middle" font-size="8.5" fill="#064e3b">électrique</text>
+    <text x="77" y="147" text-anchor="middle" font-size="8" fill="#064e3b">Groupe référence</text>
+    <!-- G2 -->
+    <rect x="138" y="60" width="105" height="96" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+    <text x="190" y="78" text-anchor="middle" font-size="9" font-weight="800" fill="#92400e">G2 — Contrôlé</text>
+    <text x="190" y="93" text-anchor="middle" font-size="8" fill="#78350f">Choc électrique</text>
+    <text x="190" y="106" text-anchor="middle" font-size="8" fill="#78350f">+ bouton stop</text>
+    <text x="190" y="119" text-anchor="middle" font-size="8" fill="#78350f">+ signal lumineux</text>
+    <text x="190" y="147" text-anchor="middle" font-size="8" fill="#78350f">Peut s'échapper</text>
+    <!-- G3 -->
+    <rect x="255" y="60" width="98" height="96" rx="8" fill="#fff5f5" stroke="#ef4444" stroke-width="2.5"/>
+    <text x="304" y="78" text-anchor="middle" font-size="9" font-weight="800" fill="#b91c1c">G3 — Subi</text>
+    <text x="304" y="93" text-anchor="middle" font-size="8" fill="#7f1d1d">Choc électrique</text>
+    <text x="304" y="106" text-anchor="middle" font-size="8" fill="#7f1d1d">sans contrôle</text>
+    <text x="304" y="119" text-anchor="middle" font-size="8" fill="#7f1d1d">ni signal</text>
+    <text x="304" y="147" text-anchor="middle" font-size="8" fill="#b91c1c">Impuissance apprise</text>
+    <!-- Flèche entre phases -->
+    <line x1="362" y1="99" x2="392" y2="99" stroke="#e84d2a" stroke-width="2.5" marker-end="url(#arI)"/>
+    <text x="377" y="91" text-anchor="middle" font-size="8" fill="#e84d2a">puis</text>
+    <!-- PHASE 2 -->
+    <rect x="392" y="30" width="353" height="138" rx="12" fill="#f6f1ff" stroke="#c4a8ff" stroke-width="2"/>
+    <text x="568" y="50" text-anchor="middle" font-size="11" font-weight="900" fill="#5010b0">PHASE 2 — Test de fuite</text>
+    <text x="568" y="65" text-anchor="middle" font-size="8.5" fill="#170a30">Même dispositif MAIS un mur permet de fuir vers le côté B (sans choc)</text>
+    <!-- Résultats -->
+    <rect x="403" y="76" width="100" height="80" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+    <text x="453" y="96" text-anchor="middle" font-size="9.5" font-weight="800" fill="#15803d">G1 → Fuit ✓</text>
+    <text x="453" y="112" text-anchor="middle" font-size="8" fill="#064e3b">Jamais eu de chocs</text>
+    <text x="453" y="126" text-anchor="middle" font-size="8" fill="#064e3b">→ explore</text>
+    <text x="453" y="147" text-anchor="middle" font-size="8" fill="#064e3b">normalement</text>
+    <rect x="515" y="76" width="105" height="80" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+    <text x="567" y="96" text-anchor="middle" font-size="9.5" font-weight="800" fill="#92400e">G2 → Fuit ✓</text>
+    <text x="567" y="112" text-anchor="middle" font-size="8" fill="#78350f">Fuit au signal</text>
+    <text x="567" y="126" text-anchor="middle" font-size="8" fill="#78350f">ou après le choc</text>
+    <text x="567" y="147" text-anchor="middle" font-size="8" fill="#78350f">→ latence courte</text>
+    <rect x="632" y="76" width="102" height="80" rx="8" fill="#fff5f5" stroke="#ef4444" stroke-width="2.5"/>
+    <text x="683" y="96" text-anchor="middle" font-size="9.5" font-weight="800" fill="#b91c1c">G3 → Reste ✗</text>
+    <text x="683" y="112" text-anchor="middle" font-size="8" fill="#7f1d1d">Résignation</text>
+    <text x="683" y="126" text-anchor="middle" font-size="8" fill="#7f1d1d">→ latence longue</text>
+    <text x="683" y="147" text-anchor="middle" font-size="8" fill="#b91c1c">ou ne fuit pas</text>
+    <!-- Conclusion dépression -->
+    <rect x="15" y="180" width="730" height="52" rx="10" fill="#fff0ea" stroke="#f7845a" stroke-width="1.5"/>
+    <text x="380" y="200" text-anchor="middle" font-size="10" font-weight="900" fill="#e84d2a">Liens avec la dépression</text>
+    <text x="380" y="216" text-anchor="middle" font-size="8.5" fill="#2a120a">Passivité · Résignation · Baisse de motivation → symptômes dépressifs.</text>
+    <text x="380" y="228" text-anchor="middle" font-size="8.5" fill="#2a120a">L'impuissance se généralise. Apprentissage antérieur → changement radical de comportement.</text>
+    <!-- Modèle souris -->
+    <rect x="15" y="243" width="730" height="68" rx="10" fill="#ede5ff" stroke="#c4a8ff" stroke-width="1.5"/>
+    <text x="380" y="262" text-anchor="middle" font-size="10" font-weight="900" fill="#5010b0">Adaptation chez la souris (conditions A / B / C)</text>
+    <text x="380" y="278" text-anchor="middle" font-size="8.5" fill="#170a30">A : son + fuite possible → latence courte ✓</text>
+    <text x="380" y="292" text-anchor="middle" font-size="8.5" fill="#170a30">B : pas de son, fuite impossible 24h → latence longue ✗ (impuissance apprise)</text>
+    <text x="380" y="306" text-anchor="middle" font-size="8.5" fill="#170a30">C : son + choc contrôlé → latence courte ✓ — Condition B significativement plus longue que A et C (p &lt; 0,05)</text>
+  </svg>
+  </div>
+</div>
+
+<div class="sh">👶 Stress juvénile — Modèles d'induction précoce</div>
+<div class="card">
+  <div class="ct">🌱 Impact du stress précoce sur la dépression à l'âge adulte</div>
+  <div class="hli">Le stress survenant pendant la période juvénile peut avoir des répercussions durables sur le développement cérébral et le comportement à l'âge adulte → vulnérabilité accrue à la dépression.</div>
+  <div class="g2">
+    <div>
+      <div class="hl"><strong>Séparation maternelle :</strong><br>
+      Séparation du nouveau-né de sa mère pendant des périodes variables (quelques heures par jour). Entraîne un stress chronique précoce → perturbation de l'axe HPA (hypothalamus-hypophyse-surrénales) → hyperréactivité au stress à l'âge adulte → comportements anxieux et dépressifs.</div>
+      <div class="hl2"><strong>Déficit de soins maternels :</strong><br>
+      Modèle basé sur la qualité des soins apportés par la mère (léchage, portage). Une mère peu attentive → descendance plus réactive au stress, avec des taux de cortisol plus élevés et des comportements anxieux accrus à l'âge adulte. Mise en évidence de mécanismes épigénétiques (méthylation du gène du récepteur aux glucocorticoïdes).</div>
+    </div>
+    <div>
+      <div class="hlw"><strong>Pourquoi ces modèles sont importants ?</strong><br>
+      Ils permettent de modéliser les <em>traumatismes de l'enfance</em> comme facteur de risque majeur de dépression. Ils montrent l'interaction entre <strong>génétique</strong> (sensibilité) et <strong>environnement précoce</strong> (stress juvénile) dans le développement des troubles dépressifs.</div>
+      <div class="hlg"><strong>Lien avec l'axe HPA :</strong><br>
+      Stress précoce → ↑ CRH → ↑ ACTH → ↑ cortisol chronique → désensibilisation récepteurs glucocorticoïdes → ↑ neuroinflammation (cytokines) → ↑ IDO → kynurénines toxiques → mort neuronale → symptômes dépressifs (rejoint l'hypothèse glucocorticoïdes vue en CM).</div>
+    </div>
+  </div>
+</div>
+
+<div class="sh">🃏 Flashcards — Génétique &amp; Modèles animaux (Bacque)</div>
+<div class="fc-g">
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Gène SERT</div><div class="ft">Allèle S vs L — conséquences</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd"><strong>Allèle S (Short) :</strong> ↓ expression SERT → moins de recapture 5-HT → hyperémotivité, hyperactivité amygdale. Sans événement stressant (SLE) : risque faible. Avec SLE : risque dépression ×8 (femme) ou ×4 (homme). <strong>Allèle L (Long) :</strong> expression normale, pas de surrisque.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Impuissance apprise</div><div class="ft">Protocole Seligman &amp; Maier</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">Phase 1 : G1 (contrôle), G2 (choc + bouton stop), G3 (choc subi sans contrôle). Phase 2 (test fuite mur) : G1 et G2 fuient, G3 reste (résignation). Chez la souris : condition B (fuite impossible) → latence fuite significativement plus longue que A et C. Généralisation de l'impuissance.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">3 hypothèses</div><div class="ft">Neurobiologie de la dépression</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">① <strong>Monoaminergique</strong> : ↓ 5-HT/DA/NA → dépression. ② <strong>Neurotrophique</strong> : ↓ BDNF → ↓ neurogenèse (hippocampe). ③ <strong>Glucocorticoïdes + neuroinflammation</strong> : stress chronique → ↑ cortisol → désensibilisation GR → ↑ cytokines → IDO → kynurénines toxiques. Non exclusives !</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">UCMS</div><div class="ft">Unpredictable Chronic Mild Stress</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">Exposition à des stresseurs légers, répétés et imprédictibles (sons prédateurs, contrainte, inclinaison cage, changement litière, décalage cycles J/N). 15 jours chez rongeurs. Pas de douleur physique. Induit un pattern de symptômes dépressifs (anhédonie, apathie, anxiété). Se rapproche de l'étiologie humaine.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Phases traitement TDC</div><div class="ft">3 phases et leurs durées</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">① <strong>Attaque</strong> (6-12 sem) : atteindre la rémission. ② <strong>Consolidation</strong> (16-20 sem) : éviter les rechutes (même épisode). ③ <strong>Maintenance</strong> (si ≥3 EDM / 4 ans) : prévenir les récidives (nouvel épisode). Durée totale : 4 à 9 mois.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Défaite sociale</div><div class="ft">Modèle animal dépression</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">Souris agressive vs souris non-agressive. Répétition de défaites agonistiques. Au bout de ~3 semaines : induction de dépression chez la souris "perdante". Évalue : évitement social, apathie, anhédonie. Modèle très utilisé car proche de la situation humaine (stress social chronique).</div></div>
+  </div></div>
+</div>
+
 </section>
 
 <section id="s2" class="sec">
@@ -823,7 +1119,7 @@ strong{color:var(--C);}
   <div class="ct">🌐 Organisation du système nerveux</div>
 
   <div class="sb">
-    <svg viewBox="0 0 780 200" xmlns="http://www.w3.org/2000/svg" style="max-width:780px;font-family:Nunito,sans-serif;">
+    <svg viewBox="0 0 780 200" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
       <!-- SNC box -->
       <rect x="10" y="15" width="230" height="175" rx="14" fill="#e3eeff" stroke="#1a56db" stroke-width="2.5"/>
       <text x="125" y="40" text-anchor="middle" font-size="13" font-weight="900" fill="#1040c0">SNC</text>
@@ -894,7 +1190,7 @@ strong{color:var(--C);}
     </div>
     <div>
       <div class="sb" style="padding:10px">
-        <svg viewBox="0 0 310 175" xmlns="http://www.w3.org/2000/svg" style="max-width:310px;font-family:Nunito,sans-serif;">
+        <svg viewBox="0 0 310 175" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
           <text x="155" y="16" text-anchor="middle" font-size="10.5" font-weight="800" fill="#1a56db">POTENTIEL D'ACTION</text>
           <!-- Axes -->
           <line x1="30" y1="145" x2="295" y2="145" stroke="#a8caff" stroke-width="1.5"/>
@@ -940,7 +1236,7 @@ strong{color:var(--C);}
 <div class="card">
   <div class="ct">🔁 Cascade complète de l'axe HHA (HPA)</div>
   <div class="sb">
-    <svg viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
+    <svg viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
       <defs>
         <marker id="aD" markerWidth="8" markerHeight="7" refX="4" refY="7" orient="auto"><polygon points="0 0,8 0,4 7" fill="#1a56db"/></marker>
         <marker id="aR" markerWidth="8" markerHeight="7" refX="4" refY="7" orient="auto"><polygon points="0 0,8 0,4 7" fill="#dc2626"/></marker>
@@ -956,7 +1252,7 @@ strong{color:var(--C);}
       <rect x="170" y="94" width="320" height="60" rx="12" fill="#bfdbfe" stroke="#1a56db" stroke-width="2"/>
       <text x="330" y="118" text-anchor="middle" font-size="12" font-weight="800" fill="#1040c0">Hypothalamus — NPV</text>
       <text x="330" y="136" text-anchor="middle" font-size="9.5" fill="#050e30">Neurones <em>parvocellulaires</em> → libèrent <strong>CRH</strong> (+ AVP) dans l'éminence médiane</text>
-      <text x="330" y="150" text-anchor="middle" font-size="8.5" fill="#3860a0">CRH = Corticotropin Releasing Hormone · CRFR-1 = récepteur très distribué dans le cerveau</text>
+      <text x="330" y="150" text-anchor="middle" font-size="7.5" fill="#3860a0">CRH = Corticotropin Releasing Hormone · CRFR-1 = récepteur très distribué dans le cerveau</text>
       <line x1="330" y1="154" x2="330" y2="176" stroke="#1a56db" stroke-width="2.5" marker-end="url(#aD)"/>
 
       <!-- Antéhypophyse -->
@@ -970,7 +1266,7 @@ strong{color:var(--C);}
       <rect x="170" y="258" width="320" height="60" rx="12" fill="#eff6ff" stroke="#5086f7" stroke-width="2"/>
       <text x="330" y="282" text-anchor="middle" font-size="12" font-weight="800" fill="#1040c0">Glande surrénale — Zone fasciculée</text>
       <text x="330" y="300" text-anchor="middle" font-size="9.5" fill="#050e30">ACTH → récepteur MC2R → synthèse <strong>cortisol / corticostérone</strong></text>
-      <text x="330" y="314" text-anchor="middle" font-size="8.5" fill="#3860a0">Zone glomérulée = aldostérone · Médulla = catécholamines (ortho-sympathique !)</text>
+      <text x="330" y="314" text-anchor="middle" font-size="7.5" fill="#3860a0">Zone glomérulée = aldostérone · Médulla = catécholamines (ortho-sympathique !)</text>
 
       <!-- Feedback négatif -->
       <path d="M490 288 Q640 288 640 180 Q640 52 490 52" stroke="#dc2626" stroke-width="2" stroke-dasharray="7,4" fill="none" marker-end="url(#aR)"/>
@@ -1040,7 +1336,7 @@ strong{color:var(--C);}
 <div class="card">
   <div class="ct">📅 Protocole de stress chronique détaillé</div>
   <div class="sb">
-    <svg viewBox="0 0 760 170" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
+    <svg viewBox="0 0 760 180" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
       <text x="380" y="16" text-anchor="middle" font-size="12" font-weight="900" fill="#1a56db">PROTOCOLE STRESS CHRONIQUE (Fischer 344)</text>
       <!-- Jours -->
       <rect x="8" y="28" width="172" height="132" rx="12" fill="#e3eeff" stroke="#1a56db" stroke-width="2"/>
@@ -1066,8 +1362,8 @@ strong{color:var(--C);}
       <text x="658" y="68" text-anchor="middle" font-size="8.5" fill="#050e30">2 chocs électriques aux pattes</text>
       <text x="658" y="83" text-anchor="middle" font-size="8.5" fill="#050e30">RAS (nuit normale)</text>
 
-      <text x="380" y="148" text-anchor="middle" font-size="9" fill="#1040c0" font-weight="800">Stresseurs légers mais imprédictibles et répétés · Puis stress aigu (contention velcro) + prise de sang sur les 2 groupes</text>
-      <text x="380" y="163" text-anchor="middle" font-size="8.5" fill="#3860a0">Expérimentations toujours hors de la salle de vie des animaux · Groupe contrôle : même manipulation, sans stress</text>
+      <text x="380" y="148" text-anchor="middle" font-size="9" fill="#1040c0" font-weight="800">Stresseurs légers mais imprédictibles et répétés</text>
+      <text x="380" y="163" text-anchor="middle" font-size="7.5" fill="#3860a0">Expérimentations hors de la salle de vie · Groupe contrôle : même manipulation, sans stress</text>
     </svg>
   </div>
 </div>
@@ -1146,6 +1442,47 @@ strong{color:var(--C);}
 </div>
 
 <div class="card">
+  <div class="ct">🐭 Détails méthodologiques de l'article (à connaître pour l'examen)</div>
+  <div class="g2">
+    <div>
+      <div class="hl2"><strong>Choix du modèle animal :</strong> On utilise des animaux plutôt que des humains car induire du stress chez l'homme est peu éthique, et la variabilité interindividuelle humaine complique l'interprétation. Ici : rats de souche <strong>Fischer 344</strong>, souche connue pour être répondante au stress et susceptible de développer des pathologies liées au stress.</div>
+      <div class="hl"><strong>Loi des 3R (éthique animale) :</strong><br>
+      ① <strong>Réduire</strong> le nombre d'animaux<br>
+      ② <strong>Raffiner</strong> les conditions d'hébergement et le protocole<br>
+      ③ <strong>Remplacer</strong> par des alternatives quand possible<br>
+      → Les expériences nécessitent un numéro d'autorisation officiel (Animal Welfare Act). Les animaux sont décrits avec précision : hébergement, cycle lumière/obscurité, accès à l'eau et la nourriture.</div>
+    </div>
+    <div>
+      <div class="hl"><strong>Protocole d'acclimatation :</strong> Le transport est une source de stress → <strong>7 jours d'acclimatation</strong> au lieu de vie avant toute expérience. L'homme représente une menace pour le rat → période d'habituation à l'expérimentateur. Au total : <strong>15 jours</strong> entre l'arrivage et le début des expériences.</div>
+      <div class="hl2"><strong>Protocole de stress chronique (4 jours, alternant stress courts le matin et longs le soir) :</strong><br>
+      Jour 1 : contention 60 min (matin) / privation de nourriture (nuit)<br>
+      Jour 2 : 2 chocs électriques aux pattes / privation de sommeil (nuit)<br>
+      Jour 3 : inclinaison des cages 180 min (matin) / litière humide (nuit)<br>
+      Jour 4 : 2 chocs électriques / rien la nuit<br>
+      → Groupe contrôle = non stressé. Les deux groupes sont ensuite soumis à un stress aigu (contention velcro) entre <strong>9h et 12h</strong> = nadir circadien du cortisol chez le rat (taux les plus faibles → meilleure fenêtre de détection de l'augmentation).</div>
+    </div>
+  </div>
+  <div class="g2" style="margin-top:10px">
+    <div>
+      <div class="hl"><strong>Méthode de mesure : ELISA / EIA</strong><br>
+      <em>Enzyme-Linked Immunosorbent Assay / Enzyme ImmunoAssay</em><br>
+      Détecte et quantifie une molécule (ACTH, corticostérone) dans un échantillon sanguin grâce à des <strong>anticorps spécifiques</strong> couplés à une enzyme.<br>
+      ① Ajout de l'échantillon aux puits<br>
+      ② L'anticorps conjugué à une enzyme se lie à la molécule cible<br>
+      ③ La réaction enzymatique produit un <strong>composé coloré proportionnel</strong> à la quantité de molécule recherchée<br>
+      ④ Lecture optique de la plaque → quantification</div>
+    </div>
+    <div>
+      <div class="hlw">📌 <strong>Vocabulaire clé :</strong><br>
+      <strong>Nadir circadien</strong> = point le plus bas du cycle circadien (ici, taux de corticostérone le plus bas chez le rat, en début de matinée = fin de leur période de sommeil)<br>
+      <strong>Antagoniste</strong> = molécule qui se fixe sur un récepteur à la place du ligand naturel et bloque son effet (≠ agoniste qui mime l'effet)<br>
+      <strong>Astressin</strong> = antagoniste CRFR-1 → bloque CRH → inhibe production d'ACTH par l'hypophyse<br>
+      <strong>Chlorisondamine</strong> = inhibiteur du système nerveux sympathique (SNS)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
   <div class="ct">📝 Méthode de rédaction d'une analyse d'article (conseils du TD)</div>
   <div class="g2">
     <div>
@@ -1161,6 +1498,75 @@ strong{color:var(--C);}
     </div>
   </div>
   <div class="hlw">⚠ <strong>À retenir pour l'examen :</strong> L'article peut tomber. Il faut maîtriser les connaissances du CM (axe HHA, rôle SNS, cortisol, ACTH) ET savoir analyser les figures. Le mot "antagoniste" est apprécié par le prof = molécule qui se fixe au récepteur à la place du ligand naturel et bloque l'effet.</div>
+</div>
+
+<!-- ══ FIN DU CM : FACTEURS MOLÉCULAIRES ══ -->
+<div class="sh">🔬 Fin du CM — Facteurs moléculaires impliqués dans le PTSD</div>
+
+<div class="card">
+  <div class="ct">⚗️ Dérégulation de l'axe HPA dans le PTSD</div>
+  <div class="g2">
+    <div>
+      <div class="hli">Dans le PTSD, l'axe HPA (hypothalamo-hypophyso-surrénalien) est <strong>dérégulé</strong>, mais de manière paradoxale par rapport à ce qu'on attendrait : contrairement à un stress chronique simple (↑ cortisol), les patients PTSD présentent souvent un <strong>cortisol bas</strong> et une <strong>hypersensibilité aux glucocorticoïdes</strong>.</div>
+      <div class="hl"><strong>Observations cliniques chez les patients PTSD :</strong><br>
+      • <strong>↓ cortisol basal</strong> (contrairement au stress chronique non-PTSD qui ↑ cortisol)<br>
+      • <strong>↑ nombre et sensibilité des récepteurs GR</strong> sur les lymphocytes<br>
+      • <strong>Rétrocontrôle négatif exagéré</strong> : les patients PTSD suppriment encore plus le cortisol en réponse à une dose faible de dexaméthasone (agoniste des GR) → test de freinage à la dexaméthasone anormal<br>
+      • <strong>↑ réactivité de l'amygdale</strong> aux stimuli de peur<br>
+      • <strong>↓ volume hippocampique</strong> (lié à l'hypercortisolémie ou à l'atrophie liée au stress)</div>
+    </div>
+    <div>
+      <div class="hl2"><strong>Rôle du CRH dans le PTSD :</strong><br>
+      • ↑ CRH dans le liquide céphalorachidien (LCR) des patients PTSD<br>
+      • CRH agit sur l'amygdale (récepteurs CRFR-1) → ↑ réactivité émotionnelle et peur<br>
+      • CRH agit sur le locus coeruleus → ↑ noradrénaline → hypervigilance, réaction de sursaut exagérée (critère E du DSM-5)<br>
+      • CRFR-2 : rôle opposé (anxiolytique) → déséquilibre CRFR-1/CRFR-2 dans le PTSD</div>
+      <div class="hlr"><strong>Rôle de la noradrénaline :</strong> ↑ activité du locus coeruleus → ↑ NA dans cortex préfrontal et amygdale → consolidation des mémoires traumatiques (flashbacks), hypervigilance, troubles du sommeil. C'est pourquoi les <strong>β-bloquants</strong> (propranolol) sont étudiés comme traitement préventif du PTSD (bloquent la consolidation émotionnelle du souvenir).</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="ct">🧬 Facteurs de vulnérabilité moléculaires</div>
+  <div class="g2">
+    <div>
+      <div class="hl"><strong>Épigénétique et PTSD :</strong><br>
+      Le stress traumatique laisse des <strong>marques épigénétiques</strong> (méthylation de l'ADN, modifications des histones) sur des gènes clés :<br>
+      • Gène du récepteur aux glucocorticoïdes (NR3C1) : hyperméthylation → ↓ expression GR → ↓ rétrocontrôle négatif → axe HPA dysrégulé<br>
+      • Transmission possible à la génération suivante (<strong>transmission transgénérationnelle</strong>) : études sur enfants de survivants de la Shoah (Yehuda et al.)</div>
+      <div class="hl2"><strong>Système sérotoninergique :</strong> Le polymorphisme du gène du transporteur de la sérotonine (<strong>5-HTTLPR</strong>, allèle court "s") est un facteur de vulnérabilité : ↑ réactivité de l'amygdale aux stimuli négatifs → ↑ risque de PTSD après trauma. Base des traitements par <strong>ISRS</strong> (inhibiteurs sélectifs de la recapture de la sérotonine = 1re ligne de traitement pharmacologique du PTSD).</div>
+    </div>
+    <div>
+      <div class="hl"><strong>Système endocannabinoïde :</strong><br>
+      • Déficit en endocannabinoïdes (anandamide) dans le PTSD<br>
+      • CB1 dans l'amygdale : rôle dans l'extinction de la peur<br>
+      • ↓ densité CB1 dans cortex préfrontal → ↓ contrôle top-down de l'amygdale → incapacité à éteindre la réponse de peur (explication des flashbacks persistants)<br>
+      • Piste thérapeutique : CBD (cannabidiol), non psychoactif, étudié dans le PTSD</div>
+      <div class="hlw"><strong>Structures cérébrales impliquées dans le PTSD :</strong><br>
+      ① <strong>Amygdale</strong> (↑ activité) : hyperréactivité aux stimuli de peur, encodage des mémoires émotionnelles<br>
+      ② <strong>Hippocampe</strong> (↓ volume, ↓ activité) : déficit de contextualisation des souvenirs traumatiques → impossibilité de les "dater" dans le passé<br>
+      ③ <strong>Cortex préfrontal</strong> (↓ activité) : ↓ inhibition de l'amygdale → ↓ régulation émotionnelle, ↓ extinction de la peur<br>
+      → Ce déséquilibre amygdale/CPF explique les flashbacks, l'hypervigilance et les difficultés à "éteindre" la réponse de peur.</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="ct">💊 Traitements du PTSD — base neurobiologique</div>
+  <div class="g2">
+    <div>
+      <div class="hl"><strong>Pharmacologiques (1re ligne) :</strong><br>
+      • <strong>ISRS</strong> (Sertraline, Paroxétine) : ↑ sérotonine → ↓ hyperréactivité amygdalienne, ↓ symptômes dépressifs et anxieux<br>
+      • <strong>Prazosin</strong> : antagoniste α1-adrénergique → ↓ cauchemars liés à la noradrénaline<br>
+      • <strong>Propranolol</strong> (en prévention) : β-bloquant → ↓ consolidation émotionnelle du souvenir traumatique si donné dans les heures suivant le trauma</div>
+    </div>
+    <div>
+      <div class="hl2"><strong>Psychothérapeutiques :</strong><br>
+      • <strong>EMDR</strong> (Eye Movement Desensitization and Reprocessing) : mouvements oculaires bilatéraux pendant rappel du trauma → reconsolidation du souvenir dans un contexte de sécurité<br>
+      • <strong>TCC centrée sur le trauma</strong> (Thérapie Cognitivo-Comportementale) : exposition progressive au souvenir traumatique → extinction de la réponse de peur via le cortex préfrontal<br>
+      → Ces deux thérapies agissent sur les mêmes circuits que les traitements pharmacologiques : ↓ amygdale, ↑ CPF, ↑ hippocampe</div>
+    </div>
+  </div>
 </div>
 
 <!-- ══ FLASHCARDS ══ -->
@@ -1181,6 +1587,26 @@ strong{color:var(--C);}
   <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
     <div class="fc-f"><div class="fq">Définition</div><div class="ft">Antagoniste</div><div class="fh">👆 Retourner</div></div>
     <div class="fc-b"><div class="fd">Molécule qui se fixe sur un récepteur à la place du ligand naturel et <em>bloque</em> son effet. Ex : Astressin = antagoniste CRFR-1 (bloque CRH → pas d'ACTH). ≠ agoniste (mimique l'effet du ligand naturel).</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">PTSD vs stress chronique</div><div class="ft">Cortisol : la différence paradoxale</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">Stress chronique "simple" → ↑ cortisol. PTSD → ↓ cortisol basal + ↑ sensibilité des GR + rétrocontrôle négatif exagéré (test dexaméthasone anormal). Paradoxe : moins de cortisol mais axe plus réactif → dérégulation qualitative, pas quantitative.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">3 structures cérébrales</div><div class="ft">PTSD : qui fait quoi ?</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd"><strong>Amygdale ↑</strong> : hyperréactivité peur, encodage mémoire émotionnelle<br><strong>Hippocampe ↓</strong> : ↓ contextualisation → souvenir non daté dans le passé → flashbacks<br><strong>CPF ↓</strong> : ↓ inhibition de l'amygdale → ↓ extinction peur, ↓ régulation émotionnelle</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Loi des 3R</div><div class="ft">Éthique animale</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">① <strong>Réduire</strong> le nombre d'animaux ② <strong>Raffiner</strong> les conditions et protocoles ③ <strong>Remplacer</strong> par des alternatives. 15 jours entre arrivage et expérience (7j acclimatation + habituation à l'expérimentateur). Souche Fischer 344 = répondante au stress.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Technique</div><div class="ft">ELISA / EIA</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">Détecte une molécule (ACTH, corticostérone) dans le sang via anticorps spécifiques couplés à une enzyme. Réaction enzymatique → composé coloré proportionnel à la quantité de molécule. 4 étapes : ajout échantillon → liaison anticorps → réaction colorée → lecture optique.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Épigénétique</div><div class="ft">PTSD & transmission</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">Hyperméthylation du gène NR3C1 (récepteur GR) → ↓ expression GR → ↓ rétrocontrôle HPA. Transmission transgénérationnelle possible (études Yehuda sur enfants de survivants Shoah). 5-HTTLPR allèle "s" = vulnérabilité sérotoninergique au PTSD.</div></div>
   </div></div>
 </div>
 
@@ -1207,7 +1633,7 @@ strong{color:var(--C);}
 <div class="card">
 <div class="ct">🔄 Les 3 types de rythmes biologiques</div>
 <div class="sb">
-<svg viewBox="0 0 720 152" xmlns="http://www.w3.org/2000/svg" style="max-width:720px;font-family:Nunito,sans-serif;">
+<svg viewBox="0 0 720 152" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
 <text x="360" y="16" text-anchor="middle" font-size="12" font-weight="900" fill="#6920d8">CLASSIFICATION DES RYTHMES BIOLOGIQUES</text>
 <rect x="6" y="26" width="218" height="118" rx="12" fill="#f6f1ff" stroke="#6920d8" stroke-width="2"/>
 <text x="115" y="50" text-anchor="middle" font-size="12" font-weight="900" fill="#6920d8">ULTRADIENS</text>
@@ -1248,7 +1674,7 @@ strong{color:var(--C);}
 <div class="card">
 <div class="ct">📈 Fluctuations circadiennes — Les pics à connaître</div>
 <div class="sb">
-<svg viewBox="0 0 720 170" xmlns="http://www.w3.org/2000/svg" style="max-width:720px;font-family:Nunito,sans-serif;">
+<svg viewBox="0 0 720 170" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
 <text x="360" y="16" text-anchor="middle" font-size="12" font-weight="900" fill="#6920d8">FLUCTUATIONS CIRCADIENNES SUR 24H</text>
 <!-- Axe temps -->
 <line x1="40" y1="145" x2="700" y2="145" stroke="#c4a8ff" stroke-width="1.5"/>
@@ -1357,7 +1783,7 @@ Sujets sans aucun indice temporel (5j adaptation, puis retrait de tous repères 
 <div class="card">
 <div class="ct">☀️ Rôle des synchroniseurs (Zeitgeber)</div>
 <div class="sb">
-<svg viewBox="0 0 720 200" xmlns="http://www.w3.org/2000/svg" style="max-width:720px;font-family:Nunito,sans-serif;">
+<svg viewBox="0 0 720 200" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
 <defs><marker id="aVio" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#6920d8"/></marker></defs>
 <text x="360" y="16" text-anchor="middle" font-size="12" font-weight="900" fill="#6920d8">NSC, ÉPIPHYSE ET HORLOGES PÉRIPHÉRIQUES</text>
 <!-- Lumière -->
@@ -1394,9 +1820,9 @@ Sujets sans aucun indice temporel (5j adaptation, puis retrait de tous repères 
 <text x="55" y="163" text-anchor="middle" font-size="18">🌙</text>
 <text x="55" y="180" text-anchor="middle" font-size="8" fill="#c4a8ff">NSC inactif</text>
 <line x1="87" y1="165" x2="128" y2="155" stroke="#9b5ef7" stroke-width="1.5" marker-end="url(#aVio)"/>
-<text x="300" y="148" text-anchor="middle" font-size="8.5" fill="#170a30">Nuit → NSC inactif → Épiphyse libre → Mélatonine sécrétée → synchronise tout</text>
-<text x="300" y="165" text-anchor="middle" font-size="8.5" fill="#6040a0">Alimentation, exercice physique, interactions sociales = autres synchroniseurs</text>
-<text x="300" y="182" text-anchor="middle" font-size="8" fill="#9b5ef7" font-style="italic">Lésion NSC + pénombre permanente → arythmie totale des 2 rythmes (activité ET température)</text>
+<text x="300" y="148" text-anchor="middle" font-size="7.5" fill="#170a30">Nuit → NSC inactif → Épiphyse libre → Mélatonine sécrétée → synchronise tout</text>
+<text x="300" y="165" text-anchor="middle" font-size="7.5" fill="#6040a0">Alimentation, exercice, interactions sociales = synchroniseurs secondaires</text>
+<text x="300" y="182" text-anchor="middle" font-size="7" fill="#9b5ef7" font-style="italic">Lésion NSC + pénombre → arythmie totale (activité ET température)mpérature)</text>
 </svg>
 </div>
 <div class="hl"><strong>Synchroniseurs (Zeitgeber)</strong> = facteurs environnementaux dont la variation cyclique est capable d'asservir un rythme biologique et d'imposer sa propre période. Lumière = le plus puissant. Aussi : alimentation, exercice physique, interactions sociales.</div>
@@ -1407,7 +1833,7 @@ Sujets sans aucun indice temporel (5j adaptation, puis retrait de tous repères 
 <div class="card">
 <div class="ct">📊 EEG — Les 4 types d'ondes</div>
 <div class="sb">
-<svg viewBox="0 0 720 195" xmlns="http://www.w3.org/2000/svg" style="max-width:720px;font-family:Nunito,sans-serif;">
+<svg viewBox="0 0 720 195" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
 <text x="360" y="15" text-anchor="middle" font-size="12" font-weight="900" fill="#6920d8">ONDES CORTICALES EEG — ÉLECTROENCÉPHALOGRAMME</text>
 <text x="360" y="30" text-anchor="middle" font-size="9" fill="#6040a0">↑ Synchronisation neuronale = ↑ Amplitude + ↓ Fréquence</text>
 <!-- Beta -->
@@ -1448,7 +1874,7 @@ Sujets sans aucun indice temporel (5j adaptation, puis retrait de tous repères 
 <div class="card">
 <div class="ct">🌙 Hypnogramme — Organisation d'une nuit adulte</div>
 <div class="sb">
-<svg viewBox="0 0 720 195" xmlns="http://www.w3.org/2000/svg" style="max-width:720px;font-family:Nunito,sans-serif;">
+<svg viewBox="0 0 720 195" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
 <text x="360" y="14" text-anchor="middle" font-size="12" font-weight="900" fill="#6920d8">HYPNOGRAMME ADULTE — 5 CYCLES × ≈90 MIN</text>
 <line x1="72" y1="175" x2="685" y2="175" stroke="#c4a8ff" stroke-width="1.5"/>
 <line x1="72" y1="40" x2="72" y2="175" stroke="#c4a8ff" stroke-width="1.5"/>
@@ -1535,7 +1961,7 @@ Sujets sans aucun indice temporel (5j adaptation, puis retrait de tous repères 
 <div class="card">
 <div class="ct">🔀 Noyaux du tronc cérébral — Neurotransmetteurs</div>
 <div class="sb">
-<svg viewBox="0 0 720 205" xmlns="http://www.w3.org/2000/svg" style="max-width:720px;font-family:Nunito,sans-serif;">
+<svg viewBox="0 0 720 205" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
 <defs>
 <marker id="aVio2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#6920d8"/></marker>
 <marker id="aRed2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#dc2626"/></marker>
@@ -1665,7 +2091,7 @@ Sujets sans aucun indice temporel (5j adaptation, puis retrait de tous repères 
   <div class="hli">L'eau se déplace toujours vers le compartiment le plus <strong>concentré</strong> (hypertonique) pour rétablir l'équilibre. Ex : poisson eau douce dans eau salée → perd toute son eau. Poisson eau salée dans eau douce → peut exploser. Même principe au niveau cellulaire.</div>
 
   <div class="sb">
-    <svg viewBox="0 0 760 185" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
+    <svg viewBox="0 0 760 185" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
       <text x="380" y="16" text-anchor="middle" font-size="12.5" font-weight="900" fill="#08875a">LES 4 COMPARTIMENTS HYDRIQUES DU CORPS HUMAIN</text>
 
       <!-- Intracellulaire -->
@@ -1710,7 +2136,7 @@ Sujets sans aucun indice temporel (5j adaptation, puis retrait de tous repères 
       <text x="662" y="114" text-anchor="middle" font-size="8.5" fill="#022818">mais vital</text>
 
       <!-- Accolade extracellulaire -->
-      <text x="471" y="185" text-anchor="middle" font-size="8" fill="#2a7050" font-style="italic">← Interstitiel + Intravasculaire + LCR = ⅓ restant (compartiments extracellulaires) →</text>
+      <text x="471" y="185" text-anchor="middle" font-size="7" fill="#2a7050" font-style="italic">← Interstitiel + Intravasculaire + LCR = ⅓ restant (compartiments extracellulaires) →</text>
     </svg>
   </div>
 
@@ -1759,7 +2185,7 @@ Sujets sans aucun indice temporel (5j adaptation, puis retrait de tous repères 
   </div>
 
   <div class="sb" style="margin-top:10px">
-    <svg viewBox="0 0 760 235" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
+    <svg viewBox="0 0 760 235" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
       <defs><marker id="aGr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#08875a"/></marker></defs>
       <text x="380" y="15" text-anchor="middle" font-size="12" font-weight="900" fill="#08875a">CIRCUITS NEURONAUX DE LA SOIF</text>
 
@@ -1926,7 +2352,7 @@ Sujets sans aucun indice temporel (5j adaptation, puis retrait de tous repères 
   <div class="sh2" style="margin-top:12px">Structures hypothalamiques &amp; circuit complet</div>
 
   <div class="sb">
-    <svg viewBox="0 0 760 242" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
+    <svg viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
       <defs>
         <marker id="ag2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#08875a"/></marker>
         <marker id="ar2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#dc2626"/></marker>
@@ -2109,7 +2535,7 @@ Sujets sans aucun indice temporel (5j adaptation, puis retrait de tous repères 
 <div class="sh">🔍 Les 3 Types de Symptômes</div>
 
 <div class="sb">
-<svg viewBox="0 0 760 292" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
+<svg viewBox="0 0 760 292" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
   <text x="380" y="18" text-anchor="middle" font-size="14" font-weight="900" fill="#c8157a">3 TYPES DE SYMPTÔMES DES SCHIZOPHRÉNIES</text>
   <rect x="10" y="30" width="230" height="250" rx="13" fill="#ffe0f4" stroke="#c8157a" stroke-width="2.5"/>
   <text x="125" y="52" text-anchor="middle" font-size="12" font-weight="900" fill="#c8157a">➕ SYMPTÔMES POSITIFS</text>
@@ -2178,7 +2604,7 @@ Sujets sans aucun indice temporel (5j adaptation, puis retrait de tous repères 
 <div class="sh">🌀 Modèle de Vulnérabilité-Stress (Diathèse-Stress)</div>
 <div class="card">
   <div class="sb">
-  <svg viewBox="0 0 760 200" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
+  <svg viewBox="0 0 760 200" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
     <defs><marker id="aP" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#c8157a"/></marker></defs>
     <text x="380" y="17" text-anchor="middle" font-size="13" font-weight="900" fill="#c8157a">SCHIZOPHRÉNIE = VULNÉRABILITÉ + STRESSEURS</text>
     <!-- Vulnérabilité -->
@@ -2234,7 +2660,7 @@ Sujets sans aucun indice temporel (5j adaptation, puis retrait de tous repères 
 <div class="sh">🧬 Étiologie Génétique — 4 méthodes</div>
 <div class="card">
   <div class="sb">
-  <svg viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
+  <svg viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
     <text x="380" y="17" text-anchor="middle" font-size="13" font-weight="900" fill="#c8157a">4 MÉTHODES D'ÉTUDE GÉNÉTIQUE — RÉSULTATS CLÉS</text>
     <rect x="10" y="28" width="170" height="210" rx="11" fill="#ffe0f4" stroke="#c8157a" stroke-width="2"/>
     <text x="95" y="48" text-anchor="middle" font-size="10" font-weight="900" fill="#c8157a">1. Probants</text>
@@ -2312,7 +2738,7 @@ Sujets sans aucun indice temporel (5j adaptation, puis retrait de tous repères 
 <div class="card">
   <div class="ct">🧠 Neurobiologie de l'Anxiété — Amygdale & Cortex préfrontal</div>
   <div class="sb">
-  <svg viewBox="0 0 760 262" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
+  <svg viewBox="0 0 760 262" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
     <defs>
       <marker id="aP2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#c8157a"/></marker>
       <marker id="aBl2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#1a56db"/></marker>
@@ -2364,7 +2790,7 @@ Sujets sans aucun indice temporel (5j adaptation, puis retrait de tous repères 
 <div class="card">
   <div class="ct">🏔️ Hippocampe & PTSD — Étude des jumeaux (Gilbertson)</div>
   <div class="sb">
-  <svg viewBox="0 0 760 190" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
+  <svg viewBox="0 0 760 190" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
     <text x="380" y="17" text-anchor="middle" font-size="13" font-weight="900" fill="#c8157a">HIPPOCAMPE &amp; RISQUE PTSD — ÉTUDE JUMEAUX</text>
     <!-- Grand hippocampe -->
     <rect x="10" y="30" width="220" height="150" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
@@ -2495,7 +2921,7 @@ Sujets sans aucun indice temporel (5j adaptation, puis retrait de tous repères 
   <div class="ct">⚗️ Découverte & Voies dopaminergiques</div>
   <div class="hli"><strong>Dopamine découverte en 1958 par Arvid Carlsson & Hillarp</strong> (Prix Nobel 2000). La dopamine est un NT ET précurseur de la noradrénaline. Produite dans la <em>substance noire</em> et l'<em>ATV</em>.</div>
   <div class="sb">
-    <svg viewBox="0 0 760 275" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
+    <svg viewBox="0 0 760 275" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
       <defs>
         <marker id="aPk" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#c8157a"/></marker>
         <marker id="aRd3" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#dc2626"/></marker>
@@ -2560,7 +2986,7 @@ Sujets sans aucun indice temporel (5j adaptation, puis retrait de tous repères 
       <text x="535" y="216" text-anchor="middle" font-size="8.5" fill="#7f1d1d">→ mais AGGRAVENT les symptômes négatifs (voie C)</text>
       <text x="535" y="232" text-anchor="middle" font-size="8.5" fill="#7f1d1d">Solution partielle : Aripiprazole = agoniste partiel (faible dose)</text>
       <text x="535" y="248" text-anchor="middle" font-size="8.5" fill="#b91c1c" font-weight="700">→ Difficulté de trouver l'équilibre entre symptômes + et -</text>
-      <text x="535" y="260" text-anchor="middle" font-size="8" fill="#9a4830">DA n'est pas seule responsable : hypothèse glutamatergique (kétamine → symptômes schizo)</text>
+      <text x="535" y="260" text-anchor="middle" font-size="7" fill="#9a4830">DA n'est pas seule responsable : hypothèse glutamatergique (kétamine → symptômes schizo)</text>
     </svg>
   </div>
 </div>
@@ -2673,10 +3099,211 @@ Sujets sans aucun indice temporel (5j adaptation, puis retrait de tous repères 
   </div></div>
 </div>
 
+
+<div class="sh">📐 Lire et commenter les graphiques — Méthode (TD Billard)</div>
+<div class="card">
+  <div class="ct">🎓 Vocabulaire et règles pour commenter une figure d'imagerie</div>
+  <div class="hli">Dans les annales, les questions portent souvent sur la <strong>description et l'interprétation de figures</strong>. Voici la méthode enseignée en TD par Billard pour les articles sur la schizophrénie.</div>
+  <div class="g2">
+    <div>
+      <div class="hl"><strong>Effet principal</strong> : comparaison entre un groupe et le groupe contrôle. Toujours formuler ainsi : <em>"On observe un effet principal significatif du volume [structure] entre le groupe [X] et le groupe contrôle [Y] (F=..., p=...)"</em>.<br><br>
+      <strong>Effet d'interaction</strong> : comparaison entre deux groupes expérimentaux (pas vs contrôle). Toujours situer les deux groupes comparés.</div>
+      <div class="hl2"><strong>Correction de Bonferroni</strong> : quand plusieurs comparaisons sont faites simultanément, le seuil de significativité est divisé par le nombre de comparaisons. Ici p&lt;0,02 → seuil réel = 0,02/4 = <strong>0,005</strong>. Si un résultat ne survit pas cette correction → il faut quand même le mentionner mais préciser qu'il n'est <em>"plus significatif après correction de Bonferroni"</em>.</div>
+    </div>
+    <div>
+      <div class="hlw"><strong>Étoiles de significativité :</strong><br>
+      ✦ <strong>*</strong> → p ≤ 0,05<br>
+      ✦ <strong>**</strong> → p ≤ 0,01<br>
+      ✦ <strong>***</strong> → p ≤ 0,001<br>
+      Un point (•) sur un graphique = tendance (non significatif, juste au-dessus de 0,05) → à mentionner mais distinguer clairement des résultats significatifs.</div>
+      <div class="hlg"><strong>Structure d'une réponse type :</strong><br>
+      ① Nommer la structure/variable mesurée<br>
+      ② Dire la direction de l'effet (↑ ou ↓)<br>
+      ③ Préciser les groupes comparés<br>
+      ④ Donner la statistique (F ou t) et le p<br>
+      ⑤ Mentionner si la correction Bonferroni tient ou non</div>
+    </div>
+  </div>
+</div>
+
+<div class="sh">📄 Article Van Haren et al. 2004 — Lecture détaillée des graphiques</div>
+<div class="card">
+  <div class="ct">📊 Comment lire la Figure 1 de Van Haren (jumeaux MZ)</div>
+  <div class="hli">Les graphiques montrent les <strong>résidus non standardisés</strong> des volumes corrigés pour l'âge et le genre. Les légendes : <strong>conc pt1/pt2</strong> = jumeaux concordants (1er et 2ème) · <strong>disc pt</strong> = jumeau malade des paires discordantes · <strong>disc well</strong> = jumeau sain des paires discordantes · <strong>nc1/nc2</strong> = jumeaux contrôles sains.</div>
+  <div class="sb">
+  <svg viewBox="0 0 760 340" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+    <defs><marker id="arH" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#c8157a"/></marker></defs>
+    <text x="380" y="16" text-anchor="middle" font-size="12" font-weight="900" fill="#c8157a">RÉSULTATS VAN HAREN 2004 — SYNTHÈSE DES 4 STRUCTURES</text>
+    <!-- Volume cérébral total -->
+    <rect x="10" y="25" width="355" height="140" rx="12" fill="#fff0f8" stroke="#ffaada" stroke-width="2"/>
+    <text x="187" y="45" text-anchor="middle" font-size="11" font-weight="900" fill="#c8157a">VOLUME CÉRÉBRAL TOTAL</text>
+    <!-- Effet principal concordant -->
+    <rect x="22" y="55" width="330" height="30" rx="6" fill="#ffe0f4" stroke="#ffaada" stroke-width="1"/>
+    <text x="37" y="68" font-size="8.5" font-weight="800" fill="#a0086a">Effet principal :</text>
+    <text x="37" y="80" font-size="8.5" fill="#280a1c">Concordants &lt; Contrôles (F(1,36)=8,24 ; p=.01 **) ✓ génétique</text>
+    <rect x="22" y="90" width="330" height="30" rx="6" fill="#ffe0f4" stroke="#ffaada" stroke-width="1"/>
+    <text x="37" y="103" font-size="8.5" font-weight="800" fill="#a0086a">Effet principal :</text>
+    <text x="37" y="115" font-size="8.5" fill="#280a1c">Discordants &lt; Contrôles (F(1,36)=16,04 ; p&lt;.001 ***) ✓✓</text>
+    <rect x="22" y="125" width="330" height="30" rx="6" fill="#f4c0d1" stroke="#c8157a" stroke-width="1.5"/>
+    <text x="37" y="138" font-size="8.5" font-weight="800" fill="#a0086a">Interaction :</text>
+    <text x="37" y="150" font-size="8.5" fill="#280a1c">Disc. malade &lt; disc. sain ET concordants (F(1,36)=4,41 ; p=.04 *)</text>
+    <!-- Hippocampe -->
+    <rect x="10" y="175" width="355" height="90" rx="12" fill="#fff0f8" stroke="#ffaada" stroke-width="2"/>
+    <text x="187" y="195" text-anchor="middle" font-size="11" font-weight="900" fill="#c8157a">HIPPOCAMPE</text>
+    <rect x="22" y="203" width="330" height="28" rx="6" fill="#ffe0f4" stroke="#ffaada" stroke-width="1"/>
+    <text x="37" y="215" font-size="8.5" font-weight="800" fill="#a0086a">Effet principal :</text>
+    <text x="37" y="226" font-size="8.5" fill="#280a1c">Discordants &lt; Contrôles (F(1,36)=4,34 ; p=.04) ⚠ non sig. après Bonferroni</text>
+    <rect x="22" y="235" width="330" height="22" rx="6" fill="#f3f4f6"/>
+    <text x="37" y="249" font-size="8.5" fill="#6b7280">Pas d'effet d'interaction significatif → rôle environnemental partiel</text>
+    <!-- 3ème ventricule -->
+    <rect x="390" y="25" width="355" height="140" rx="12" fill="#fff0f8" stroke="#ffaada" stroke-width="2"/>
+    <text x="567" y="45" text-anchor="middle" font-size="11" font-weight="900" fill="#c8157a">3ÈME VENTRICULE</text>
+    <rect x="402" y="55" width="330" height="30" rx="6" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="1"/>
+    <text x="417" y="68" font-size="8.5" font-weight="800" fill="#6b7280">Tendance (non sig.) :</text>
+    <text x="417" y="80" font-size="8.5" fill="#374151">Concordants : tendance ↑ 3V vs contrôles (F=3,95 ; p=.06) • non sig.</text>
+    <rect x="402" y="90" width="330" height="30" rx="6" fill="#ffe0f4" stroke="#ffaada" stroke-width="1"/>
+    <text x="417" y="103" font-size="8.5" font-weight="800" fill="#a0086a">Interaction :</text>
+    <text x="417" y="115" font-size="8.5" fill="#280a1c">Disc. malade : ↑ 3V vs disc. sain et contrôles (F=4,54 ; p=.04 *)</text>
+    <rect x="402" y="125" width="330" height="30" rx="6" fill="#f3f4f6"/>
+    <text x="417" y="138" font-size="8.5" fill="#6b7280">⚠ non significatif après correction Bonferroni</text>
+    <text x="417" y="150" font-size="8.5" fill="#6b7280">→ Environnement joue un rôle (mais correction atténue)</text>
+    <!-- Ventricules latéraux -->
+    <rect x="390" y="175" width="355" height="105" rx="12" fill="#fff0f8" stroke="#c8157a" stroke-width="2.5"/>
+    <text x="567" y="195" text-anchor="middle" font-size="11" font-weight="900" fill="#c8157a">VENTRICULES LATÉRAUX ⭐ Résultat le + solide</text>
+    <rect x="402" y="203" width="330" height="28" rx="6" fill="#f4c0d1" stroke="#c8157a" stroke-width="1.5"/>
+    <text x="417" y="215" font-size="8.5" font-weight="800" fill="#a0086a">Interaction disc. vs contrôles :</text>
+    <text x="417" y="226" font-size="8.5" fill="#280a1c">Disc. malade : ↑ VL vs disc. sain et contrôles (F=13,70 ; p=.001 ***)</text>
+    <rect x="402" y="235" width="330" height="28" rx="6" fill="#f4c0d1" stroke="#c8157a" stroke-width="1.5"/>
+    <text x="417" y="247" font-size="8.5" font-weight="800" fill="#a0086a">Interaction disc. vs concordants :</text>
+    <text x="417" y="259" font-size="8.5" fill="#280a1c">Disc. malade : ↑ VL vs concordants (F=6,15 ; p=.02 *) ✓ survit Bonferroni</text>
+    <!-- Conclusion -->
+    <rect x="10" y="275" width="740" height="55" rx="10" fill="#ede5ff" stroke="#c4a8ff" stroke-width="1.5"/>
+    <text x="380" y="294" text-anchor="middle" font-size="10" font-weight="900" fill="#5010b0">CONCLUSION : Génétique vs Environnement</text>
+    <text x="380" y="310" text-anchor="middle" font-size="7.5" fill="#170a30">Volume cérébral total ↓ = marqueur GÉNÉTIQUE (retrouvé dans les 2 groupes schizophrènes)</text>
+    <text x="380" y="323" text-anchor="middle" font-size="7.5" fill="#170a30">Hippocampe ↓ + Ventricules latéraux ↑ chez disc. malade = influence ENVIRONNEMENTALE (même gènes, effet différent entre jumeaux)</text>
+  </svg>
+  </div>
+  <div class="hlw"><strong>Pourquoi les paires discordantes sont clés ?</strong> Les deux jumeaux ont exactement le même génome (MZ). Si le jumeau malade diffère du jumeau sain, c'est forcément dû à l'environnement (stress prénatal, hypoxie, etc.) et non aux gènes. C'est ce qui permet de distinguer la part génétique de la part environnementale.</div>
+</div>
+
+<div class="sh">📄 Article Guma et al. (TD3) — Antipsychotiques &amp; récepteur D2</div>
+<div class="card">
+  <div class="ct">🐭 Protocole expérimental</div>
+  <div class="hli">Objectif : mesurer comment les récepteurs D2 médient les effets des antipsychotiques sur le <strong>volume cérébral</strong>. IRM toutes les 3 semaines pendant 9 semaines.</div>
+  <div class="g2">
+    <div>
+      <div class="hl"><strong>2 génotypes :</strong><br>
+      • <strong>WT</strong> (Wild Type) = souris sauvages avec récepteurs D2 normaux<br>
+      • <strong>D2KO</strong> = souris knock-out sans récepteurs D2 (délétion génétique)</div>
+      <div class="hl2"><strong>3 traitements :</strong><br>
+      • <strong>SAL</strong> = solution saline (contrôle)<br>
+      • <strong>HAL</strong> = halopéridol 1 mg/kg (antipsychotique typique, antagoniste D2 fort)<br>
+      • <strong>CLZ</strong> = clozapine 5 mg/kg (antipsychotique atypique, antagoniste D2 partiel)</div>
+    </div>
+    <div>
+      <div class="hlw"><strong>Design : 3 facteurs</strong><br>
+      Génotype (WT / D2KO) × Traitement (SAL / HAL / CLZ) × Temps (0, 3, 6, 9 semaines)<br><br>
+      <strong>Structures mesurées :</strong><br>
+      TBV (Total Brain Volume) · PL (aire Prélimbique = CPF) · STR (Striatum) · HP (Hippocampe)</div>
+      <div class="hlg"><strong>Hypothèse des auteurs :</strong><br>
+      Administration chronique d'APD → ↓ volume PFC et HP · ↑ volume STR<br>
+      D2KO → changements atténués car pas de récepteurs cibles</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="ct">📊 Résultats détaillés — 4 structures</div>
+  <div class="sb">
+  <svg viewBox="0 0 760 370" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+    <text x="380" y="16" text-anchor="middle" font-size="12" font-weight="900" fill="#c8157a">RÉSULTATS GUMA ET AL. — EFFET DES ANTIPSYCHOTIQUES SUR LE CERVEAU</text>
+    <!-- TBV -->
+    <rect x="10" y="25" width="360" height="155" rx="12" fill="#fff0f8" stroke="#ffaada" stroke-width="2"/>
+    <text x="190" y="44" text-anchor="middle" font-size="11" font-weight="900" fill="#c8157a">VOLUME CÉRÉBRAL TOTAL (TBV)</text>
+    <rect x="22" y="52" width="335" height="36" rx="6" fill="#ffe0f4" stroke="#ffaada" stroke-width="1"/>
+    <text x="37" y="66" font-size="8.5" font-weight="800" fill="#a0086a">Interaction WT (9 sem) :</text>
+    <text x="37" y="78" font-size="8.5" fill="#280a1c">WT HAL &lt; WT CLZ (p=.02 *) · WT HAL &lt; WT SAL (p=.001 **)</text>
+    <rect x="22" y="93" width="335" height="24" rx="6" fill="#f3f4f6"/>
+    <text x="37" y="108" font-size="8.5" fill="#374151">→ HAL diminue significativement le volume cérébral total</text>
+    <rect x="22" y="122" width="335" height="24" rx="6" fill="#dcfce7" stroke="#22c55e" stroke-width="1"/>
+    <text x="37" y="137" font-size="8.5" fill="#064e3b">D2KO : aucun effet significatif du traitement → confirme rôle du récepteur D2</text>
+    <rect x="22" y="150" width="335" height="24" rx="6" fill="#f0fdf4"/>
+    <text x="37" y="163" font-size="8.5" fill="#374151">CLZ → pas de diminution significative du TBV (avantage vs HAL)</text>
+    <!-- PL = Cortex prélimbique -->
+    <rect x="390" y="25" width="360" height="155" rx="12" fill="#fff0f8" stroke="#ffaada" stroke-width="2"/>
+    <text x="570" y="44" text-anchor="middle" font-size="11" font-weight="900" fill="#c8157a">AIRE PRÉLIMBIQUE (CPF)</text>
+    <rect x="402" y="52" width="335" height="36" rx="6" fill="#ffe0f4" stroke="#c8157a" stroke-width="1.5"/>
+    <text x="417" y="66" font-size="8.5" font-weight="800" fill="#a0086a">WT HAL (3 sem) :</text>
+    <text x="417" y="78" font-size="8.5" fill="#280a1c">↓ vs SAL (p=.007) ✓ survit Bonferroni · ↓ vs SAL à 9 sem (p=.002) ✓</text>
+    <rect x="402" y="93" width="335" height="36" rx="6" fill="#ffe0f4" stroke="#c8157a" stroke-width="1.5"/>
+    <text x="417" y="107" font-size="8.5" font-weight="800" fill="#a0086a">WT CLZ vs HAL :</text>
+    <text x="417" y="119" font-size="8.5" fill="#280a1c">↑ vs HAL à 3 sem (p=.003) ✓ · ↑ vs HAL à 9 sem (p=.007) ✓ Bonferroni</text>
+    <rect x="402" y="134" width="335" height="24" rx="6" fill="#dcfce7" stroke="#22c55e" stroke-width="1"/>
+    <text x="417" y="149" font-size="8.5" fill="#064e3b">D2KO : aucune différence → effet médié par récepteur D2 ✓</text>
+    <rect x="402" y="160" width="335" height="14" rx="4" fill="#f0fdf4"/>
+    <text x="570" y="170" text-anchor="middle" font-size="8" fill="#374151">HAL ↓ CPF · CLZ ↑ CPF (effet protecteur atypique)</text>
+    <!-- Striatum -->
+    <rect x="10" y="190" width="360" height="130" rx="12" fill="#fff0f8" stroke="#ffaada" stroke-width="2"/>
+    <text x="190" y="209" text-anchor="middle" font-size="11" font-weight="900" fill="#c8157a">STRIATUM (STR)</text>
+    <rect x="22" y="217" width="335" height="36" rx="6" fill="#ffe0f4" stroke="#c8157a" stroke-width="1.5"/>
+    <text x="37" y="231" font-size="8.5" font-weight="800" fill="#a0086a">WT HAL (6 sem) :</text>
+    <text x="37" y="243" font-size="8.5" fill="#280a1c">↑ vs SAL (p=.018) · ↑ vs CLZ (p=.017) → augmentation striatum</text>
+    <rect x="22" y="258" width="335" height="24" rx="6" fill="#ffe0f4" stroke="#ffaada"/>
+    <text x="37" y="269" font-size="8.5" fill="#280a1c">WT HAL (9 sem) : ↑ vs CLZ (p=.01 **)</text>
+    <rect x="22" y="287" width="335" height="24" rx="6" fill="#dcfce7" stroke="#22c55e" stroke-width="1"/>
+    <text x="37" y="302" font-size="8.5" fill="#064e3b">D2KO : ↑ STR dans tous les groupes (croissance naturelle) mais pas d'effet traitement</text>
+    <!-- Hippocampe -->
+    <rect x="390" y="190" width="360" height="130" rx="12" fill="#fff0f8" stroke="#ffaada" stroke-width="2"/>
+    <text x="570" y="209" text-anchor="middle" font-size="11" font-weight="900" fill="#c8157a">HIPPOCAMPE (HP)</text>
+    <rect x="402" y="217" width="335" height="36" rx="6" fill="#ffe0f4" stroke="#c8157a" stroke-width="1.5"/>
+    <text x="417" y="231" font-size="8.5" font-weight="800" fill="#a0086a">WT CLZ vs HAL :</text>
+    <text x="417" y="243" font-size="8.5" fill="#280a1c">↑ HP vs HAL à 3 sem (p=.012) · 6 sem (p=.05) · 9 sem (p=.04 *)</text>
+    <rect x="402" y="258" width="335" height="24" rx="6" fill="#f3f4f6"/>
+    <text x="417" y="272" font-size="8.5" fill="#374151">HAL WT : légère ↓ HP (tendance, non sig. Bonferroni)</text>
+    <rect x="402" y="287" width="335" height="24" rx="6" fill="#dcfce7" stroke="#22c55e" stroke-width="1"/>
+    <text x="417" y="302" font-size="8.5" fill="#064e3b">D2KO : aucune différence de traitement → effet via D2</text>
+    <!-- Conclusion -->
+    <rect x="10" y="330" width="740" height="32" rx="10" fill="#ede5ff" stroke="#c4a8ff" stroke-width="1.5"/>
+    <text x="380" y="349" text-anchor="middle" font-size="9.5" font-weight="900" fill="#5010b0">Conclusion : HAL → ↓ TBV ↓ CPF ↑ STR · CLZ → ↑ CPF ↑ HP · D2KO = aucun effet → changements médiés par récepteur D2</text>
+  </svg>
+  </div>
+  <div class="g2" style="margin-top:12px">
+    <div class="hl"><strong>Ce que ça signifie cliniquement :</strong> Les antipsychotiques typiques (HAL) modifient le volume cérébral de façon significative (↓ CPF, ↑ striatum) via les récepteurs D2. Les atypiques (CLZ) ont un profil différent — moins délétères voire protecteurs pour le CPF et l'hippocampe. Les souris D2KO ne montrent pas ces effets → preuve que c'est bien le récepteur D2 qui médie ces changements.</div>
+    <div class="hl2"><strong>Lien avec la schizophrénie :</strong> Les patients sous antipsychotiques typiques au long cours présentent des modifications neuroanatomiques similaires à certains changements observés dans la schizophrénie. Question ouverte : ces changements cérébraux sont-ils dus à la maladie ou au traitement ?</div>
+  </div>
+</div>
+
+<div class="sh">🃏 Flashcards — Articles Van Haren &amp; Guma (Billard)</div>
+<div class="fc-g">
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Van Haren 2004</div><div class="ft">Groupes de l'étude (5)</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">① MZ concordants (14 paires, 2 malades) ② MZ discordants (10 paires, 1 malade/1 sain) ③ MZ contrôles (17 paires) ④ Siblings non-jumeaux (22 paires) ⑤ Contrôles non-apparentés (56 paires). Limite : hommes surreprésentés dans groupes schizophrènes vs femmes contrôles.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Van Haren 2004</div><div class="ft">Résultat clé ventricules latéraux</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">Interaction discordants vs contrôles : jumeau malade ↑ VL vs jumeau sain ET contrôles (F=13,70 ; p=.001 ***). Interaction disc. vs concordants (p=.02). Survit à la correction Bonferroni → résultat le plus solide. → Effet <strong>environnemental</strong> sur les VL.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Van Haren 2004</div><div class="ft">Génétique ou environnement ?</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">• Volume cérébral total ↓ = marqueur <strong>génétique</strong> (concordants ET discordants &lt; contrôles). • Ventricules latéraux ↑ + hippocampe ↓ chez le jumeau <em>malade</em> des paires discordantes = influence <strong>environnementale</strong> (même gènes, mais effets différents entre jumeaux).</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Guma et al.</div><div class="ft">HAL vs CLZ sur le CPF et HP</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">HAL (typique) : ↓ CPF (p=.007 à 3 sem, p=.002 à 9 sem, survit Bonferroni). CLZ (atypique) : ↑ CPF vs HAL (p=.003 à 3 sem). HP : CLZ &gt; HAL (p=.012 à 3 sem). → CLZ protège CPF et HP. D2KO : aucun effet → effets médiés par récepteur D2.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Guma et al.</div><div class="ft">Effet HAL sur le striatum</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">WT HAL : ↑ STR vs SAL à 6 sem (p=.018) et vs CLZ à 6 sem (p=.017) et 9 sem (p=.01). CLZ : pas d'augmentation striatum. D2KO : croissance naturelle du STR mais pas d'effet du traitement. → HAL augmente le striatum via D2, CLZ non.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Méthode Billard</div><div class="ft">Effet principal vs interaction</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd"><strong>Effet principal</strong> = comparaison groupe X vs contrôle. <strong>Interaction</strong> = comparaison entre 2 groupes expérimentaux. Bonferroni = diviser p par nb de comparaisons (ici ÷4 → seuil 0,005). Étoiles : * p≤0,05 · ** p≤0,01 · *** p≤0,001. Point sur graphique = tendance non significative → mentionner mais distinguer.</div></div>
+  </div></div>
+</div>
 </section>
 
 <script>
-const themes = ['t1','t2','t3','t4','t5','t6'];
+const themes = ['t1','t2','t3','t4','t5','t6','t7','t8'];
 function go(id, idx) {
   document.querySelectorAll('.sec').forEach(s => s.classList.remove('on'));
   document.querySelectorAll('.tbtn').forEach(b => b.classList.remove('on'));
@@ -2684,6 +3311,13 @@ function go(id, idx) {
   document.querySelectorAll('.tbtn')[idx].classList.add('on');
   document.body.className = themes[idx];
   window.scrollTo({top:0,behavior:'smooth'});
+}
+function filterA(year, btn) {
+  document.querySelectorAll('.fb').forEach(b => b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.ac[data-year]').forEach(c => {
+    c.style.display = (year === 'all' || c.dataset.year === year) ? 'block' : 'none';
+  });
 }
 </script>
 <section id="s6" class="sec">
@@ -2765,7 +3399,7 @@ function go(id, idx) {
     <div>
       <div class="hl"><strong>Protéine amyloïde :</strong> Non produite directement. L'organisme produit son précurseur <strong>APP</strong> (Amyloid Precursor Protein) qui doit être clivé 2 fois par des enzymes (sécrétases).</div>
       <div class="sb">
-        <svg viewBox="0 0 520 190" xmlns="http://www.w3.org/2000/svg" style="max-width:520px;font-family:Nunito,sans-serif;">
+        <svg viewBox="0 0 520 190" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
           <defs>
             <marker id="arB" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#c45c00"/></marker>
             <marker id="arBr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#dc2626"/></marker>
@@ -2831,7 +3465,7 @@ function go(id, idx) {
 <div class="card">
   <div class="ct">📈 Progression des DNF — 10 stades (Delacourte)</div>
   <div class="sb">
-    <svg viewBox="0 0 760 180" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
+    <svg viewBox="0 0 760 180" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
       <text x="380" y="15" text-anchor="middle" font-size="12" font-weight="900" fill="#c45c00">PROGRESSION SÉQUENTIELLE DES DNF — 10 STADES</text>
       <!-- Timeline -->
       <line x1="20" y1="60" x2="740" y2="60" stroke="#ffc680" stroke-width="3"/>
@@ -2871,7 +3505,7 @@ function go(id, idx) {
       <text x="720" y="106" text-anchor="middle" font-size="7.5" fill="#b91c1c" font-weight="700">MA terminale</text>
       <!-- Flèche progression -->
       <text x="380" y="150" text-anchor="middle" font-size="9.5" font-weight="800" fill="#c45c00">Progression séquentielle, hiérarchique et caractéristique ↗</text>
-      <text x="380" y="165" text-anchor="middle" font-size="8.5" fill="#a04800">Stades 0-3 = vieillissement normal (pas de symptômes) · Stade 3+ = MCI possible · Stade 7+ = MA diagnostiquée</text>
+      <text x="380" y="165" text-anchor="middle" font-size="7.5" fill="#a04800">Stades 0-3 = vieillissement normal · Stade 3+ = MCI possible · Stade 7+ = MA diagnostiquée</text>
     </svg>
   </div>
 </div>
@@ -2880,7 +3514,7 @@ function go(id, idx) {
 <div class="card">
   <div class="ct">🔥 Hypothèse de la cascade amyloïde</div>
   <div class="sb">
-    <svg viewBox="0 0 760 240" xmlns="http://www.w3.org/2000/svg" style="max-width:760px;font-family:Nunito,sans-serif;">
+    <svg viewBox="0 0 760 240" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
       <defs>
         <marker id="arB2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#c45c00"/></marker>
         <marker id="arR2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#dc2626"/></marker>
@@ -2918,7 +3552,7 @@ function go(id, idx) {
       <line x1="170" y1="154" x2="100" y2="198" stroke="#dc2626" stroke-width="2" marker-end="url(#arR2)"/>
       <rect x="10" y="196" width="160" height="36" rx="9" fill="#fecaca" stroke="#dc2626" stroke-width="2.5"/>
       <text x="90" y="218" text-anchor="middle" font-size="9.5" font-weight="900" fill="#b91c1c">MORT NEURONALE</text>
-      <text x="380" y="240" text-anchor="middle" font-size="8" fill="#a04800" font-style="italic">↑ Neuroinflammation ↔ ↑ Dysfonct. neuronal : cercle vicieux · Défense initiale → devient chronique et délétère</text>
+      <text x="380" y="240" text-anchor="middle" font-size="7" fill="#a04800" font-style="italic">↑ Neuroinflammation ↔ ↑ Dysfonct. neuronal : cercle vicieux · Défense initiale → devient chronique et délétère</text>
     </svg>
   </div>
   <div class="g2">
@@ -3100,6 +3734,170 @@ function go(id, idx) {
 
 </section>
 
+
+
+<section id="s7" class="sec">
+<div class="prob-wrap">
+  <h2>📊 Probabilités de révision</h2>
+  <p>Session 2 · 2025-2026 · Analyse basée sur les annales 2021–2025 et la nouvelle équipe enseignante</p>
+  <div class="info-box">ℹ️ <strong>Nouvelle équipe depuis 2024-2025 :</strong> Baque-Cazenave (dépression, alcool, TSA), Bellanger (sommeil + chronobiologie), Soulet (soif, faim, régulation hydrominérale). Les thèmes de Durantou sont repris par Bellanger et Soulet — tout reste potentiellement à l'examen !</div>
+
+  <div class="tc">
+    <div class="tc-head"><div><div class="tc-name">Maladie d'Alzheimer — physiopathologie &amp; thérapeutiques</div><div class="tc-prof">Mme Bardou</div></div><span class="pb pb-h">⭐⭐⭐ Très probable</span></div>
+    <div class="bar-bg"><div class="bar-f bh" style="width:95%"></div></div>
+    <div class="tc-meta"><span>✓ Session 1 déc. 2025</span><span>✓ TD déc. 2023</span><span>✓ Thème phare Bardou</span></div>
+    <div class="tc-note">La session 2 approfondit souvent le thème de session 1. Attendu sous forme de dissertation ou analyse de figure (piscine de Morris, traitements anti-Aβ). Réviser absolument : plaques amyloïdes, DNF, APP/PS1, inhibiteurs AChE, immunothérapie.</div>
+  </div>
+
+  <div class="tc">
+    <div class="tc-head"><div><div class="tc-name">Sommeil à ondes lentes — EEG, contrôle, fonctions</div><div class="tc-prof">Mme Bellanger</div></div><span class="pb pb-h">⭐⭐⭐ Très probable</span></div>
+    <div class="bar-bg"><div class="bar-f bh" style="width:90%"></div></div>
+    <div class="tc-meta"><span>✓ Session 1 déc. 2025</span><span>⚠ Peu d'annales (nouvelle prof)</span></div>
+    <div class="tc-note">Session 1 portait sur le sommeil à ondes lentes → session 2 peut approfondir (REM, parasomnies) OU basculer vers la chronobiologie. Bellanger enseigne les deux. À réviser en priorité avec les rythmes circadiens.</div>
+  </div>
+
+  <div class="tc">
+    <div class="tc-head"><div><div class="tc-name">Schizophrénie — génétique, neuroimagerie, dopamine</div><div class="tc-prof">Mme Haelewyn / Mme Leroux</div></div><span class="pb pb-h">⭐⭐⭐ Très probable</span></div>
+    <div class="bar-bg"><div class="bar-f bh" style="width:88%"></div></div>
+    <div class="tc-meta"><span>✓ Déc. 2024</span><span>✓ Juin 2024</span><span>✓ Déc. 2023</span><span>✓ Déc. 2022</span></div>
+    <div class="tc-note">Thème le plus récurrent de l'UE21 sur toutes les années. GMV, méthodes génétiques (jumeaux MZ/DZ, adoption, GWAS), dopamine comme cible des antipsychotiques. Lecture de tableaux/figures d'imagerie quasi-certaine.</div>
+  </div>
+
+  <div class="tc">
+    <div class="tc-head"><div><div class="tc-name">Dépression — hypothèses neurobiologiques &amp; traitements</div><div class="tc-prof">Mme Baque-Cazenave</div></div><span class="pb pb-h">⭐⭐ Probable</span></div>
+    <div class="bar-bg"><div class="bar-f bh" style="width:80%"></div></div>
+    <div class="tc-meta"><span>⚠ Nouvelle intervenante → peu d'annales</span><span>✓ Thème central de son cours</span></div>
+    <div class="tc-note">Nouvelle prof = style d'examen inconnu, mais c'est son thème principal. Réviser : hypothèse monoaminergique (5-HT/DA/NA), ISRS, cascade P11→BDNF, hypothèse neurotrophique, neuroinflammation/cytokines.</div>
+  </div>
+
+  <div class="tc">
+    <div class="tc-head"><div><div class="tc-name">Rythmes circadiens &amp; chronobiologie</div><div class="tc-prof">Mme Bellanger (reprend Durantou)</div></div><span class="pb pb-m">⭐⭐ Modérément probable</span></div>
+    <div class="bar-bg"><div class="bar-f bm" style="width:65%"></div></div>
+    <div class="tc-meta"><span>⚠ Nouveau prof → style d'examen inconnu</span><span>✓ Fréquent sous Durantou (2021–2023)</span></div>
+    <div class="tc-note">NSC, mélatonine, Per/Bmal1, faisceau rétino-hypothalamique. Attention : session 1 = sommeil à ondes lentes → session 2 pourrait justement porter sur la chronobiologie. À ne pas négliger.</div>
+  </div>
+
+  <div class="tc">
+    <div class="tc-head"><div><div class="tc-name">Troubles anxieux — hippocampe, amygdale, neuroimagerie</div><div class="tc-prof">Mme Haelewyn / Mme Leroux</div></div><span class="pb pb-m">⭐⭐ Modérément probable</span></div>
+    <div class="bar-bg"><div class="bar-f bm" style="width:75%"></div></div>
+    <div class="tc-meta"><span>✓ Déc. 2024 (Gold et al. 2017)</span><span>✓ Hippocampe droit p=0,02</span></div>
+    <div class="tc-note">Article Gold 2017 très récurrent. Hippocampe droit réduit chez les enfants anxieux, corrélation négative avec la sévérité (p=0,007). Attendre une analyse de figure ou tableau.</div>
+  </div>
+
+  <div class="tc">
+    <div class="tc-head"><div><div class="tc-name">Soif, faim &amp; régulation hydrominérale</div><div class="tc-prof">Mme Soulet (reprend Durantou)</div></div><span class="pb pb-m">⭐⭐ Modérément probable</span></div>
+    <div class="bar-bg"><div class="bar-f bm" style="width:58%"></div></div>
+    <div class="tc-meta"><span>⚠ Nouveau prof → style d'examen inconnu</span><span>✓ Fréquent sous Durantou (2021–2023)</span></div>
+    <div class="tc-note">Vasopressine/ADH, angiotensine 2, leptine, noyaux hypothalamiques (arqué, paraventriculaire, ventromédian), microbiote et comportement alimentaire, intestin grêle = 2ème cerveau. Contenu testé depuis plusieurs années.</div>
+  </div>
+
+  <div class="tc">
+    <div class="tc-head"><div><div class="tc-name">PTSD — critères DSM-5, SNV, neurobiologie</div><div class="tc-prof">Mme Baudron</div></div><span class="pb pb-m">⭐⭐ Modérément probable</span></div>
+    <div class="bar-bg"><div class="bar-f bm" style="width:62%"></div></div>
+    <div class="tc-meta"><span>✓ Déc. 2023 (Maubert)</span><span>✓ SNV ortho/parasympathique</span></div>
+    <div class="tc-note">Critères A à H du DSM-5, SNV dans le PTSD (orthosympathique), schéma hypothalamus-hypophyse. Peut revenir sous forme QCM vrai/faux ou légendage de schéma.</div>
+  </div>
+
+  <div class="tc">
+    <div class="tc-head"><div><div class="tc-name">Alcool sur le SNC — GABA, SAF, bumétanide</div><div class="tc-prof">Mme Baque-Cazenave</div></div><span class="pb pb-m">⭐⭐ Modérément probable</span></div>
+    <div class="bar-bg"><div class="bar-f bm" style="width:65%"></div></div>
+    <div class="tc-meta"><span>✓ Déc. 2021</span><span>✓ Juin 2024</span><span>✓ Pharmacocinétique + NKCC1</span></div>
+    <div class="tc-note">Pharmacocinétique éthanol, GABA excitateur in utero (NKCC1), syndrome d'alcoolisation fœtale, bumétanide. Réapparu plusieurs fois. Souvent couplé avec les TSA.</div>
+  </div>
+
+  <div class="tc">
+    <div class="tc-head"><div><div class="tc-name">TSA — troubles du spectre autistique</div><div class="tc-prof">Mme Baque-Cazenave</div></div><span class="pb pb-m">⭐ Modérément probable</span></div>
+    <div class="bar-bg"><div class="bar-f bm" style="width:58%"></div></div>
+    <div class="tc-meta"><span>✓ Déc. 2021</span><span>✓ Juin 2024</span><span>✓ Modèle VPA</span></div>
+    <div class="tc-note">Critères DSM-5, facteurs de risque idiopathiques, modèle valproate chez la souris, vocalisations ultrasonores, bumétanide prénatal. Souvent associé à l'alcool dans le même sujet.</div>
+  </div>
+
+  <div class="tc">
+    <div class="tc-head"><div><div class="tc-name">Cannabinoïdes &amp; cannabis — CB1/CB2, effets</div><div class="tc-prof">Mme Bardou (TD)</div></div><span class="pb pb-l">⭐ Moins probable</span></div>
+    <div class="bar-bg"><div class="bar-f bl" style="width:35%"></div></div>
+    <div class="tc-meta"><span>✓ Déc. 2023 (TD Bardou)</span><span>✗ Session 1 2025 = Alzheimer utilisé</span></div>
+    <div class="tc-note">Bardou a utilisé son heure de session 1 sur Alzheimer. Moins probable, mais CB1/CB2, anandamide, mécanisme dopaminergique du THC et effets chroniques restent au programme.</div>
+  </div>
+
+</div>
+</section>
+
+<section id="s8" class="sec">
+<div class="ann-wrap">
+  <h2>📋 Annales 2021 – 2025</h2>
+  <p>Toutes les questions des sessions précédentes. Les sujets Durantou (🟡) sont repris par Bellanger et Soulet — ils restent à réviser !</p>
+
+  <div class="frow">
+    <button class="fb on" onclick="filterA('all',this)">Toutes</button>
+    <button class="fb" onclick="filterA('2025',this)">2025</button>
+    <button class="fb" onclick="filterA('2024',this)">2024</button>
+    <button class="fb" onclick="filterA('2023',this)">2023</button>
+    <button class="fb" onclick="filterA('2022',this)">2022</button>
+    <button class="fb" onclick="filterA('2021',this)">2021</button>
+  </div>
+
+  <div class="ac" data-year="2025">
+    <div class="ac-yr">Décembre 2025 · Session 1 <span class="s2b">Votre session 1 — non passée</span></div>
+    <div><span class="ac-prof">Mme Bardou (60 min)</span><span class="ac-prof">Mme Bellanger (60 min)</span></div>
+    <div class="ac-q"><strong>Bardou :</strong> En quoi la compréhension des mécanismes physiopathologiques de la maladie d'Alzheimer ouvre-t-elle la voie à de nouvelles approches thérapeutiques ? (physiopathologie + stratégies actuelles/futures + schémas si nécessaire)</div>
+    <div class="ac-q"><strong>Bellanger :</strong> Qu'est-ce que le sommeil à ondes lentes, comment l'observer, comment est-il contrôlé et à quoi sert-il ? (plan suggéré : intro/déf ; technique EEG + caractéristiques physiologiques ; contrôle SNC ; fonctions)</div>
+  </div>
+
+  <div class="ac" data-year="2024">
+    <div class="ac-yr">Décembre 2024 · Session 1</div>
+    <div><span class="ac-prof">Haelewyn A.</span><span class="ac-prof">Leroux E.</span><span class="ac-prof">Billard P.</span></div>
+    <div class="ac-q"><strong>Q1 :</strong> Citez une modification cérébrale largement décrite chez les patients schizophrènes comparativement à des sujets contrôles. <em>→ Réduction du volume de matière grise (GMV)</em></div>
+    <div class="ac-q"><strong>Q2 :</strong> Citez quelle méthode permet d'estimer l'incidence de la génétique en interaction avec l'environnement. <em>→ Études de jumeaux MZ/DZ, ou études d'adoption</em></div>
+    <div class="ac-q"><strong>Q3a (Gold et al. 2017 — Tableau 2) :</strong> Décrire le(s) résultat(s) significatif(s) : hippocampe droit anxieux (4005 mm³) &lt; sains (4215 mm³), t=−2,36, p=0,02 ✓. Hippocampe gauche (p=0,06) et amygdale (p=0,13 et 0,73) : non significatifs.</div>
+    <div class="ac-q"><strong>Q3b (Gold et al. 2017 — Figure 2) :</strong> Corrélation négative significative entre le volume du GMV de l'hippocampe droit et la sévérité totale de l'anxiété (p=0,007, N=108). Plus le volume hippocampique est petit, plus l'anxiété est sévère, chez les deux groupes.</div>
+    <div class="ac-q"><strong>Q4 (Borgwardt et al. 2010 — Figure 1) :</strong> Résultats significatifs : les groupes diffèrent sur le GMV total (p&lt;0,0001 après correction âge/genre). Jumeaux schizophrènes ET cogemins non-psychotiques de paires discordantes ont un GMV &lt; contrôles sains. Pas de différence entre schizophrènes concordants vs discordants.</div>
+  </div>
+
+  <div class="ac" data-year="2024">
+    <div class="ac-yr">Juin 2024 · Session 2</div>
+    <div><span class="ac-prof">Haelewyn A. (1h)</span><span class="ac-prof">Bonnet/Baque-Cazenave (1h TD)</span></div>
+    <div class="ac-q"><strong>Haelewyn Q1 :</strong> Citez 4 méthodes permettant d'étudier l'étiologie génétique de la schizophrénie. <em>→ Études de jumeaux, d'adoption, de liaison génétique, GWAS (genome-wide association study), épigénétique…</em></div>
+    <div class="ac-q"><strong>Haelewyn Q2 :</strong> Quel neurotransmetteur est la cible des psychotropes dans le traitement de la schizophrénie ? <em>→ La dopamine</em></div>
+    <div class="ac-q"><strong>Haelewyn Q3a (Pichionni 2017 — Table 1) :</strong> Décrire les participants : 70 schizophrènes, 16 jumeaux MZ discordants non-atteints, 6 jumeaux DZ discordants non-atteints, 76 contrôles sains. Seule la classe sociale à la naissance diffère significativement (p=0,019).</div>
+    <div class="ac-q"><strong>Haelewyn Q3b (Pichionni 2017 — Table 2) :</strong> Résultats significatifs : volume cerveau entier, matière grise et blanche → schizophrènes &lt; contrôles (p&lt;0,001 à 0,016). Hippocampe gauche DZ discordants &lt; contrôles (p=0,001). Hippocampe droit non significatif.</div>
+    <div class="ac-q"><strong>Baque-Cazenave Partie 1 — Alcool Q1 (30L) :</strong> Rappeler les propriétés physico-chimiques de l'éthanol + décrire les étapes pharmacocinétiques dans l'organisme humain.</div>
+    <div class="ac-q"><strong>Baque-Cazenave Q2 (15L) :</strong> Définir le binge drinking, la tranche d'âge concernée, ses conséquences. Puis : mise en place et validation d'un modèle animal préclinique + présenter un modèle et des approches pour le valider.</div>
+    <div class="ac-q"><strong>Baque-Cazenave Q3 (15L) :</strong> Bumétanide bloque NKCC1 → effets sur système GABA → impact SNC adulte. Effets de l'alcool sur ce système + structure cérébrale affectée. Conclure sur le potentiel thérapeutique du bumétanide.</div>
+    <div class="ac-q"><strong>Baque-Cazenave Partie 2 — TSA (30L) :</strong> Définir l'autisme + atteintes associées + critères diagnostiques DSM-5 + facteurs de risque des formes idiopathiques.</div>
+  </div>
+
+  <div class="ac" data-year="2023">
+    <div class="ac-yr">Décembre 2023 · Session 1</div>
+    <div><span class="ac-prof">Mme Bardou (TD, 1h)</span><span class="ac-prof">M. Durantou (CM, 1h) 🟡</span><span class="ac-prof">Mme Maubert (CM, 30 min)</span></div>
+    <div class="ac-q"><strong>Bardou Q1 :</strong> Définir "cannabinoïde", citer 3 exemples (endocannabinoïdes, phytocannabinoïdes, synthétiques).</div>
+    <div class="ac-q"><strong>Bardou Q2 :</strong> Décrire le système endocannabinoïde : lieu de synthèse, d'action, récepteurs CB1/CB2, signalisation rétrograde.</div>
+    <div class="ac-q"><strong>Bardou Q3 :</strong> Citer ~10 effets physiologiques à court et long terme de la prise de cannabis.</div>
+    <div class="ac-q"><strong>Bardou Q4a :</strong> Expliquer en quoi consiste le test de la piscine de Morris chez le rongeur.</div>
+    <div class="ac-q"><strong>Bardou Q4b+c :</strong> Décrire et interpréter la figure (Control vs AD vs AD+Ttt) + proposer un titre.</div>
+    <div class="ac-q"><strong>Bardou Q5 :</strong> À partir de vos connaissances sur la physiopathologie de l'Alzheimer, proposer des hypothèses sur le mode d'action du traitement.</div>
+    <div class="ac-q repris"><strong>Durantou 🟡 (repris par Bellanger &amp; Soulet) :</strong> Mélatonine et rythmes chronobiologiques ; NSC hors du temps (horloge faible) ; pertes hydrominérales et compartiment intracellulaire ; comportement d'autostimulation et neurones GABAergiques de l'ATV ; lésion noyaux paraventriculaires et troubles soif/faim.</div>
+    <div class="ac-q"><strong>Maubert Q1 :</strong> Quels sont les principaux critères permettant de diagnostiquer un PTSD ? (critères A à H du DSM-5)</div>
+    <div class="ac-q"><strong>Maubert Q2 :</strong> Légender schéma hypothalamus/hypophyse avec structures et molécules sécrétées (cellules, molécules sécrétées dans le sang).</div>
+    <div class="ac-q"><strong>Maubert Q3 :</strong> Identifier les propositions FAUSSES parmi 10 sur SNV ortho/parasympathique (−1 pt par erreur). Fausses : a, b, c, d, e.</div>
+  </div>
+
+  <div class="ac" data-year="2022">
+    <div class="ac-yr">Décembre 2022 · Session 1</div>
+    <div><span class="ac-prof">F. Durantou (CM+TD, 60 min) 🟡</span><span class="ac-prof">Mme Haelewyn (CM+TD)</span></div>
+    <div class="ac-q repris"><strong>Durantou 🟡 (repris par Bellanger &amp; Soulet) :</strong> Définir 4 rythmes biologiques ; horloge recevant directement les messages photiques ; activité rythmique cellulaire permettant les rythmes proches de 24h ; troubles par excès/défaut d'insuline ; vasopressine/ADH signaux déclencheurs et mode d'action ; trouble de la soif personnes âgées ; opiacées endogènes et VTA ; noyau arqué + insuline/leptine ; microbiote et comportement alimentaire ; intestin grêle = 2ème cerveau.</div>
+    <div class="ac-q"><strong>Haelewyn :</strong> 2 questions de cours sur la schizophrénie + questions sur une étude (non reproduit dans les annales disponibles).</div>
+  </div>
+
+  <div class="ac" data-year="2021">
+    <div class="ac-yr">Décembre 2021 · Session 1</div>
+    <div><span class="ac-prof">F. Durantou (CM+TD, 30 min) 🟡</span><span class="ac-prof">Amandine Bonnet / Baque-Cazenave (TD, 1h)</span></div>
+    <div class="ac-q repris"><strong>Durantou 🟡 (repris par Bellanger &amp; Soulet) :</strong> Faisceau rétino-hypothalamique ; rythmes biologiques hors du temps ; utilité sécrétion mélatonine ; protéines Per et Bmal1 ; angiotensine 2 dans la régulation hydrominérale ; que se passe-t-il si leptine non sécrétée ; microbiote et comportement alimentaire ; lésion noyaux ventromédians et hyperphagie ; soif et eau hypertonique dans le duodénum ; utilité insuline à glycémie basse.</div>
+    <div class="ac-q"><strong>Baque-Cazenave Partie 1 — Alcool in utero :</strong> GABA excitateur avant la naissance (NKCC1) ; syndrome d'alcoolisation fœtale définition et manifestations ; figures Skorput 2019 (EtOH ± bumétanide sur interneurones corticaux E16.5) : décrire et interpréter.</div>
+    <div class="ac-q"><strong>Baque-Cazenave Partie 2 — TSA :</strong> Modèle VPA (valproate de sodium chez femelle gestante) ; communication souriceaux 3 jours post-naissance (vocalisations ultrasonores : durée + nombre) ; bumétanide prénatal et potentiel thérapeutique.</div>
+  </div>
+
+</div>
+</section>
 
 </body>
 </html>
