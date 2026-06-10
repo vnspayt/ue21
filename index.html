@@ -3955,71 +3955,195 @@ function filterA(year, btn) {
   <div class="ct">🔴 1. Plaques amyloïdes (β-amyloïdes, Aβ)</div>
   <div class="g2">
     <div>
-      <div class="hl"><strong>Protéine amyloïde :</strong> Non produite directement. L'organisme produit son précurseur <strong>APP</strong> (Amyloid Precursor Protein) qui doit être clivé 2 fois par des enzymes (sécrétases).</div>
-      <p style="font-size:.85rem;color:var(--mu);margin:6px 0 6px">Ce schéma montre les deux façons de couper la protéine APP : la voie verte (α-sécrétase) produit des fragments inoffensifs. La voie rouge (β-sécrétase) produit la protéine Aβ complète qui va s'agréger. Dans l'Alzheimer, c'est la voie rouge qui prend le dessus — soit par excès de β-sécrétase, soit par défaut de dégradation d'Aβ.</p>
-      <div class="sb">
-        <svg viewBox="0 0 520 190" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
-          <defs>
-            <marker id="arB" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#c45c00"/></marker>
-            <marker id="arBr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#dc2626"/></marker>
-          </defs>
-          <text x="260" y="14" text-anchor="middle" font-size="11" font-weight="900" fill="#c45c00">CLIVAGE DE L'APP — 2 VOIES</text>
-          <!-- APP -->
-          <rect x="185" y="20" width="150" height="34" rx="8" fill="#fff1e0" stroke="#c45c00" stroke-width="2"/>
-          <text x="260" y="42" text-anchor="middle" font-size="10.5" font-weight="900" fill="#c45c00">APP</text>
-          <!-- Voie non-amyloïdogène -->
-          <line x1="220" y1="54" x2="130" y2="80" stroke="#16a34a" stroke-width="2" marker-end="url(#arB)"/>
-          <text x="145" y="70" font-size="8" fill="#16a34a" font-weight="700">α-sécrétase</text>
-          <rect x="10" y="80" width="210" height="62" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
-          <text x="115" y="100" text-anchor="middle" font-size="9.5" font-weight="800" fill="#15803d">Voie NON-amyloïdogène</text>
-          <text x="115" y="115" text-anchor="middle" font-size="8.5" fill="#064e3b">α-sécrétase puis ɣ-sécrétase</text>
-          <text x="115" y="128" text-anchor="middle" font-size="8.5" fill="#064e3b">→ Aβ incomplète → pas de plaque</text>
-          <text x="115" y="156" text-anchor="middle" font-size="8" fill="#15803d" font-weight="700">✅ Normale / Protectrice</text>
-          <!-- Voie amyloïdogène -->
-          <line x1="300" y1="54" x2="390" y2="80" stroke="#dc2626" stroke-width="2" marker-end="url(#arBr)"/>
-          <text x="370" y="70" font-size="8" fill="#dc2626" font-weight="700">β-sécrétase</text>
-          <rect x="300" y="80" width="210" height="100" rx="9" fill="#fff5f5" stroke="#dc2626" stroke-width="2"/>
-          <text x="405" y="100" text-anchor="middle" font-size="9.5" font-weight="800" fill="#b91c1c">Voie amyloïdogène</text>
-          <text x="405" y="115" text-anchor="middle" font-size="8.5" fill="#7f1d1d">β-sécrétase puis ɣ-sécrétase</text>
-          <text x="405" y="129" text-anchor="middle" font-size="8.5" fill="#7f1d1d">→ Protéine Aβ entière formée</text>
-          <text x="405" y="143" text-anchor="middle" font-size="8.5" fill="#7f1d1d">Dimères → Oligomères</text>
-          <text x="405" y="157" text-anchor="middle" font-size="8.5" fill="#7f1d1d">→ Fibrilles → Plaques</text>
-          <text x="405" y="174" text-anchor="middle" font-size="8" fill="#dc2626" font-weight="700">❌ Dysfonction synaptique → Mort neuronale</text>
-        </svg>
-      </div>
+      <div class="hl"><strong>Protéine amyloïde :</strong> Non produite directement. L'organisme produit son précurseur <strong>APP</strong> (Amyloid Precursor Protein) qui doit être clivé 2 fois par des enzymes (sécrétases : α, β, ɣ).</div>
+      <div class="hl"><strong>Lieu :</strong> Variable et évolution variable selon les individus. Vieillissement normal = plaques présentes mais en moindre quantité.</div>
     </div>
     <div>
       <div class="hl2"><strong>Formation progressive des agrégats :</strong><br>
       2 Aβ → <strong>Dimères</strong><br>
       Plusieurs Aβ → <strong>Oligomères</strong><br>
-      Plusieurs oligomères → <strong>Fibrilles</strong><br>
+      Plusieurs oligomères → <strong>Fibrilles</strong> (amyloïdes, faites d'Aβ)<br>
       Plusieurs fibrilles → <strong>Plaque amyloïde</strong><br>
       → S'accumulent au niveau des synapses, dendrites → transmission synaptique perturbée → neurone mort</div>
       <div class="hlw">⚠ En vieillissant, la dégradation d'Aβ se fait moins efficacement. Encore moins dans la MA → accumulation progressive des plaques.</div>
-      <div class="hl"><strong>Lieu :</strong> Variable et évolution variable selon les individus. Vieillissement normal = plaques présentes mais en moindre quantité.</div>
     </div>
   </div>
-</div>
 
+  <p style="font-size:.85rem;color:var(--mu);margin:6px 0 6px">Ce schéma résume les deux façons de couper l'APP : la voie verte (α-sécrétase) produit des fragments inoffensifs ; la voie rouge (β-sécrétase) produit la protéine Aβ complète qui va s'agréger. Dans l'Alzheimer, c'est la voie rouge qui prend le dessus — soit par excès de β-sécrétase, soit par défaut de dégradation d'Aβ.</p>
+  <div class="sb">
+    <svg viewBox="0 0 520 190" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+      <defs>
+        <marker id="arB" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#c45c00"/></marker>
+        <marker id="arBr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#dc2626"/></marker>
+      </defs>
+      <text x="260" y="14" text-anchor="middle" font-size="11" font-weight="900" fill="#c45c00">CLIVAGE DE L'APP — 2 VOIES</text>
+      <rect x="185" y="20" width="150" height="34" rx="8" fill="#fff1e0" stroke="#c45c00" stroke-width="2"/>
+      <text x="260" y="42" text-anchor="middle" font-size="10.5" font-weight="900" fill="#c45c00">APP</text>
+      <line x1="220" y1="54" x2="130" y2="80" stroke="#16a34a" stroke-width="2" marker-end="url(#arB)"/>
+      <text x="145" y="70" font-size="8" fill="#16a34a" font-weight="700">α-sécrétase</text>
+      <rect x="10" y="80" width="210" height="62" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+      <text x="115" y="100" text-anchor="middle" font-size="9.5" font-weight="800" fill="#15803d">Voie NON-amyloïdogène</text>
+      <text x="115" y="115" text-anchor="middle" font-size="8.5" fill="#064e3b">α-sécrétase puis ɣ-sécrétase</text>
+      <text x="115" y="128" text-anchor="middle" font-size="8.5" fill="#064e3b">→ Aβ incomplète → pas de plaque</text>
+      <text x="115" y="156" text-anchor="middle" font-size="8" fill="#15803d" font-weight="700">✅ Normale / Protectrice</text>
+      <line x1="300" y1="54" x2="390" y2="80" stroke="#dc2626" stroke-width="2" marker-end="url(#arBr)"/>
+      <text x="370" y="70" font-size="8" fill="#dc2626" font-weight="700">β-sécrétase</text>
+      <rect x="300" y="80" width="210" height="100" rx="9" fill="#fff5f5" stroke="#dc2626" stroke-width="2"/>
+      <text x="405" y="100" text-anchor="middle" font-size="9.5" font-weight="800" fill="#b91c1c">Voie amyloïdogène</text>
+      <text x="405" y="115" text-anchor="middle" font-size="8.5" fill="#7f1d1d">β-sécrétase puis ɣ-sécrétase</text>
+      <text x="405" y="129" text-anchor="middle" font-size="8.5" fill="#7f1d1d">→ Protéine Aβ entière formée</text>
+      <text x="405" y="143" text-anchor="middle" font-size="8.5" fill="#7f1d1d">Dimères → Oligomères</text>
+      <text x="405" y="157" text-anchor="middle" font-size="8.5" fill="#7f1d1d">→ Fibrilles → Plaques</text>
+      <text x="405" y="174" text-anchor="middle" font-size="8" fill="#dc2626" font-weight="700">❌ Dysfonction synaptique → Mort neuronale</text>
+    </svg>
+  </div>
+
+  <p style="font-size:.9rem;color:var(--mu);margin:14px 0 6px"><strong>Au niveau des fragments</strong> (le schéma du cours) : l'APP est une longue protéine qui traverse la membrane. Le segment Aβ chevauche la zone α. <strong>Tout dépend de l'endroit où l'on coupe.</strong> Si la 1ʳᵉ coupe tombe <strong>au milieu</strong> du segment Aβ (α-sécrétase) → l'Aβ est tranchée en deux, donc <em>incomplète</em>. Si la 1ʳᵉ coupe tombe <strong>avant</strong> le segment Aβ (β-sécrétase) → l'Aβ reste <em>entière</em>. La ɣ-sécrétase fait la 2ᵉ coupe dans les deux cas.</p>
+  <div class="sb">
+    <svg viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+      <defs>
+        <marker id="arFb" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#64748b"/></marker>
+      </defs>
+      <text x="450" y="24" text-anchor="middle" font-size="18" font-weight="900" fill="#c45c00">CLIVAGE DE L'APP — AU NIVEAU DES FRAGMENTS</text>
+
+      <!-- APP entière -->
+      <text x="20" y="62" font-size="14" font-weight="800" fill="#334155">APP entière</text>
+      <text x="20" y="78" font-size="11" fill="#64748b">(précurseur)</text>
+      <rect x="270" y="48" width="150" height="30" fill="#dbeafe" stroke="#334155" stroke-width="1.6"/>
+      <text x="345" y="68" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">β</text>
+      <rect x="420" y="48" width="130" height="30" fill="#fde68a" stroke="#334155" stroke-width="1.6"/>
+      <text x="485" y="68" text-anchor="middle" font-size="12.5" font-weight="700" fill="#92400e">α — zone Aβ</text>
+      <rect x="550" y="48" width="120" height="30" fill="#e2e8f0" stroke="#334155" stroke-width="1.6"/>
+      <text x="610" y="68" text-anchor="middle" font-size="13" font-weight="700" fill="#334155">ɣ</text>
+      <!-- cut sites -->
+      <line x1="420" y1="40" x2="420" y2="86" stroke="#dc2626" stroke-width="2.2" stroke-dasharray="4 3"/>
+      <text x="380" y="36" text-anchor="middle" font-size="12.5" font-weight="800" fill="#dc2626">✂ β-séc</text>
+      <line x1="485" y1="40" x2="485" y2="86" stroke="#16a34a" stroke-width="2.2" stroke-dasharray="4 3"/>
+      <text x="540" y="36" text-anchor="middle" font-size="12.5" font-weight="800" fill="#16a34a">✂ α-séc</text>
+
+      <!-- LEFT panel : NON-amyloïdogène -->
+      <rect x="20" y="105" width="415" height="170" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+      <text x="227" y="132" text-anchor="middle" font-size="15" font-weight="900" fill="#15803d">① VOIE NON-AMYLOÏDOGÈNE (α puis ɣ)</text>
+      <text x="227" y="153" text-anchor="middle" font-size="12.5" fill="#334155">α-sécrétase coupe AU MILIEU de la zone Aβ</text>
+      <rect x="45" y="168" width="160" height="30" fill="#dbeafe" stroke="#334155" stroke-width="1.3"/>
+      <text x="125" y="188" text-anchor="middle" font-size="11.5" fill="#1e3a8a">sAPPα + moitié Aβ</text>
+      <rect x="207" y="168" width="95" height="30" fill="#dcfce7" stroke="#16a34a" stroke-width="1.3"/>
+      <text x="254" y="184" text-anchor="middle" font-size="11" fill="#15803d">p3</text>
+      <text x="254" y="195" text-anchor="middle" font-size="9" fill="#15803d">(inoffensif)</text>
+      <rect x="304" y="168" width="105" height="30" fill="#e2e8f0" stroke="#334155" stroke-width="1.3"/>
+      <text x="356" y="188" text-anchor="middle" font-size="11" fill="#334155">AICD (ɣ)</text>
+      <text x="227" y="232" text-anchor="middle" font-size="14" font-weight="800" fill="#15803d">→ Aβ coupée en 2 = INCOMPLÈTE</text>
+      <text x="227" y="258" text-anchor="middle" font-size="15" font-weight="900" fill="#15803d">✅ PAS de plaque</text>
+
+      <!-- RIGHT panel : amyloïdogène -->
+      <rect x="465" y="105" width="415" height="170" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+      <text x="672" y="132" text-anchor="middle" font-size="15" font-weight="900" fill="#b91c1c">② VOIE AMYLOÏDOGÈNE (β puis ɣ)</text>
+      <text x="672" y="153" text-anchor="middle" font-size="12.5" fill="#334155">β-sécrétase coupe AVANT la zone Aβ</text>
+      <rect x="490" y="168" width="105" height="30" fill="#dbeafe" stroke="#334155" stroke-width="1.3"/>
+      <text x="542" y="188" text-anchor="middle" font-size="11.5" fill="#1e3a8a">sAPPβ</text>
+      <rect x="597" y="168" width="120" height="30" fill="#fecaca" stroke="#dc2626" stroke-width="2"/>
+      <text x="657" y="188" text-anchor="middle" font-size="12" font-weight="800" fill="#b91c1c">Aβ ENTIÈRE</text>
+      <rect x="719" y="168" width="95" height="30" fill="#e2e8f0" stroke="#334155" stroke-width="1.3"/>
+      <text x="766" y="188" text-anchor="middle" font-size="11" fill="#334155">AICD (ɣ)</text>
+      <text x="672" y="232" text-anchor="middle" font-size="14" font-weight="800" fill="#b91c1c">→ Peptide Aβ entier = Aβ42</text>
+      <text x="672" y="258" text-anchor="middle" font-size="15" font-weight="900" fill="#b91c1c">❌ S'agrège → PLAQUE</text>
+
+      <!-- arrow down to aggregation -->
+      <line x1="672" y1="278" x2="672" y2="300" stroke="#64748b" stroke-width="2.2" marker-end="url(#arFb)"/>
+      <!-- aggregation box full width -->
+      <rect x="120" y="304" width="660" height="50" rx="10" fill="#fff5f5" stroke="#dc2626" stroke-width="1.8"/>
+      <text x="450" y="326" text-anchor="middle" font-size="13.5" font-weight="900" fill="#b91c1c">Aβ42 (42 acides aminés) = la forme la PLUS agrégeante</text>
+      <text x="450" y="346" text-anchor="middle" font-size="12.5" fill="#7f1d1d">2 Aβ = dimère → oligomères → fibrilles → PLAQUE (extracellulaire)</text>
+    </svg>
+  </div>
+  <div class="hlr"><strong>📍 Localisation — à ne pas confondre :</strong> les <strong>plaques amyloïdes</strong> (Aβ) sont <strong>EXTRA-cellulaires</strong> (dehors, autour des synapses). Les <strong>DNF</strong> (Tau) sont <strong>INTRA-cellulaires</strong> (dans le neurone). Les « fibrilles » des plaques (Aβ) ≠ les filaments des DNF (Tau) : <em>protéine différente + localisation différente</em>.</div>
+</div>
 <div class="card">
   <div class="ct">🔵 2. Dégénérescences Neurofibrillaires (DNF) — Protéine Tau</div>
   <div class="g2">
     <div>
-      <div class="hl"><strong>Cytosquelette neuronal :</strong><br>
-      Les neurones ont un cytosquelette complexe : microtubules (transport axonal des NT), filaments intermédiaires (rigidité), filaments d'actine (extensions/dendrites). Les <strong>microtubules</strong> = rails pour transporter les protéines du corps cellulaire vers les terminaisons axonales.</div>
-      <div class="hl2"><strong>Rôle normal de la protéine Tau :</strong><br>
-      Tau <em>stabilise</em> les microtubules. Elle peut être phosphorylée (se détache → microtubules dynamiques) ou déphosphorylée (se rattache → stabilisation). Mécanisme de régulation normal.<br>
-      → Kinases : ajoutent phosphate · Phosphatases : retirent phosphate</div>
+      <div class="hl"><strong>Cytosquelette neuronal = l'ossature de la cellule :</strong><br>
+      • <strong>Microtubules</strong> : tubes longs et creux = <em>rails</em> pour le transport axonal (protéines/NT du corps cellulaire → terminaisons)<br>
+      • <strong>Filaments intermédiaires</strong> : force mécanique, rigidité<br>
+      • <strong>Filaments d'actine</strong> : extensions, dendrites, mouvement<br>
+      <em>Sans Tau pour stabiliser les microtubules, les « rails » déraillent → plus de transport.</em></div>
+      <div class="hl2"><strong>Rôle normal de Tau = stabiliser les rails :</strong><br>
+      Tau s'accroche aux microtubules pour les maintenir.<br>
+      • <strong>Tau phosphorylée</strong> (kinases ajoutent un phosphate) → se <em>détache</em> → microtubules dynamiques (peuvent se réorganiser)<br>
+      • <strong>Tau déphosphorylée</strong> (phosphatases retirent le phosphate) → se <em>rattache</em> → stabilisation<br>
+      → C'est un équilibre normal : un peu de phosphate = rails flexibles.</div>
     </div>
     <div>
-      <div class="hlr"><strong>Dans la MA :</strong><br>
-      <strong>Hyperphosphorylation de Tau</strong> → agrégats de Tau hyperphosphorylées → DNF<br>
-      → Microtubules sans stabilisation → se désagrègent → transport axonal impossible → neurone ne fonctionne plus → mort<br>
-      <strong>NB : Tauopathies</strong> = maladies dues à la protéine Tau. La MA est une tauopathie MAIS aussi amyloïde (les deux lésions).<br>
-      Impossible de bloquer toute la phosphorylation (beaucoup de protéines en ont besoin).</div>
+      <div class="hlr"><strong>Dans la MA — l'équilibre se casse :</strong><br>
+      <strong>HYPER-phosphorylation</strong> de Tau (trop de phosphates) → Tau ne tient plus les microtubules et se <em>décroche en masse</em> → elle s'<strong>agrège</strong> en filaments = <strong>DNF</strong> (enchevêtrements neurofibrillaires, <strong>intra-cellulaires</strong>).<br>
+      → Microtubules sans Tau → se désagrègent → transport axonal impossible → le neurone ne fonctionne plus → <strong>mort neuronale</strong>.</div>
+      <div class="hlw"><strong>NB :</strong> les maladies dues à Tau = <strong>tauopathies</strong>. La MA est une tauopathie MAIS <em>aussi</em> une maladie amyloïde (les <strong>deux</strong> lésions coexistent). On ne peut pas bloquer toute la phosphorylation comme traitement : beaucoup d'autres protéines en ont besoin.</div>
     </div>
   </div>
+
+  <p style="font-size:.9rem;color:var(--mu);margin:14px 0 6px"><strong>Le schéma à retenir :</strong> à gauche le neurone sain (Tau tient les rails, le transport circule) ; à droite l'Alzheimer (Tau sur-phosphorylée se décroche, les rails s'effondrent, Tau s'entasse en agrégats = DNF, le transport s'arrête).</p>
+  <div class="sb">
+    <svg viewBox="0 0 900 340" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+      <defs>
+        <marker id="vMove" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#0369a1"/></marker>
+      </defs>
+      <text x="450" y="24" text-anchor="middle" font-size="18" font-weight="900" fill="#1d4ed8">PROTÉINE TAU &amp; MICROTUBULES — NORMAL vs ALZHEIMER</text>
+
+      <!-- LEFT : NORMAL -->
+      <rect x="20" y="42" width="410" height="280" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+      <text x="225" y="68" text-anchor="middle" font-size="15" font-weight="900" fill="#15803d">✅ NEURONE SAIN</text>
+      <text x="225" y="88" text-anchor="middle" font-size="12" fill="#334155">Tau attachée → microtubules stables</text>
+      <!-- microtubule rails -->
+      <rect x="50" y="150" width="350" height="10" rx="5" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.4"/>
+      <rect x="50" y="200" width="350" height="10" rx="5" fill="#bfdbfe" stroke="#1d4ed8" stroke-width="1.4"/>
+      <text x="225" y="138" text-anchor="middle" font-size="11" font-weight="700" fill="#1d4ed8">microtubules (rails)</text>
+      <!-- Tau bridges -->
+      <g stroke="#15803d" stroke-width="4" stroke-linecap="round">
+        <line x1="85" y1="160" x2="85" y2="200"/>
+        <line x1="135" y1="160" x2="135" y2="200"/>
+        <line x1="185" y1="160" x2="185" y2="200"/>
+        <line x1="235" y1="160" x2="235" y2="200"/>
+        <line x1="285" y1="160" x2="285" y2="200"/>
+        <line x1="335" y1="160" x2="335" y2="200"/>
+      </g>
+      <text x="135" y="228" text-anchor="middle" font-size="11" font-weight="700" fill="#15803d">Tau (verte) = entretoises</text>
+      <!-- vesicle moving -->
+      <circle cx="120" cy="180" r="11" fill="#fde68a" stroke="#ca8a04" stroke-width="1.6"/>
+      <line x1="135" y1="180" x2="200" y2="180" stroke="#0369a1" stroke-width="2.2" marker-end="url(#vMove)"/>
+      <text x="225" y="262" text-anchor="middle" font-size="12.5" font-weight="800" fill="#15803d">→ Transport axonal OK</text>
+      <text x="225" y="286" text-anchor="middle" font-size="12.5" font-weight="800" fill="#15803d">→ Neurone fonctionnel ✓</text>
+
+      <!-- RIGHT : ALZHEIMER -->
+      <rect x="465" y="42" width="415" height="280" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+      <text x="672" y="68" text-anchor="middle" font-size="15" font-weight="900" fill="#b91c1c">❌ ALZHEIMER</text>
+      <text x="672" y="88" text-anchor="middle" font-size="12" fill="#334155">Tau HYPER-phosphorylée → se décroche</text>
+      <!-- broken rails -->
+      <g fill="#fecaca" stroke="#1d4ed8" stroke-width="1.2">
+        <rect x="500" y="150" width="60" height="10" rx="5"/>
+        <rect x="575" y="153" width="45" height="10" rx="5" transform="rotate(8 597 158)"/>
+        <rect x="640" y="148" width="50" height="10" rx="5" transform="rotate(-6 665 153)"/>
+        <rect x="710" y="152" width="55" height="10" rx="5"/>
+        <rect x="520" y="200" width="50" height="10" rx="5" transform="rotate(-5 545 205)"/>
+        <rect x="590" y="202" width="55" height="10" rx="5"/>
+        <rect x="665" y="198" width="45" height="10" rx="5" transform="rotate(7 687 203)"/>
+      </g>
+      <text x="672" y="138" text-anchor="middle" font-size="11" font-weight="700" fill="#dc2626">microtubules désagrégés (rails cassés)</text>
+      <!-- detached hyperphospho Tau with P -->
+      <g>
+        <path d="M530 235 q10 -14 22 0 q12 14 24 0 q12 -14 24 0" fill="none" stroke="#b91c1c" stroke-width="3.4" stroke-linecap="round"/>
+        <circle cx="540" cy="226" r="6.5" fill="#facc15" stroke="#a16207" stroke-width="1"/><text x="540" y="230" text-anchor="middle" font-size="8" font-weight="800" fill="#713f12">P</text>
+        <circle cx="566" cy="226" r="6.5" fill="#facc15" stroke="#a16207" stroke-width="1"/><text x="566" y="230" text-anchor="middle" font-size="8" font-weight="800" fill="#713f12">P</text>
+        <circle cx="592" cy="226" r="6.5" fill="#facc15" stroke="#a16207" stroke-width="1"/><text x="592" y="230" text-anchor="middle" font-size="8" font-weight="800" fill="#713f12">P</text>
+      </g>
+      <!-- tangle DNF -->
+      <path d="M715 220 q25 -20 40 5 q20 25 -8 38 q-30 14 -42 -10 q-12 -25 10 -33 q18 -7 28 8 q8 14 -10 20" fill="none" stroke="#7f1d1d" stroke-width="3" stroke-linecap="round"/>
+      <text x="735" y="290" text-anchor="middle" font-size="11" font-weight="800" fill="#7f1d1d">DNF = agrégats Tau</text>
+      <text x="565" y="258" text-anchor="middle" font-size="10.5" font-weight="700" fill="#b91c1c">Tau + phosphates (P)</text>
+      <text x="672" y="312" text-anchor="middle" font-size="12.5" font-weight="900" fill="#b91c1c">→ Transport STOP → MORT neuronale ☠</text>
+    </svg>
+  </div>
 </div>
+
 
 <div class="card">
   <div class="ct">📈 Progression des DNF — 10 stades (Delacourte)</div>
@@ -4119,11 +4243,128 @@ function filterA(year, btn) {
   <div class="g2">
     <div class="hl"><strong>Rôle des cellules microgliales :</strong><br>
     Cellules immunitaires du cerveau (petites, avec extensions pour "sonder" l'environnement). Détectent les plaques → <em>phagocytose</em> (tentent de détruire les plaques). Libèrent des molécules pro-inflammatoires → neuroinflammation. Au départ protecteur. Devient chronique → délétère pour les neurones.</div>
+    <div class="hlw"><strong>Pourquoi ça devient chronique ? (le « pourquoi » du cours)</strong><br>
+    Les microglies <strong>n'arrivent pas à éliminer</strong> les plaques amyloïdes → elles continuent de libérer des molécules pro-inflammatoires <em>en permanence</em> pour « alerter et recruter de l'aide ».<br>
+    • <strong>Inflammation courte</strong> = OK, les déchets sont nettoyés (rôle de défense).<br>
+    • <strong>Inflammation longue</strong> = molécules pro-inflammatoires en <em>surabondance</em> → elles ne nettoient plus, elles <strong>attaquent les neurones sains</strong>.<br>
+    Ces molécules perturbent l'homéostasie neuronale → stress → activation des <strong>kinases</strong> → <strong>hyperphosphorylation de Tau</strong> → DNF. <em>C'est le pont entre les deux lésions.</em></div>
     <div class="hl2"><strong>Systèmes préférentiellement atteints :</strong><br>
     • <strong>Système cholinergique</strong> (1er atteint) : ↓ acétylcholine → cortex frontal, hippocampe…<br>
     • <strong>Système glutamatergique</strong> (plus tardivement) : ↑ glutamate → ↑ récepteurs NMDA → ↑ Ca²⁺ entrant → excitotoxicité → mort neuronale<br>
     → Perte neuronale et synaptique : 20 à 60%</div>
   </div>
+</div>
+
+
+<div class="card" style="border:2px solid #f59e0b;">
+  <div class="ct">🔥 Comprendre la NEUROINFLAMMATION pas à pas (le point clé)</div>
+  <p style="font-size:.92rem;color:var(--mu);margin-bottom:8px">L'idée centrale : la microglie est la <strong>cellule immunitaire du cerveau</strong>. Au départ elle est utile (elle nettoie). Le problème, c'est qu'elle <strong>n'arrive pas à éliminer les plaques</strong> → elle reste activée <em>en permanence</em> → l'inflammation devient <strong>chronique</strong> et finit par <strong>abîmer les neurones sains</strong>. Lis le schéma de gauche à droite, puis le bas.</p>
+  <div class="sb">
+    <svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+      <defs>
+        <marker id="niA" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#64748b"/></marker>
+        <marker id="niR" markerWidth="9" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#dc2626"/></marker>
+      </defs>
+
+      <!-- ===== BANDE 1 : histoire de la microglie ===== -->
+      <text x="450" y="24" text-anchor="middle" font-size="16" font-weight="900" fill="#b45309">① LA MICROGLIE S'ACTIVE FACE AUX PLAQUES</text>
+
+      <!-- étape 1 : repos -->
+      <g stroke="#16a34a" stroke-width="2.4" stroke-linecap="round">
+        <line x1="100" y1="95" x2="78" y2="73"/><line x1="100" y1="95" x2="122" y2="73"/>
+        <line x1="100" y1="95" x2="70" y2="95"/><line x1="100" y1="95" x2="130" y2="95"/>
+        <line x1="100" y1="95" x2="78" y2="117"/><line x1="100" y1="95" x2="122" y2="117"/>
+      </g>
+      <circle cx="100" cy="95" r="13" fill="#bbf7d0" stroke="#15803d" stroke-width="1.8"/>
+      <text x="100" y="150" text-anchor="middle" font-size="12.5" font-weight="800" fill="#15803d">Au repos</text>
+      <text x="100" y="167" text-anchor="middle" font-size="11" fill="#334155">sentinelle qui</text>
+      <text x="100" y="181" text-anchor="middle" font-size="11" fill="#334155">patrouille / sonde</text>
+      <line x1="150" y1="95" x2="195" y2="95" stroke="#64748b" stroke-width="2.4" marker-end="url(#niA)"/>
+
+      <!-- étape 2 : détecte plaque -->
+      <path d="M300 78 q14 -10 24 4 q14 -4 16 12 q12 8 0 20 q4 16 -16 14 q-10 12 -24 0 q-16 2 -14 -16 q-12 -10 2 -22 q-2 -16 12 -16 Z" fill="#fdba74" stroke="#c2410c" stroke-width="1.6"/>
+      <text x="305" y="100" text-anchor="middle" font-size="10" font-weight="800" fill="#7c2d12">plaque</text>
+      <text x="305" y="150" text-anchor="middle" font-size="12.5" font-weight="800" fill="#c2410c">Détection</text>
+      <text x="305" y="167" text-anchor="middle" font-size="11" fill="#334155">plaque amyloïde</text>
+      <text x="305" y="181" text-anchor="middle" font-size="11" fill="#334155">« pas normale »</text>
+      <line x1="350" y1="95" x2="400" y2="95" stroke="#64748b" stroke-width="2.4" marker-end="url(#niA)"/>
+
+      <!-- étape 3 : pacman activé -->
+      <path d="M520 95 L539 84 A22 22 0 1 0 539 106 Z" fill="#fca5a5" stroke="#b91c1c" stroke-width="1.8"/>
+      <circle cx="513" cy="88" r="2.6" fill="#7f1d1d"/>
+      <text x="510" y="150" text-anchor="middle" font-size="12.5" font-weight="800" fill="#b91c1c">Activée = « pacman »</text>
+      <text x="510" y="167" text-anchor="middle" font-size="11" fill="#334155">phagocyte la plaque</text>
+      <text x="510" y="181" text-anchor="middle" font-size="11" fill="#334155">+ libère des molécules</text>
+      <line x1="556" y1="95" x2="600" y2="95" stroke="#64748b" stroke-width="2.4" marker-end="url(#niA)"/>
+
+      <!-- étape 4 : molécules pro-inflam -->
+      <g fill="#ef4444">
+        <polygon points="690,80 700,100 680,100"/>
+        <polygon points="720,90 730,110 710,110"/>
+        <polygon points="700,108 710,128 690,128"/>
+        <polygon points="735,75 745,95 725,95"/>
+      </g>
+      <text x="715" y="150" text-anchor="middle" font-size="12.5" font-weight="800" fill="#dc2626">Molécules</text>
+      <text x="715" y="167" text-anchor="middle" font-size="11" fill="#334155">pro-inflammatoires</text>
+      <text x="715" y="181" text-anchor="middle" font-size="11" fill="#334155">= NEUROINFLAMMATION</text>
+
+      <line x1="20" y1="205" x2="880" y2="205" stroke="#e2e8f0" stroke-width="1.5"/>
+
+      <!-- ===== BANDE 2 : courte vs longue ===== -->
+      <text x="450" y="232" text-anchor="middle" font-size="16" font-weight="900" fill="#b45309">② COURTE = UTILE · LONGUE = DANGEREUSE</text>
+      <rect x="40" y="246" width="390" height="92" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+      <text x="235" y="270" text-anchor="middle" font-size="13.5" font-weight="900" fill="#15803d">✅ Inflammation COURTE</text>
+      <text x="235" y="292" text-anchor="middle" font-size="12" fill="#166534">Rôle de défense : nettoie les déchets,</text>
+      <text x="235" y="309" text-anchor="middle" font-size="12" fill="#166534">tente de détruire les plaques (phagocytose).</text>
+      <text x="235" y="328" text-anchor="middle" font-size="12" font-weight="700" fill="#15803d">→ Bénéfique</text>
+
+      <rect x="470" y="246" width="390" height="92" rx="10" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+      <text x="665" y="270" text-anchor="middle" font-size="13.5" font-weight="900" fill="#b91c1c">❌ Inflammation LONGUE (chronique)</text>
+      <text x="665" y="292" text-anchor="middle" font-size="12" fill="#7f1d1d">Plaques jamais éliminées → microglie activée</text>
+      <text x="665" y="309" text-anchor="middle" font-size="12" fill="#7f1d1d">en continu → molécules EN SURABONDANCE</text>
+      <text x="665" y="328" text-anchor="middle" font-size="12" font-weight="700" fill="#b91c1c">→ Attaque les neurones SAINS</text>
+
+      <line x1="20" y1="358" x2="880" y2="358" stroke="#e2e8f0" stroke-width="1.5"/>
+
+      <!-- ===== BANDE 3 : cercle vicieux ===== -->
+      <text x="450" y="386" text-anchor="middle" font-size="16" font-weight="900" fill="#b45309">③ LE CERCLE VICIEUX (pont vers les DNF)</text>
+
+      <!-- top row -->
+      <rect x="35" y="402" width="200" height="46" rx="9" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+      <text x="135" y="423" text-anchor="middle" font-size="11.5" font-weight="800" fill="#b91c1c">Microglie activée</text>
+      <text x="135" y="438" text-anchor="middle" font-size="11" fill="#7f1d1d">en permanence</text>
+      <line x1="235" y1="425" x2="345" y2="425" stroke="#dc2626" stroke-width="2.2" marker-end="url(#niR)"/>
+
+      <rect x="350" y="402" width="200" height="46" rx="9" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+      <text x="450" y="423" text-anchor="middle" font-size="11.5" font-weight="800" fill="#b91c1c">Molécules pro-inflam</text>
+      <text x="450" y="438" text-anchor="middle" font-size="11" fill="#7f1d1d">en excès → toxiques</text>
+      <line x1="550" y1="425" x2="660" y2="425" stroke="#dc2626" stroke-width="2.2" marker-end="url(#niR)"/>
+
+      <rect x="665" y="402" width="200" height="46" rx="9" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+      <text x="765" y="423" text-anchor="middle" font-size="11.5" font-weight="800" fill="#b91c1c">Homéostasie perturbée</text>
+      <text x="765" y="438" text-anchor="middle" font-size="11" fill="#7f1d1d">→ stress neuronal</text>
+      <line x1="765" y1="448" x2="765" y2="478" stroke="#dc2626" stroke-width="2.2" marker-end="url(#niR)"/>
+
+      <!-- bottom row (right to left) -->
+      <rect x="665" y="482" width="200" height="46" rx="9" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+      <text x="765" y="503" text-anchor="middle" font-size="11.5" font-weight="800" fill="#5b21b6">Kinases activées</text>
+      <text x="765" y="518" text-anchor="middle" font-size="11" fill="#5b21b6">(ajoutent des phosphates)</text>
+      <line x1="665" y1="505" x2="555" y2="505" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#niR)"/>
+
+      <rect x="350" y="482" width="200" height="46" rx="9" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+      <text x="450" y="503" text-anchor="middle" font-size="11.5" font-weight="800" fill="#5b21b6">Hyperphosphorylation Tau</text>
+      <text x="450" y="518" text-anchor="middle" font-size="11" fill="#5b21b6">→ DNF</text>
+      <line x1="350" y1="505" x2="240" y2="505" stroke="#7c3aed" stroke-width="2.2" marker-end="url(#niR)"/>
+
+      <rect x="35" y="482" width="200" height="46" rx="9" fill="#fecaca" stroke="#991b1b" stroke-width="1.8"/>
+      <text x="135" y="503" text-anchor="middle" font-size="11.5" font-weight="900" fill="#7f1d1d">Mort neuronale ☠</text>
+      <text x="135" y="518" text-anchor="middle" font-size="11" fill="#7f1d1d">+ ↑ dysfonction</text>
+      <!-- loop back arrow -->
+      <path d="M135 482 C 95 472, 95 462, 135 448" fill="none" stroke="#991b1b" stroke-width="2.2" stroke-dasharray="5 3" marker-end="url(#niR)"/>
+      <text x="60" y="468" text-anchor="middle" font-size="10.5" font-weight="800" fill="#991b1b" transform="rotate(-90 60 468)">cercle vicieux</text>
+    </svg>
+  </div>
+  <div class="hl2" style="margin-top:10px"><strong>En une phrase :</strong> la microglie veut nous défendre, mais comme elle <em>n'arrive jamais à éliminer les plaques</em>, elle reste allumée en permanence → ses molécules deviennent toxiques → elles stressent les neurones → activation des kinases → <strong>Tau est hyperphosphorylée</strong> → DNF + mort neuronale → encore plus d'inflammation. <strong>C'est ce qui relie les plaques (Aβ) aux DNF (Tau).</strong></div>
 </div>
 
 <div class="sh">💊 Traitements — Actuels et Futurs</div>
@@ -4227,6 +4468,24 @@ function filterA(year, btn) {
 </div>
 
 <div class="card">
+  <div class="ct">🌱 Formes, variétés & consommation du cannabis</div>
+  <div class="g2">
+    <div>
+      <div class="hli"><strong>Cannabis</strong> = nom scientifique du chanvre indien. <strong>3 variétés :</strong> <em>Cannabis sativa</em> · <em>Cannabis indica</em> · <em>Cannabis ruderalis</em>. Les effets varient selon la personne, son état et la variété.</div>
+      <div class="hl"><strong>Formes & teneur en THC :</strong><br>
+      • <strong>Résine (haschich)</strong> : 5 à 40% de THC<br>
+      • <strong>Huile</strong> : 60 à 80% de THC<br>
+      • <strong>Plante séchée (marijuana)</strong> : ~15% (variation 5-25%) · environ 400 produits chimiques</div>
+      <div class="hl2"><strong>Le THC</strong> (tétrahydrocannabinol) = principale substance psychoactive du cannabis. Phytocannabinoïdes : THC · CBD (cannabidiol) · CBN (cannabinol).</div>
+    </div>
+    <div>
+      <div class="hl"><strong>Modes de consommation :</strong> tisane · fumé · mangé → effets différents car pas le même % de THC absorbé et pas la même cinétique.</div>
+      <div class="hlw"><strong>Épidémio France (détail) :</strong> Plus grand consommateur d'Europe · <strong>5ᵉ rang mondial</strong>. 17 millions d'expérimentateurs · 5 millions dans l'année · 1,4 million de réguliers (≥10×/mois) · 900 000 quotidiens · 48% des jeunes ont expérimenté à 17 ans · surtout les 18-25 ans · plus de garçons en usage régulier · consommation en augmentation.</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
   <div class="ct">💨 THC — Mécanisme d'action & Pharmacocinétique</div>
   <div class="g2">
     <div>
@@ -4242,6 +4501,10 @@ function filterA(year, btn) {
       THC → se fixe sur récepteur CB1 présynaptique → inhibe l'exocytose → <em>inhibition libération NT (GABA)</em><br>
       → Le GABA inhibait normalement les neurones dopaminergiques<br>
       → Moins de GABA → neurones DA non inhibés → <strong>↑ libération dopamine</strong> → euphorie/récompense</div>
+      <div class="hl2"><strong>Les 2 grandes voies dopaminergiques activées :</strong><br>
+      • <strong>Voie méso-corticale/limbique</strong> : aire tegmentale ventrale (ATV, dans le mésencéphale) → cortex (surtout préfrontal) → récompense/euphorie<br>
+      • <strong>Voie nigro-striée</strong> : substance noire → striatum (c'est cette voie qui dégénère dans la maladie de Parkinson)</div>
+      <div class="hl"><strong>Endocannabinoïdes (AEA, 2-AG) :</strong> produits « à la demande » (<strong>synthèse <em>de novo</em></strong>), <em>non stockés</em> en vésicules. Libérés au niveau post-synaptique pour agir en présynaptique = <strong>neurotransmetteurs rétrogrades</strong>. En cas de compétition avec le THC, les endocannabinoïdes l'emportent.</div>
       <div class="hlr"><strong>Usage chronique :</strong> ↓ récepteurs CB1 (régulation à la baisse) → tolérance/accoutumance (besoin de + pour même effet). Conséquence : moins d'inhibition du GABA → ↑ GABA → ↓ DA → <em>inhibition système dopaminergique → dépression</em></div>
     </div>
   </div>
@@ -4290,6 +4553,28 @@ function filterA(year, btn) {
   <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
     <div class="fc-f"><div class="fq">ApoE</div><div class="ft">Gène de prédisposition Alzheimer</div><div class="fh">👆 Retourner</div></div>
     <div class="fc-b"><div class="fd">Gène de l'Apolipoprotéine E (ApoE). 3 allèles : E2, E3, E4. Génotype E4/E4 = le plus à risque. Allèle E4 = facteur de risque mais pas déterministe (≠ mutation familiale qui elle est déterministe = APP, PS1, PS2).</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Voies dopaminergiques</div><div class="ft">Les 2 grandes voies & cannabis</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">① Voie méso-cortico-limbique : ATV (aire tegmentale ventrale, mésencéphale) → cortex préfrontal → récompense/euphorie. ② Voie nigro-striée : substance noire → striatum (= voie qui dégénère dans Parkinson). Le THC active la libération de DA via levée de l'inhibition GABAergique.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Cannabis — formes</div><div class="ft">Variétés & teneur en THC</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">Chanvre indien, 3 variétés : sativa, indica, ruderalis. Formes : résine/haschich (5-40% THC), huile (60-80%), marijuana/plante séchée (~15%, var. 5-25%, ~400 produits chimiques). THC = principale substance psychoactive. France = 1er consommateur d'Europe, 5ᵉ rang mondial.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Endocannabinoïdes</div><div class="ft">Particularités AEA & 2-AG</div><div class="fh">👆 Retourner</div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Piège « fibrilles »</div><div class="ft">Plaques vs DNF : même mot, ≠ chose</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">Les fibrilles des PLAQUES = peptide Aβ, EXTRA-cellulaire (Aβ → dimères → oligomères → fibrilles → plaque). Les filaments des DNF = protéine Tau hyperphosphorylée, INTRA-cellulaire. → Protéine différente (Aβ vs Tau) + localisation différente (extra vs intra). Ce ne sont PAS les mêmes fibrilles.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Aβ42</div><div class="ft">Que signifie le « 42 » ?</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">Aβ42 = peptide β-amyloïde de 42 acides aminés (le « 42 » = nb d'acides aminés). C'est la forme la plus agrégeante, issue de la voie amyloïdogène (β puis γ-sécrétase, Aβ entière). Plus pathogène que l'Aβ40.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Pont plaques → DNF</div><div class="ft">Comment l'Aβ déclenche-t-elle les DNF ?</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">Plaques Aβ → microglies activées qui n'éliminent pas les plaques → neuroinflammation chronique → molécules pro-inflammatoires en surabondance → perturbent l'homéostasie neuronale → activent les kinases → hyperphosphorylation de Tau → DNF. La neuroinflammation chronique est le pont entre les deux lésions.</div></div>
   </div></div>
 </div>
 
