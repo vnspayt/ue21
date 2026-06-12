@@ -23,6 +23,8 @@ body.t4{--bg:#f0fdf6;--card:#fff;--sur:#dcfcee;--brd:#96e8c0;--A:#08875a;--B:#38
 body.t5{--bg:#fff0f8;--card:#fff;--sur:#ffe0f4;--brd:#ffaada;--A:#c8157a;--B:#f050a8;--C:#a0086a;--txt:#280a1c;--mu:#900858;--hdr:linear-gradient(130deg,#c8157a,#a0086a 50%,#e030a0);}
 /* Bardou : orange cuivré */
 body.t6{--bg:#fff8f0;--card:#fff;--sur:#fff1e0;--brd:#ffc680;--A:#c45c00;--B:#f08020;--C:#a04800;--txt:#2a1500;--mu:#8a4a10;--hdr:linear-gradient(130deg,#c45c00,#a04800 50%,#e07020);}
+/* Bonnet : cyan sarcelle */
+body.t9{--bg:#f0fcff;--card:#fff;--sur:#dcf7ff;--brd:#90dcf0;--A:#0782a8;--B:#36b8d8;--C:#055c78;--txt:#04222a;--mu:#2a6a80;--hdr:linear-gradient(130deg,#0782a8,#055c78 50%,#10a0c8);}
 
 body{background:var(--bg);}
 
@@ -59,6 +61,10 @@ body{background:var(--bg);}
 .hlr{border-left:4px solid #ef4444;background:#fff5f5;border-radius:0 10px 10px 0;padding:12px 16px;margin:10px 0;font-size:.9rem;}
 .hlg{border-left:4px solid #22c55e;background:#f0fdf4;border-radius:0 10px 10px 0;padding:12px 16px;margin:10px 0;font-size:.9rem;}
 .hli{border-left:4px solid var(--A);background:color-mix(in srgb,var(--A) 10%,white);border-radius:10px;padding:14px 18px;margin:12px 0;font-weight:700;}
+/* Badge complément hors-cours */
+.xcb{display:inline-block;background:#7c3aed;color:#fff;font-size:.7rem;font-weight:800;letter-spacing:.3px;padding:3px 9px;border-radius:999px;margin-bottom:8px;text-transform:uppercase;}
+.xc{border:2px dashed #a78bfa;background:#faf5ff;border-radius:12px;padding:14px 16px;margin:12px 0;}
+.xc .xcn{font-size:.82rem;color:#6d28d9;font-style:italic;margin-top:6px;}
 
 /* ── GRIDS ── */
 .g2{display:grid;grid-template-columns:1fr 1fr;gap:14px;min-width:0;}
@@ -174,8 +180,9 @@ svg{max-width:100%;overflow:visible;}
     <button class="tbtn" onclick="go('s4',3)">💧 Soulet · Soif & Alimentation</button>
     <button class="tbtn" onclick="go('s5',4)">🔬 Haelewyn · Schizophrénie</button>
     <button class="tbtn" onclick="go('s6',5)">🧠 Bardou · Neurodégénérescence</button>
-    <button class="tbtn" onclick="go('s7',6)">📊 Probabilités</button>
-    <button class="tbtn" onclick="go('s8',7)">📋 Annales</button>
+    <button class="tbtn" onclick="go('s9',6)">🍷 Bonnet · Alcool & Autisme</button>
+    <button class="tbtn" onclick="go('s7',7)">📊 Probabilités</button>
+    <button class="tbtn" onclick="go('s8',8)">📋 Annales</button>
   </div>
 </div>
 
@@ -2686,12 +2693,16 @@ D'autres synchroniseurs existent : température · heure des repas · exercice p
 </section>
 <section id="s4" class="sec">
 
+<div class="xc" style="margin:0 0 16px"><span class="xcb">⊕ Comment lire cet onglet</span><div style="font-size:.86rem;color:#4c1d95">J'ai comparé cette fiche au CM de Mme Soulet. Tout ce qui porte le marqueur <span style="color:#7c3aed;font-weight:800">⊕</span> ou un bandeau violet <strong>« Complément hors-cours »</strong> est un <strong>ajout de ma part</strong> (approfondissement utile, mais qui n'est <em>pas</em> dans le cours de Soulet). Le reste correspond bien au contenu du CM. Tu peux donc réviser en priorité ce qui n'est <em>pas</em> marqué, et traiter les blocs violets comme du bonus.</div></div>
+
 <!-- ══ SOIF ══ -->
 <div class="hlw" style="margin:0 0 18px">📌 <strong>Rappel hormonal — contenu aussi dans l'onglet Baudron</strong> (contexte stress). Ici ces hormones sont à leur place thématique : régulation hydrominérale et alimentaire.</div>
 
 <div class="sh">💧 Hormones de la régulation hydrominérale</div>
 
 <div class="card">
+  <span class="xcb">⊕ Complément hors-cours</span>
+  <div class="xcn" style="margin:0 0 10px;font-style:italic;color:#6d28d9;font-size:.82rem">Le CM de Mme Soulet parle de l'angiotensine II et de la logique du SRAA, mais <strong>ne détaille pas</strong> le mécanisme de l'ADH (récepteurs V1/V2, aquaporines), l'aldostérone au niveau moléculaire, les médicaments anti-HTA, ni le diabète insipide. Cette carte est un approfondissement (utile et cohérent avec l'onglet Baudron), à ne pas réviser comme du « par cœur Soulet ».</div>
   <div class="ct">🧬 ADH (Vasopressine) — Hormone anti-diurétique</div>
   <div class="g2">
     <div>
@@ -2906,38 +2917,99 @@ D'autres synchroniseurs existent : température · heure des repas · exercice p
 </div>
 
 <div class="card">
-  <div class="ct">💊 Stockage &amp; Hormones pancréatiques</div>
-  <div class="hli">⭐ Seuls les <strong>neurones</strong> utilisent directement le glucose sans insuline. Toutes les autres cellules ont besoin d'insuline pour faire entrer le glucose et l'utiliser comme source d'énergie.</div>
-  <div class="g2">
-    <div>
-      <div class="hl"><strong>Stockage du glucose excédentaire :</strong><br>
-      • → <strong>Glycogène</strong> (foie + muscles) = stockage <em>court terme</em> · utilisé en premier<br>
-      • → <strong>Triglycérides / Graisses</strong> (cellules adipeuses) = stockage <em>long terme</em><br>
-      → Les lipides stockent 2× plus d'énergie que le glycogène<br>
-      → Les acides gras proviennent de l'association des graisses aux composés glucidiques</div>
-      <div class="hl2"><strong>Insuline</strong> (phases céphalique + post-prandiale) — <span style="color:#dc2626;font-weight:700">Hypoglycémiante</span> :<br>
-      • Glycogénèse : glucose → glycogène<br>
-      • Facilite stockage glycogène + lipides dans cellules adipeuses<br>
-      • Permet l'assimilation du glucose par toutes les cellules (sauf neurones)<br>
-      → ↓ taux de glucose sanguin</div>
-      <div class="hl2">💡 Les <strong>cellules adipeuses</strong> peuvent stocker <strong>deux fois plus</strong> d'énergie que le glycogène (stockage LT beaucoup plus dense)</div>
-      <div class="hl"><strong>Mécanisme moléculaire de sécrétion de l'insuline :</strong><br>
-      Glucose → entre dans la cellule β via <strong>GLUT2</strong> → glycolyse → ↑ ATP/ADP → fermeture canaux K⁺-ATP → dépolarisation → ouverture canaux Ca²⁺ voltage-dépendants → ↑ Ca²⁺ intracellulaire → <strong>exocytose des granules d'insuline</strong><br>
-      Sulfamides hypoglycémiants (ex. glibenclamide) bloquent ces canaux K⁺ → stimule la sécrétion d'insuline</div>
-    </div>
-    <div>
-      <div class="hl"><strong>Glucagon</strong> (phase de jeûne) — <span style="color:#16a34a;font-weight:700">Hyperglycémiant</span> :<br>
-      • Glycogénolyse : glycogène → glucose (mobilisation)<br>
-      • Libération d'acides gras libres → source d'énergie principale du corps à jeun (SAUF cerveau)<br>
-      → À jeun : insuline quasi absente → glucose <em>uniquement</em> pour les neurones · Corps utilise AG</div>
-      <div class="hlw"><strong>Stockage des lipides :</strong> Acides gras (lipides) + composés glucidiques → <strong>Triglycérides</strong> stockés dans cellules adipeuses. <strong>Protéines</strong> → AA → protéines de l'organisme.</div>
-    </div>
-  </div>
+  <div class="ct">💊 Stockage de l'énergie &amp; hormones pancréatiques</div>
+  <div class="hli">⭐ <strong>Le cerveau est une exception.</strong> Seuls les <strong>neurones</strong> font entrer le glucose <em>sans avoir besoin d'insuline</em>. Toutes les autres cellules du corps (muscle, foie, tissu adipeux…) ont besoin de l'insuline pour ouvrir leurs « portes » à glucose (les transporteurs GLUT4) et pouvoir l'utiliser comme carburant.</div>
+
+  <div class="hl"><strong>Que devient le glucose en trop après un repas ?</strong><br>
+  Quand on mange, la glycémie (taux de glucose dans le sang) monte. Le corps n'utilise immédiatement qu'une partie de ce glucose ; <strong>le reste n'est pas jeté, il est transformé en réserves</strong>. Il existe deux formes de stockage, qui se remplissent dans cet ordre :<br><br>
+  • <strong>① Le glycogène — réserve à court terme.</strong> Le glucose excédentaire est <strong>assemblé en une grosse molécule appelée glycogène</strong> (le glucose est le « maillon », le glycogène est la « chaîne »). Ce glycogène est stocké dans le <strong>foie</strong> et les <strong>muscles</strong>. C'est une réserve <em>rapide à constituer et rapide à mobiliser</em> → c'est elle qu'on puise <strong>en premier</strong> entre les repas. La transformation glucose → glycogène s'appelle la <strong>glycogénèse</strong>.<br><br>
+  • <strong>② Les triglycérides (graisses) — réserve à long terme.</strong> Une fois les réserves de glycogène pleines, le glucose en excès est <strong>converti en graisses (triglycérides)</strong>, stockées dans les <strong>cellules adipeuses</strong>. C'est une réserve <em>plus lente</em> mais bien plus dense : à poids égal, les graisses stockent environ <strong>2× plus d'énergie</strong> que le glycogène. La fabrication de ces graisses s'appelle la <strong>lipogenèse</strong>.</div>
+
+  <div class="hl2"><strong>🔻 Insuline — l'hormone qui fait BAISSER la glycémie (hypoglycémiante)</strong><br>
+  Sécrétée par les <strong>cellules β du pancréas</strong> dès que la glycémie monte (et même par anticipation, en phase céphalique : à la vue/l'odeur de la nourriture). C'est <strong>l'hormone du stockage</strong>. Elle agit de trois façons :<br>
+  • elle <strong>ouvre les cellules au glucose</strong> (insertion des transporteurs GLUT4) → toutes les cellules sauf les neurones absorbent le glucose ;<br>
+  • elle déclenche la <strong>glycogénèse</strong> (glucose → glycogène) dans le foie et les muscles ;<br>
+  • elle favorise la <strong>lipogenèse</strong> (mise en réserve sous forme de graisses).<br>
+  <strong>Résultat : la glycémie redescend.</strong></div>
+
+  <div class="hl"><strong>🔺 Glucagon — l'hormone qui fait MONTER la glycémie (hyperglycémiante)</strong><br>
+  Sécrétée par les <strong>cellules α du pancréas</strong> pendant le <strong>jeûne</strong> (entre les repas), quand la glycémie baisse. C'est <strong>l'hormone du déstockage</strong>, l'<strong>antagoniste de l'insuline</strong>. Elle fait l'inverse :<br>
+  • <strong>glycogénolyse</strong> : elle <strong>recasse le glycogène en glucose</strong> (glycogène → glucose) pour le renvoyer dans le sang — c'est exactement l'opération inverse de la glycogénèse ;<br>
+  • elle libère des <strong>acides gras</strong> à partir des graisses stockées (lipolyse) → ils deviennent la <strong>source d'énergie principale du corps à jeun</strong>.</div>
+
+  <div class="hlg">🧠 <strong>Pourquoi cette répartition ?</strong> À jeun, l'insuline est quasi absente, donc la plupart des cellules ne peuvent plus capter le glucose et brûlent les <strong>acides gras</strong> à la place. Le peu de glucose disponible est ainsi <strong>réservé en priorité aux neurones</strong>, qui, eux, n'ont pas besoin d'insuline et dépendent presque uniquement du glucose. Le glucagon maintient donc une glycémie de base juste pour nourrir le cerveau, pendant que le reste du corps tourne aux graisses.</div>
+
+  <div class="hlw"><strong>Et les protéines ?</strong> Les protéines alimentaires sont d'abord découpées en <strong>acides aminés (AA)</strong>, qui servent surtout à <strong>fabriquer les protéines de l'organisme</strong> (muscles, enzymes…). En cas de jeûne prolongé, ces AA peuvent aussi être convertis en glucose par le foie (néoglucogenèse).</div>
+</div>
+
+<div class="sb">
+  <p style="font-size:.88rem;color:var(--mu);margin-bottom:8px;text-align:left">Le schéma ci-dessous résume tout : à <strong>gauche</strong>, après un repas (glycémie haute → insuline → on <em>stocke</em>) ; à <strong>droite</strong>, à jeun (glycémie basse → glucagon → on <em>déstocke</em>). Les deux flèches centrales (glycogénèse ↔ glycogénolyse) sont une seule et même réserve qu'on remplit puis qu'on vide.</p>
+  <svg viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+    <defs>
+      <marker id="alF" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#08875a"/></marker>
+      <marker id="alR" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#c45c00"/></marker>
+    </defs>
+    <text x="380" y="20" text-anchor="middle" font-size="13" font-weight="900" fill="#08875a">QUE DEVIENT LE GLUCOSE ? STOCKAGE ⇄ DÉSTOCKAGE</text>
+
+    <!-- glucose central -->
+    <rect x="300" y="150" width="160" height="58" rx="12" fill="#dcfcee" stroke="#08875a" stroke-width="2.5"/>
+    <text x="380" y="175" text-anchor="middle" font-size="12" font-weight="900" fill="#056840">GLUCOSE</text>
+    <text x="380" y="194" text-anchor="middle" font-size="8.5" fill="#022818">dans le sang (glycémie)</text>
+
+    <!-- APRES REPAS (gauche, haut) -->
+    <rect x="20" y="40" width="250" height="92" rx="12" fill="#dcfcee" stroke="#08875a" stroke-width="2"/>
+    <text x="145" y="60" text-anchor="middle" font-size="10.5" font-weight="900" fill="#056840">🍽 APRÈS UN REPAS</text>
+    <text x="145" y="78" text-anchor="middle" font-size="9" fill="#022818">Glycémie HAUTE</text>
+    <text x="145" y="95" text-anchor="middle" font-size="9.5" font-weight="800" fill="#08875a">→ INSULINE (cellules β)</text>
+    <text x="145" y="112" text-anchor="middle" font-size="8.5" fill="#2a7050">= hormone du STOCKAGE</text>
+    <text x="145" y="126" text-anchor="middle" font-size="8" fill="#2a7050">ouvre les cellules au glucose (GLUT4)</text>
+    <!-- fleche insuline vers glucose -->
+    <line x1="200" y1="132" x2="305" y2="165" stroke="#08875a" stroke-width="2.2" marker-end="url(#alF)"/>
+
+    <!-- A JEUN (droite, haut) -->
+    <rect x="490" y="40" width="250" height="92" rx="12" fill="#fff7ee" stroke="#c45c00" stroke-width="2"/>
+    <text x="615" y="60" text-anchor="middle" font-size="10.5" font-weight="900" fill="#a04800">⏳ À JEUN (entre repas)</text>
+    <text x="615" y="78" text-anchor="middle" font-size="9" fill="#04222a">Glycémie BASSE</text>
+    <text x="615" y="95" text-anchor="middle" font-size="9.5" font-weight="800" fill="#c45c00">→ GLUCAGON (cellules α)</text>
+    <text x="615" y="112" text-anchor="middle" font-size="8.5" fill="#8a4a10">= hormone du DÉSTOCKAGE</text>
+    <text x="615" y="126" text-anchor="middle" font-size="8" fill="#8a4a10">renvoie du glucose dans le sang</text>
+    <line x1="560" y1="132" x2="455" y2="165" stroke="#c45c00" stroke-width="2.2" marker-end="url(#alR)"/>
+
+    <!-- GLYCOGENE (bas gauche) -->
+    <rect x="70" y="250" width="240" height="92" rx="12" fill="#dcfcee" stroke="#08875a" stroke-width="2"/>
+    <text x="190" y="270" text-anchor="middle" font-size="10.5" font-weight="900" fill="#056840">① GLYCOGÈNE</text>
+    <text x="190" y="287" text-anchor="middle" font-size="8.5" fill="#022818">= chaîne de glucose · FOIE + MUSCLES</text>
+    <text x="190" y="303" text-anchor="middle" font-size="8.5" fill="#022818">Réserve COURT TERME (puisée en 1er)</text>
+    <text x="190" y="320" text-anchor="middle" font-size="8" fill="#2a7050">Rapide à remplir / rapide à vider</text>
+    <text x="190" y="334" text-anchor="middle" font-size="8" fill="#2a7050">⚡ utilisée la première à jeun</text>
+
+    <!-- TRIGLYCERIDES (bas droite) -->
+    <rect x="450" y="250" width="240" height="92" rx="12" fill="#fef3c7" stroke="#c45c00" stroke-width="2"/>
+    <text x="570" y="270" text-anchor="middle" font-size="10.5" font-weight="900" fill="#a04800">② TRIGLYCÉRIDES (graisses)</text>
+    <text x="570" y="287" text-anchor="middle" font-size="8.5" fill="#04222a">CELLULES ADIPEUSES</text>
+    <text x="570" y="303" text-anchor="middle" font-size="8.5" fill="#04222a">Réserve LONG TERME</text>
+    <text x="570" y="320" text-anchor="middle" font-size="8" fill="#8a4a10">≈ 2× plus d'énergie que le glycogène</text>
+    <text x="570" y="334" text-anchor="middle" font-size="8" fill="#8a4a10">à jeun → libère des acides gras</text>
+
+    <!-- fleche glucose <-> glycogene -->
+    <line x1="318" y1="200" x2="230" y2="248" stroke="#08875a" stroke-width="2.4" marker-end="url(#alF)"/>
+    <text x="222" y="232" text-anchor="middle" font-size="8" font-weight="800" fill="#056840">glycogénèse</text>
+    <text x="222" y="243" text-anchor="middle" font-size="7" fill="#2a7050">(glucose→glycogène)</text>
+    <line x1="252" y1="250" x2="340" y2="205" stroke="#c45c00" stroke-width="2.4" marker-end="url(#alR)"/>
+    <text x="330" y="240" text-anchor="middle" font-size="8" font-weight="800" fill="#a04800">glycogénolyse</text>
+    <text x="330" y="251" text-anchor="middle" font-size="7" fill="#8a4a10">(glycogène→glucose)</text>
+
+    <!-- fleche glucose -> triglycerides -->
+    <line x1="442" y1="200" x2="540" y2="248" stroke="#08875a" stroke-width="2.4" marker-end="url(#alF)"/>
+    <text x="540" y="232" text-anchor="middle" font-size="8" font-weight="800" fill="#056840">lipogenèse</text>
+    <text x="540" y="243" text-anchor="middle" font-size="7" fill="#2a7050">(si glycogène plein)</text>
+  </svg>
 </div>
 
 <div class="card">
+  <span class="xcb">⊕ Complément hors-cours</span>
   <div class="ct">🍎 Insuline & Glucagon — Mécanismes moléculaires complets</div>
-  <p style="font-size:.88rem;color:var(--mu);margin-bottom:10px">La section ci-dessus donne les grandes lignes. Voici le détail du fonctionnement cellulaire, utile pour comprendre pourquoi le cerveau est une exception et comment les médicaments anti-diabétiques fonctionnent.</p>
+  <p style="font-size:.88rem;color:var(--mu);margin-bottom:10px"><strong>Cette carte entière dépasse le CM de Soulet.</strong> Le cours s'arrête aux grandes lignes (insuline hypoglycémiante = glycogénèse + stockage ; glucagon hyperglycémiant = glycogénolyse). Le détail moléculaire ci-dessous (GLUT2, canaux K⁺-ATP, récepteur tyrosine kinase/GLUT4, voie GPCR/AMPc du glucagon, diabète T1/T2, insulinome) est un approfondissement : utile pour comprendre, mais pas exigible au titre de ce CM.</p>
   <div class="g2">
     <div>
       <div class="hli"><strong>Insuline</strong> = 51 AA · Cellules β des îlots de Langerhans · <strong>Hypoglycémiante</strong></div>
@@ -2966,7 +3038,8 @@ D'autres synchroniseurs existent : température · heure des repas · exercice p
 
 <div class="card">
   <div class="ct">🤤 Tableau synthétique — Toutes les hormones de la faim &amp; de la satiété</div>
-  <p style="font-size:.88rem;color:var(--mu);margin-bottom:10px">Ce tableau récapitule toutes les hormones impliquées dans la régulation de l'appétit. Il faut les lire en 3 temps : <em>d'où elles viennent</em>, <em>ce qui déclenche leur sécrétion</em>, et <em>comment elles agissent sur le cerveau</em>. Les rouges ↑ l'appétit (orexigènes), les verts ↓ l'appétit (anorexigènes).</p>
+  <p style="font-size:.88rem;color:var(--mu);margin-bottom:10px">Ce tableau récapitule les hormones impliquées dans la régulation de l'appétit. Il faut les lire en 3 temps : <em>d'où elles viennent</em>, <em>ce qui déclenche leur sécrétion</em>, et <em>comment elles agissent sur le cerveau</em>. Les rouges ↑ l'appétit (orexigènes), les verts ↓ l'appétit (anorexigènes).</p>
+  <div class="xc"><span class="xcb">⊕ Repères cours / hors-cours</span><div style="font-size:.85rem;color:#4c1d95"><strong>Dans le CM de Soulet :</strong> ghréline, CCK, PYY, insuline cérébrale, leptine. — <strong>Ajoutés (hors-cours) :</strong> la ligne <strong>GLP-1</strong> et la ligne <strong>Cortisol</strong> (stress eating). Les précisions très fines (cellules I/L, récepteurs Y2, mécanisme GLP-1) sont aussi du complément. Garde-les comme bonus de compréhension.</div></div>
   <table>
     <tr><th>Hormone</th><th>Origine</th><th>Signal déclencheur</th><th>Effet appétit</th><th>Mécanisme central</th></tr>
     <tr>
@@ -2991,7 +3064,7 @@ D'autres synchroniseurs existent : température · heure des repas · exercice p
       <td>Récepteurs Y2 → inhibe NPY/AgRP · Ralentit motilité intestinale</td>
     </tr>
     <tr>
-      <td><strong>GLP-1</strong></td>
+      <td><strong>GLP-1</strong> <span style="color:#7c3aed;font-weight:800">⊕</span></td>
       <td>Intestin grêle (cellules L)</td>
       <td>Repas riche en glucides+lipides</td>
       <td>⬇ <span style="color:#16a34a;font-weight:700">SATIÉTÉ + ↑ insuline</span></td>
@@ -3012,14 +3085,14 @@ D'autres synchroniseurs existent : température · heure des repas · exercice p
       <td>Active POMC/CART · Inhibe NPY/AgRP · Signal "réserves suffisantes" au noyau arqué</td>
     </tr>
     <tr>
-      <td><strong>Cortisol</strong></td>
+      <td><strong>Cortisol</strong> <span style="color:#7c3aed;font-weight:800">⊕</span></td>
       <td>Cortex surrénalien</td>
       <td>Stress chronique</td>
       <td>⬆ <span style="color:#dc2626;font-weight:700">FAIM (stress eating)</span></td>
       <td>↑ NPY · ↑ appétence aliments caloriques · Effets circuit récompense (NAc)</td>
     </tr>
   </table>
-  <div class="hlw">⚠ <strong>Résistance à la leptine dans l'obésité :</strong> Les personnes obèses ont paradoxalement des taux de leptine très élevés — mais leurs récepteurs hypothalamiques ne répondent plus (désensibilisation, comme pour l'insuline dans le T2). Le signal "stop de manger" ne passe plus → hyperphagie maintenue malgré des réserves pleines.</div>
+  <div class="hlw">⚠ <strong>Résistance à la leptine dans l'obésité</strong> <span style="color:#7c3aed;font-weight:800">⊕ hors-cours</span> : Les personnes obèses ont paradoxalement des taux de leptine très élevés — mais leurs récepteurs hypothalamiques ne répondent plus (désensibilisation). Le signal "stop de manger" ne passe plus → hyperphagie maintenue malgré des réserves pleines. <em>(Non évoqué dans le CM, mais cohérent avec le reste.)</em></div>
   <div class="hl"><strong>Distinction CT / LT :</strong> Les hormones CT (ghréline, CCK, PYY) gèrent le repas en cours. La leptine est un signal LT : elle ne décide pas si vous avez faim maintenant, mais elle module la sensibilité du cerveau à tous ces autres signaux. Quand la leptine est haute, les signaux de faim "pèsent moins lourd".</div>
 </div>
 
@@ -3034,9 +3107,9 @@ D'autres synchroniseurs existent : température · heure des repas · exercice p
       <div class="hl2"><strong>Ghréline → nerf vague :</strong> Injection de ghréline → ↓ fréquence décharge du nerf vague → ↑ prise alimentaire. (À l'opposé de la CCK qui ↑ le nerf vague)</div>
     </div>
     <div>
-      <div class="hl"><strong>Glucoprivation</strong> (déficit en glucose) → faim<br>
-      Provoquée par : injection d'insuline (→ stockage massif glucose) ou injection d'une molécule bloquant l'utilisation cellulaire du glucose<br>
-      Sites sensibles : <strong>Cerveau</strong> (bulbe rachidien) — sensible à glucoprivation</div>
+      <div class="hl"><strong>Glucoprivation</strong> (déficit en glucose <em>disponible</em>) → faim<br>
+      Comment la provoquer expérimentalement ? ① par une <strong>injection d'insuline</strong> : l'insuline force les cellules à stocker massivement le glucose → il en reste très peu de disponible dans le sang → le cerveau « croit » manquer de glucose → faim ; ou ② par une molécule qui <strong>bloque l'utilisation cellulaire du glucose</strong> (le glucose est là mais inutilisable).<br>
+      Site sensible : le <strong>cerveau</strong> (bulbe rachidien), qui dépend du glucose.</div>
       <div class="hl2"><strong>Lipoprivation</strong> (déficit en acides gras) → faim<br>
       Provoquée par : injection d'une molécule bloquant le métabolisme des AG<br>
       Sites sensibles : <strong>Foie</strong> — sensible aux deux (glucoprivation ET lipoprivation)<br>
@@ -4028,7 +4101,7 @@ D'autres synchroniseurs existent : température · heure des repas · exercice p
 </section>
 
 <script>
-const themes = ['t1','t2','t3','t4','t5','t6','t7','t8'];
+const themes = ['t1','t2','t3','t4','t5','t6','t9','t7','t8'];
 function go(id, idx) {
   document.querySelectorAll('.sec').forEach(s => s.classList.remove('on'));
   document.querySelectorAll('.tbtn').forEach(b => b.classList.remove('on'));
@@ -5122,6 +5195,591 @@ function filterA(year, btn) {
 
 </section>
 
+
+<section id="s9" class="sec">
+
+<div class="hli">🍷 <strong>Deux TD réunis</strong> — <strong>TD1 : les effets de l'alcool sur le cerveau</strong> (de la molécule au comportement, en passant par le métabolisme, les mécanismes synaptiques et les complications) · <strong>TD2 : le trouble du spectre de l'autisme (TSA)</strong>. Repère-toi avec les sous-titres colorés et les schémas.</div>
+
+<!-- ════════════════════════ TD1 : ALCOOL ════════════════════════ -->
+<div class="sh">🍺 TD1 · Qu'est-ce que l'alcool ? Les 3 grandes formes</div>
+<div class="card">
+  <p style="font-size:.88rem;color:var(--mu);margin-bottom:10px">Il existe plusieurs « alcools » au sens chimique, mais un seul est buvable. Le piège classique : confondre méthanol (toxique) et éthanol (celui des boissons).</p>
+  <div class="g3">
+    <div class="hlr"><strong>Méthanol</strong> (methyl alcohol)<br>⚠ <strong>Hautement toxique.</strong> Dégradé en <strong>acide formique</strong> (celui des orties) + <strong>formaldéhyde</strong> (formol) → cécité, coma, décès.</div>
+    <div class="hlg"><strong>Éthanol</strong> (ethyl alcohol)<br>✅ C'est <strong>l'alcool des boissons</strong>. La seule forme consommée. C'est lui qu'on étudie ici.</div>
+    <div class="hlr"><strong>Isopropanol</strong> (isopropyl alcohol)<br>⚠ <strong>Hautement toxique.</strong> Solvant industriel (décapant, dissolvant) → nausées, vertiges, coma, décès.</div>
+  </div>
+</div>
+
+<div class="sh">🩸 Biodisponibilité & alcoolémie (BAC)</div>
+<div class="card">
+  <div class="ct">🔑 Pourquoi l'éthanol diffuse partout</div>
+  <div class="g2">
+    <div class="hl"><strong>Une molécule « passe-partout » :</strong> l'éthanol est <strong>un peu lipophile</strong> (aime le gras) ET <strong>très hydrophile</strong> (aime l'eau). Comme l'organisme = ~80% d'eau et que les membranes = lipides, l'éthanol traverse <strong>facilement</strong> les tissus du tube digestif, diffuse dans le sang et dans tous les tissus.</div>
+    <div class="hl2"><strong>Variabilité interindividuelle :</strong> les propriétés sont les mêmes chez tous, mais l'<strong>absorption</strong>, la <strong>distribution</strong> et la <strong>dégradation</strong> varient selon le <strong>genre</strong>, le <strong>génome</strong> et l'<strong>âge</strong>.</div>
+  </div>
+  <div class="hli"><strong>Biodisponibilité</strong> = quantité d'alcool réellement <em>disponible et libre</em> dans le cerveau pour en perturber le fonctionnement. C'est elle qui détermine l'effet.</div>
+  <div class="g2">
+    <div class="hl"><strong>BAC (Blood Alcohol Concentration)</strong> = alcoolémie. <strong>Premiers effets dès 0,5 g/L</strong> de sang.</div>
+    <div class="hl2"><strong>Verre standard = 10 g d'alcool pur.</strong> ½ bière à 5° · 1 coupe de champagne 12° · 1 ballon de vin 12° · 1 verre d'apéritif 18°.<br><strong>Chaque verre standard → +0,2 g/L d'alcoolémie.</strong></div>
+  </div>
+</div>
+
+<div class="sh">⚙️ Le métabolisme de l'alcool — 3 étapes (ADE)</div>
+<div class="sb">
+<svg viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+  <defs><marker id="b9a" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#0782a8"/></marker></defs>
+  <text x="380" y="18" text-anchor="middle" font-size="14" font-weight="900" fill="#0782a8">PARCOURS DE L'ÉTHANOL DANS LE CORPS</text>
+  <!-- Absorption -->
+  <rect x="14" y="36" width="232" height="196" rx="13" fill="#dcf7ff" stroke="#0782a8" stroke-width="2.5"/>
+  <text x="130" y="58" text-anchor="middle" font-size="12" font-weight="900" fill="#0782a8">① ABSORPTION</text>
+  <text x="130" y="76" text-anchor="middle" font-size="9" fill="#04222a">Diffusion passive (du + concentré</text>
+  <text x="130" y="89" text-anchor="middle" font-size="9" fill="#04222a">vers le - concentré)</text>
+  <rect x="28" y="100" width="204" height="34" rx="8" fill="#fff" stroke="#36b8d8" stroke-width="1.4"/>
+  <text x="130" y="121" text-anchor="middle" font-size="9.5" font-weight="800" fill="#055c78">Estomac : 20%</text>
+  <rect x="28" y="140" width="204" height="34" rx="8" fill="#fff" stroke="#36b8d8" stroke-width="1.4"/>
+  <text x="130" y="161" text-anchor="middle" font-size="9.5" font-weight="800" fill="#055c78">Intestin grêle : 80%</text>
+  <text x="130" y="192" text-anchor="middle" font-size="8" fill="#2a6a80">↑ vite : boissons gazeuses (CO₂),</text>
+  <text x="130" y="204" text-anchor="middle" font-size="8" fill="#2a6a80">conso rapide, à jeun (20-30 min)</text>
+  <text x="130" y="218" text-anchor="middle" font-size="8" fill="#2a6a80">↓ : repas, alcools forts (1-2h)</text>
+  <!-- arrow -->
+  <line x1="246" y1="134" x2="276" y2="134" stroke="#0782a8" stroke-width="2.5" marker-end="url(#b9a)"/>
+  <!-- Distribution -->
+  <rect x="278" y="36" width="200" height="196" rx="13" fill="#dcf7ff" fill-opacity=".7" stroke="#36b8d8" stroke-width="2"/>
+  <text x="378" y="58" text-anchor="middle" font-size="12" font-weight="900" fill="#0782a8">② DISTRIBUTION</text>
+  <text x="378" y="80" text-anchor="middle" font-size="9" fill="#04222a">Via la circulation sanguine</text>
+  <text x="378" y="100" text-anchor="middle" font-size="9" fill="#04222a">Se loge où il y a de l'EAU</text>
+  <text x="378" y="113" text-anchor="middle" font-size="9" fill="#04222a">(muscles) — très peu dans</text>
+  <text x="378" y="126" text-anchor="middle" font-size="9" fill="#04222a">les tissus GRAISSEUX</text>
+  <rect x="292" y="140" width="172" height="78" rx="8" fill="#fff" stroke="#36b8d8" stroke-width="1.4"/>
+  <text x="378" y="158" text-anchor="middle" font-size="8.5" font-weight="800" fill="#055c78">+ de gras = - de « réservoir » eau</text>
+  <text x="378" y="172" text-anchor="middle" font-size="8.5" fill="#04222a">→ alcool + concentré dans le sang</text>
+  <text x="378" y="190" text-anchor="middle" font-size="8" fill="#2a6a80">Femmes : + de tissu adipeux</text>
+  <text x="378" y="203" text-anchor="middle" font-size="8" fill="#2a6a80">(hormonal) → alcoolémie souvent +</text>
+  <!-- arrow -->
+  <line x1="478" y1="134" x2="508" y2="134" stroke="#0782a8" stroke-width="2.5" marker-end="url(#b9a)"/>
+  <!-- Elimination -->
+  <rect x="510" y="36" width="236" height="196" rx="13" fill="#dcf7ff" stroke="#055c78" stroke-width="2"/>
+  <text x="628" y="58" text-anchor="middle" font-size="12" font-weight="900" fill="#0782a8">③ ÉLIMINATION</text>
+  <rect x="524" y="70" width="208" height="26" rx="7" fill="#fff" stroke="#36b8d8" stroke-width="1.4"/>
+  <text x="628" y="87" text-anchor="middle" font-size="9.5" font-weight="800" fill="#055c78">FOIE : 90% (enzymes)</text>
+  <rect x="524" y="100" width="208" height="24" rx="7" fill="#fff" stroke="#36b8d8" stroke-width="1.2"/>
+  <text x="628" y="116" text-anchor="middle" font-size="9" fill="#04222a">Urines : 5% · Respiration : 5%</text>
+  <text x="628" y="142" text-anchor="middle" font-size="8.5" fill="#04222a">Vitesse moyenne : 0,15 g/h</text>
+  <text x="628" y="155" text-anchor="middle" font-size="8.5" fill="#04222a">→ ~1h30 par verre standard</text>
+  <text x="628" y="174" text-anchor="middle" font-size="8" fill="#b91c1c" font-weight="700">Métabolisme CONSTANT & non modifiable</text>
+  <text x="628" y="192" text-anchor="middle" font-size="8" fill="#2a6a80">Si absorption &gt; élimination →</text>
+  <text x="628" y="205" text-anchor="middle" font-size="8" fill="#2a6a80">accumulation → coma éthylique</text>
+  <text x="628" y="222" text-anchor="middle" font-size="8" fill="#2a6a80">Oxydation → CO₂ + eau + énergie</text>
+</svg>
+</div>
+
+<div class="card">
+  <div class="ct">🧬 Acétaldéhyde, mutation enzymatique & tolérance</div>
+  <div class="hlw"><strong>L'étape qui rend malade :</strong> en dégradant l'alcool, le foie produit de l'<strong>acétaldéhyde</strong>, un composé <strong>toxique</strong> qui s'accumule → nausées, vomissements, maux de tête, rougeurs.</div>
+  <div class="g2">
+    <div class="hl"><strong>« Asian Flush » :</strong> ~<strong>50% des personnes d'origine asiatique</strong> portent une <strong>mutation</strong> rendant inefficace l'enzyme (<strong>déshydrogénase</strong>) qui transforme l'acétaldéhyde en <strong>acide acétique</strong> → l'acétaldéhyde s'accumule → rougeurs intenses dès une faible dose.</div>
+    <div class="hl2"><strong>Tolérance :</strong> en cas de consommation répétée, l'organisme <strong>fabrique plus d'enzymes</strong> pour contrer les effets. ⚠ Leur <strong>vitesse d'action ne change pas</strong>, seul leur nombre augmente.<br>• <strong>Tolérance pharmacodynamique</strong> : adaptations neuronales pour fonctionner « normalement » malgré l'alcool → permet…<br>• <strong>Tolérance comportementale</strong> : l'animal/individu paraît sobre malgré une alcoolémie élevée.</div>
+  </div>
+  <div class="hl"><strong>Démonstration chez le rat :</strong> alcoolisé régulièrement, il a un comportement intoxiqué. Quand on arrête, l'alcoolémie reste élevée mais le <strong>comportement redevient sobre</strong> (motricité, mémoire OK) → preuve d'une adaptation du corps qui protège l'organisme.</div>
+</div>
+
+<div class="sh">🩺 Effets physiologiques (au-delà du cerveau)</div>
+<div class="card">
+  <div class="g2">
+    <div class="hl"><strong>SNC (comportement) :</strong> altération de la <strong>mémoire</strong> (black-out), troubles de la <strong>coordination</strong> (ataxie, dysmétrie), instabilité émotionnelle, <strong>désinhibition</strong>, troubles du langage, ↓ du <strong>sommeil paradoxal</strong>.</div>
+    <div class="hl2"><strong>Cardiovasculaire :</strong> dilatation des vaisseaux périphériques, ↑ arythmie, œdème des extrémités.</div>
+    <div class="hl"><strong>Urinaire :</strong> ↑ volume d'eau → ↑ urine → <strong>déshydratation</strong>.</div>
+    <div class="hl2"><strong>Reproducteur :</strong> ↓ inhibitions, atrophie testiculaire, perturbation des cycles ovariens → ↓ fertilité.</div>
+    <div class="hl"><strong>Gastro-intestinal :</strong> ↑ salivation, ↑ sucs gastriques → inflammation estomac/œsophage, ulcères, cancers.</div>
+    <div class="hlr"><strong>Foie :</strong> cirrhose ou hépatite (mort cellulaire, hémorragies).</div>
+  </div>
+</div>
+
+<div class="sh">🧠 Mécanismes d'action — 3 cibles synaptiques</div>
+<div class="card">
+  <p style="font-size:.88rem;color:var(--mu);margin-bottom:8px">Le cœur du cours. À retenir comme une balance : l'alcool <strong>renforce le frein (GABA)</strong> et <strong>coupe l'accélérateur (glutamate)</strong>, le tout pendant qu'il <strong>active la récompense (dopamine)</strong>.</p>
+</div>
+
+<div class="sb">
+<svg viewBox="0 0 760 210" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+  <text x="380" y="18" text-anchor="middle" font-size="13" font-weight="900" fill="#0782a8">L'ALCOOL = ↑ FREIN + ↓ ACCÉLÉRATEUR + ↑ RÉCOMPENSE</text>
+  <!-- GABA -->
+  <rect x="14" y="32" width="234" height="160" rx="13" fill="#dcf7ff" stroke="#0782a8" stroke-width="2.5"/>
+  <text x="131" y="54" text-anchor="middle" font-size="12" font-weight="900" fill="#0782a8">🛑 GABA-A (frein)</text>
+  <text x="131" y="73" text-anchor="middle" font-size="9" fill="#04222a">Principal NT INHIBITEUR</text>
+  <text x="131" y="89" text-anchor="middle" font-size="9" fill="#04222a">Canal → entrée de Cl⁻</text>
+  <text x="131" y="105" text-anchor="middle" font-size="9" fill="#04222a">→ hyperpolarisation → inhibition</text>
+  <rect x="26" y="116" width="210" height="64" rx="8" fill="#fff" stroke="#36b8d8" stroke-width="1.4"/>
+  <text x="131" y="134" text-anchor="middle" font-size="8.8" font-weight="800" fill="#055c78">L'alcool POTENTIALISE le GABA</text>
+  <text x="131" y="149" text-anchor="middle" font-size="8.3" fill="#04222a">↑ entrée Cl⁻ → sédation, ↓ anxiété,</text>
+  <text x="131" y="162" text-anchor="middle" font-size="8.3" fill="#04222a">somnolence → coma → mort</text>
+  <text x="131" y="175" text-anchor="middle" font-size="7.8" fill="#2a6a80">Co-agonistes : benzo, barbituriques…</text>
+  <!-- Glutamate -->
+  <rect x="263" y="32" width="234" height="160" rx="13" fill="#dcf7ff" fill-opacity=".7" stroke="#36b8d8" stroke-width="2"/>
+  <text x="380" y="54" text-anchor="middle" font-size="12" font-weight="900" fill="#0782a8">⚡ Glutamate / NMDA</text>
+  <text x="380" y="73" text-anchor="middle" font-size="9" fill="#04222a">Principal NT EXCITATEUR</text>
+  <text x="380" y="89" text-anchor="middle" font-size="9" fill="#04222a">NMDA → entrée Na⁺/Ca²⁺ (lève Mg²⁺)</text>
+  <text x="380" y="105" text-anchor="middle" font-size="9" fill="#04222a">Très présent dans l'HIPPOCAMPE</text>
+  <rect x="275" y="116" width="210" height="64" rx="8" fill="#fff" stroke="#36b8d8" stroke-width="1.4"/>
+  <text x="380" y="134" text-anchor="middle" font-size="8.8" font-weight="800" fill="#055c78">L'alcool INHIBE NMDA</text>
+  <text x="380" y="149" text-anchor="middle" font-size="8.3" fill="#04222a">↓ entrée Ca²⁺ → trouble mémoire/</text>
+  <text x="380" y="162" text-anchor="middle" font-size="8.3" fill="#04222a">apprentissage → BLACK-OUT</text>
+  <text x="380" y="175" text-anchor="middle" font-size="7.8" fill="#2a6a80">Excès de Ca²⁺ = excitotoxicité</text>
+  <!-- Dopamine -->
+  <rect x="512" y="32" width="234" height="160" rx="13" fill="#dcf7ff" stroke="#055c78" stroke-width="2"/>
+  <text x="629" y="54" text-anchor="middle" font-size="12" font-weight="900" fill="#0782a8">🎯 Dopamine (récompense)</text>
+  <text x="629" y="73" text-anchor="middle" font-size="9" fill="#04222a">Voie ATV → noyau accumbens</text>
+  <text x="629" y="89" text-anchor="middle" font-size="9" fill="#04222a">= circuit de la RÉCOMPENSE</text>
+  <rect x="524" y="100" width="210" height="80" rx="8" fill="#fff" stroke="#36b8d8" stroke-width="1.4"/>
+  <text x="629" y="118" text-anchor="middle" font-size="8.8" font-weight="800" fill="#055c78">L'alcool ↑ la dopamine (NAc)</text>
+  <text x="629" y="133" text-anchor="middle" font-size="8.3" fill="#04222a">• directement (active l'ATV)</text>
+  <text x="629" y="147" text-anchor="middle" font-size="8.3" fill="#04222a">• indirectement (lève l'inhibition</text>
+  <text x="629" y="159" text-anchor="middle" font-size="8.3" fill="#04222a">GABA + libère opioïdes endogènes)</text>
+  <text x="629" y="174" text-anchor="middle" font-size="7.8" fill="#2a6a80">Conso chronique → tolérance → ↓ effet</text>
+</svg>
+</div>
+
+
+<div class="sh2">🔬 Au niveau de la synapse — petits schémas des récepteurs</div>
+
+<!-- ===== GABA-A ===== -->
+<div class="card">
+  <div class="ct">🛑 Récepteur GABA-A — le « frein » potentialisé par l'alcool</div>
+  <div class="sb">
+  <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+    <defs>
+      <marker id="ga_cl" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#0782a8"/></marker>
+    </defs>
+    <text x="380" y="20" text-anchor="middle" font-size="13" font-weight="900" fill="#0782a8">SYNAPSE GABAergique : l'alcool ouvre le canal Cl⁻ plus fort, plus longtemps</text>
+
+    <!-- Neurone présynaptique -->
+    <path d="M40 40 q90 -8 150 30 q40 26 30 80 l-180 0 Z" fill="#dcf7ff" stroke="#0782a8" stroke-width="2"/>
+    <text x="115" y="70" text-anchor="middle" font-size="9.5" font-weight="800" fill="#055c78">Neurone présynaptique</text>
+    <!-- vésicules GABA -->
+    <circle cx="120" cy="120" r="14" fill="#fff" stroke="#36b8d8" stroke-width="1.6"/>
+    <text x="120" y="123" text-anchor="middle" font-size="7.5" font-weight="800" fill="#0782a8">GABA</text>
+    <circle cx="160" cy="135" r="10" fill="#fff" stroke="#36b8d8" stroke-width="1.4"/>
+    <circle cx="90" cy="138" r="8" fill="#fff" stroke="#36b8d8" stroke-width="1.4"/>
+
+    <!-- GABA libérés dans la fente -->
+    <circle cx="250" cy="150" r="9" fill="#36b8d8"/><text x="250" y="153" text-anchor="middle" font-size="6.5" font-weight="800" fill="#fff">GABA</text>
+    <circle cx="300" cy="135" r="9" fill="#36b8d8"/>
+
+    <!-- Fente synaptique (label) -->
+    <text x="300" y="100" text-anchor="middle" font-size="8" font-style="italic" fill="#2a6a80">fente synaptique</text>
+
+    <!-- Membrane postsynaptique -->
+    <rect x="40" y="210" width="680" height="60" rx="6" fill="#eaf9ff" stroke="#055c78" stroke-width="1.5"/>
+    <text x="125" y="290" text-anchor="middle" font-size="9.5" font-weight="800" fill="#055c78">Neurone postsynaptique (membrane)</text>
+
+    <!-- Récepteur-canal GABA-A : 2 piliers laissant passer Cl- -->
+    <rect x="350" y="205" width="14" height="70" rx="4" fill="#0782a8"/>
+    <rect x="408" y="205" width="14" height="70" rx="4" fill="#0782a8"/>
+    <text x="300" y="200" text-anchor="middle" font-size="8.5" font-weight="800" fill="#055c78">Canal GABA-A</text>
+    <!-- GABA fixé sur le récepteur -->
+    <circle cx="345" cy="198" r="8" fill="#36b8d8"/>
+    <circle cx="427" cy="198" r="8" fill="#36b8d8"/>
+
+    <!-- Site alcool (potentialisation) -->
+    <rect x="372" y="222" width="28" height="20" rx="5" fill="#ffd9a8" stroke="#c45c00" stroke-width="1.4"/>
+    <text x="386" y="236" text-anchor="middle" font-size="7.5" font-weight="800" fill="#a04800">OH</text>
+    <text x="386" y="258" text-anchor="middle" font-size="7" fill="#a04800">alcool fixé</text>
+
+    <!-- Flux de Cl- entrant -->
+    <line x1="386" y1="150" x2="386" y2="205" stroke="#0782a8" stroke-width="2.4" marker-end="url(#ga_cl)"/>
+    <circle cx="386" cy="120" r="11" fill="#fff" stroke="#0782a8" stroke-width="1.6"/><text x="386" y="123" text-anchor="middle" font-size="8" font-weight="800" fill="#0782a8">Cl⁻</text>
+    <circle cx="386" cy="170" r="8" fill="#cdeefb" stroke="#0782a8" stroke-width="1.2"/><text x="386" y="173" text-anchor="middle" font-size="6.5" fill="#0782a8">Cl⁻</text>
+
+    <!-- effet dans le neurone -->
+    <rect x="470" y="218" width="240" height="46" rx="8" fill="#dcf7ff" stroke="#36b8d8" stroke-width="1.4"/>
+    <text x="590" y="236" text-anchor="middle" font-size="9" font-weight="800" fill="#055c78">↑ Cl⁻ entrant → HYPERPOLARISATION</text>
+    <text x="590" y="252" text-anchor="middle" font-size="8.5" fill="#04222a">→ neurone inhibé → sédation, ↓ anxiété</text>
+
+    <!-- legende alcool -->
+    <rect x="470" y="120" width="240" height="70" rx="8" fill="#fff7ee" stroke="#c45c00" stroke-width="1.4"/>
+    <text x="590" y="140" text-anchor="middle" font-size="9" font-weight="900" fill="#a04800">Rôle de l'alcool</text>
+    <text x="590" y="157" text-anchor="middle" font-size="8.3" fill="#5a3010">Il n'ouvre PAS le canal seul :</text>
+    <text x="590" y="171" text-anchor="middle" font-size="8.3" fill="#5a3010">il rend le récepteur + sensible au GABA</text>
+    <text x="590" y="185" text-anchor="middle" font-size="8.3" fill="#5a3010">→ porte ouverte + facilement / longtemps</text>
+  </svg>
+  </div>
+  <div class="hl">En clair : le <strong>GABA</strong> est la « pédale de frein » du cerveau. L'alcool ne presse pas la pédale tout seul, il la rend <strong>plus sensible</strong> → plus de <strong>Cl⁻</strong> entre → le neurone est <strong>moins excitable</strong> → relaxation, somnolence, ↓ anxiété, ralentissement. Trop = coma, voire mort.</div>
+</div>
+
+<!-- ===== NMDA ===== -->
+<div class="card">
+  <div class="ct">⚡ Récepteur NMDA (glutamate) — le « black-out »</div>
+  <div class="sb">
+  <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+    <defs>
+      <marker id="nm_ar" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#0782a8"/></marker>
+      <marker id="nm_block" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><line x1="0" y1="2" x2="0" y2="8" stroke="#b91c1c" stroke-width="2.4"/></marker>
+    </defs>
+    <text x="380" y="20" text-anchor="middle" font-size="13" font-weight="900" fill="#0782a8">SYNAPSE glutamatergique : l'alcool BLOQUE le NMDA → moins de Ca²⁺</text>
+
+    <!-- présynaptique -->
+    <path d="M40 40 q90 -8 150 30 q40 26 30 80 l-180 0 Z" fill="#dcf7ff" stroke="#0782a8" stroke-width="2"/>
+    <text x="115" y="70" text-anchor="middle" font-size="9.5" font-weight="800" fill="#055c78">Présynaptique</text>
+    <circle cx="125" cy="120" r="14" fill="#fff" stroke="#36b8d8" stroke-width="1.6"/><text x="125" y="123" text-anchor="middle" font-size="6.5" font-weight="800" fill="#0782a8">GLUT</text>
+    <circle cx="250" cy="150" r="9" fill="#7c68d8"/><text x="250" y="153" text-anchor="middle" font-size="6" font-weight="800" fill="#fff">GLU</text>
+    <circle cx="300" cy="138" r="9" fill="#7c68d8"/>
+
+    <!-- membrane post -->
+    <rect x="40" y="210" width="680" height="60" rx="6" fill="#eaf9ff" stroke="#055c78" stroke-width="1.5"/>
+    <text x="120" y="290" text-anchor="middle" font-size="9.5" font-weight="800" fill="#055c78">Postsynaptique (hippocampe ++)</text>
+
+    <!-- canal NMDA -->
+    <rect x="350" y="205" width="14" height="70" rx="4" fill="#0782a8"/>
+    <rect x="408" y="205" width="14" height="70" rx="4" fill="#0782a8"/>
+    <text x="300" y="200" text-anchor="middle" font-size="8.5" font-weight="800" fill="#055c78">Canal NMDA</text>
+    <circle cx="345" cy="198" r="7" fill="#7c68d8"/>
+    <circle cx="427" cy="198" r="7" fill="#7c68d8"/>
+
+    <!-- Mg2+ qui bouche normalement -->
+    <circle cx="386" cy="240" r="10" fill="#94a3b8" stroke="#475569" stroke-width="1.3"/><text x="386" y="243" text-anchor="middle" font-size="7" font-weight="800" fill="#fff">Mg²⁺</text>
+    <text x="500" y="258" text-anchor="middle" font-size="7.5" fill="#475569">Mg²⁺ : bouchon levé si dépolarisation</text>
+
+    <!-- entrée Na/Ca bloquée par alcool -->
+    <line x1="386" y1="150" x2="386" y2="200" stroke="#0782a8" stroke-width="2.4" marker-end="url(#nm_ar)"/>
+    <circle cx="386" cy="125" r="11" fill="#fff" stroke="#0782a8" stroke-width="1.6"/><text x="386" y="128" text-anchor="middle" font-size="7" font-weight="800" fill="#0782a8">Na⁺/Ca²⁺</text>
+
+    <!-- barre alcool qui bloque -->
+    <rect x="300" y="158" width="172" height="20" rx="6" fill="#fde2e2" stroke="#b91c1c" stroke-width="1.4"/>
+    <text x="386" y="172" text-anchor="middle" font-size="8.5" font-weight="800" fill="#b91c1c">⛔ ALCOOL inhibe le NMDA</text>
+
+    <!-- effets -->
+    <rect x="470" y="120" width="240" height="70" rx="8" fill="#fff7ee" stroke="#c45c00" stroke-width="1.4"/>
+    <text x="590" y="140" text-anchor="middle" font-size="9" font-weight="900" fill="#a04800">Conséquence</text>
+    <text x="590" y="157" text-anchor="middle" font-size="8.3" fill="#5a3010">↓ entrée de Ca²⁺ dans le neurone</text>
+    <text x="590" y="171" text-anchor="middle" font-size="8.3" fill="#5a3010">→ perturbe plasticité, mémoire,</text>
+    <text x="590" y="185" text-anchor="middle" font-size="8.3" fill="#5a3010">apprentissage → BLACK-OUT</text>
+    <rect x="470" y="218" width="240" height="46" rx="8" fill="#dcf7ff" stroke="#36b8d8" stroke-width="1.4"/>
+    <text x="590" y="236" text-anchor="middle" font-size="8.5" font-weight="800" fill="#055c78">Glutamate = NT EXCITATEUR</text>
+    <text x="590" y="252" text-anchor="middle" font-size="8.2" fill="#04222a">Excès de Ca²⁺ = excitotoxicité (danger)</text>
+  </svg>
+  </div>
+  <div class="hl2">Le récepteur NMDA a besoin de <strong>2 conditions</strong> pour s'ouvrir : la fixation du <strong>glutamate</strong> ET une <strong>dépolarisation</strong> qui chasse le bouchon de <strong>Mg²⁺</strong>. L'alcool le <strong>bloque</strong> → moins de Ca²⁺ entre → la mémorisation est perturbée (c'est le black-out).</div>
+</div>
+
+<!-- ===== Circuit récompense ===== -->
+<div class="card">
+  <div class="ct">🎯 Circuit de la récompense — ATV → noyau accumbens</div>
+  <div class="sb">
+  <svg viewBox="0 0 760 270" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+    <defs>
+      <marker id="rc_da" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0,9 3.5,0 7" fill="#0782a8"/></marker>
+      <marker id="rc_inh" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><line x1="0" y1="2" x2="0" y2="8" stroke="#b91c1c" stroke-width="2.4"/></marker>
+    </defs>
+    <text x="380" y="20" text-anchor="middle" font-size="13" font-weight="900" fill="#0782a8">L'alcool ↑ la dopamine de 2 façons (directe + indirecte)</text>
+
+    <!-- Interneurone GABA -->
+    <ellipse cx="130" cy="80" rx="62" ry="36" fill="#dcf7ff" stroke="#0782a8" stroke-width="2"/>
+    <text x="130" y="76" text-anchor="middle" font-size="9" font-weight="800" fill="#055c78">Interneurone</text>
+    <text x="130" y="90" text-anchor="middle" font-size="9" font-weight="800" fill="#055c78">GABA (frein)</text>
+
+    <!-- Neurone DA dans ATV -->
+    <ellipse cx="300" cy="170" rx="78" ry="44" fill="#dcf7ff" stroke="#055c78" stroke-width="2.2"/>
+    <text x="300" y="162" text-anchor="middle" font-size="9.5" font-weight="900" fill="#055c78">Neurone DOPAMINERGIQUE</text>
+    <text x="300" y="178" text-anchor="middle" font-size="9" fill="#04222a">dans l'ATV (mésencéphale)</text>
+    <text x="300" y="194" text-anchor="middle" font-size="8" fill="#2a6a80">DA = dopamine</text>
+
+    <!-- GABA inhibe DA normalement -->
+    <line x1="155" y1="110" x2="245" y2="150" stroke="#b91c1c" stroke-width="2.2" marker-end="url(#rc_inh)"/>
+    <text x="178" y="128" font-size="7.5" fill="#b91c1c">inhibe</text>
+
+    <!-- alcool lève l'inhibition GABA (action indirecte) -->
+    <rect x="20" y="135" width="150" height="50" rx="8" fill="#fff7ee" stroke="#c45c00" stroke-width="1.4"/>
+    <text x="95" y="153" text-anchor="middle" font-size="8" font-weight="800" fill="#a04800">② INDIRECT : l'alcool</text>
+    <text x="95" y="166" text-anchor="middle" font-size="8" fill="#5a3010">lève le frein GABA</text>
+    <text x="95" y="178" text-anchor="middle" font-size="8" fill="#5a3010">+ libère opioïdes endogènes</text>
+
+    <!-- alcool active directement ATV -->
+    <rect x="245" y="232" width="110" height="30" rx="8" fill="#fff7ee" stroke="#c45c00" stroke-width="1.4"/>
+    <text x="300" y="250" text-anchor="middle" font-size="8" font-weight="800" fill="#a04800">① DIRECT : active l'ATV</text>
+
+    <!-- DA vers noyau accumbens -->
+    <line x1="378" y1="170" x2="520" y2="120" stroke="#0782a8" stroke-width="2.6" marker-end="url(#rc_da)"/>
+    <circle cx="430" cy="152" r="7" fill="#0782a8"/><circle cx="470" cy="138" r="7" fill="#0782a8"/>
+    <text x="455" y="178" text-anchor="middle" font-size="8" fill="#055c78">libération de dopamine ↑</text>
+
+    <!-- Noyau accumbens -->
+    <ellipse cx="610" cy="105" rx="92" ry="48" fill="#dcf7ff" stroke="#055c78" stroke-width="2.2"/>
+    <text x="610" y="98" text-anchor="middle" font-size="9.5" font-weight="900" fill="#055c78">NOYAU ACCUMBENS</text>
+    <text x="610" y="114" text-anchor="middle" font-size="8.5" fill="#04222a">(télencéphale)</text>
+    <text x="610" y="130" text-anchor="middle" font-size="8" fill="#2a6a80">= centre de la récompense</text>
+
+    <text x="610" y="200" text-anchor="middle" font-size="8.5" font-weight="800" fill="#a04800">→ plaisir / renforcement / risque d'addiction</text>
+    <text x="500" y="262" text-anchor="middle" font-size="7.8" font-style="italic" fill="#2a6a80">Conso chronique → tolérance → cette libération de dopamine diminue</text>
+  </svg>
+  </div>
+  <div class="hl">Même avec le frein GABA présent, la libération de dopamine reste forte. L'alcool augmente la dopamine <strong>directement</strong> (il active les neurones DA de l'ATV) <strong>et indirectement</strong> (il lève l'inhibition des interneurones GABA + libère des opioïdes endogènes) → ↑ dopamine au <strong>noyau accumbens</strong> → renforcement.</div>
+</div>
+
+<!-- ===== Sevrage : avant / après ===== -->
+<div class="card">
+  <div class="ct">⚠ Pourquoi le sevrage est dangereux (récepteurs NMDA en excès)</div>
+  <div class="sb">
+  <svg viewBox="0 0 760 250" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+    <text x="380" y="20" text-anchor="middle" font-size="13" font-weight="900" fill="#0782a8">CONSO CHRONIQUE ➜ SEVRAGE : le piège des récepteurs en trop</text>
+
+    <!-- panneau gauche : chronique -->
+    <rect x="20" y="34" width="350" height="196" rx="13" fill="#dcf7ff" stroke="#0782a8" stroke-width="2"/>
+    <text x="195" y="56" text-anchor="middle" font-size="11" font-weight="900" fill="#0782a8">Pendant l'alcoolisation chronique</text>
+    <text x="195" y="74" text-anchor="middle" font-size="8.5" fill="#04222a">Alcool freine NMDA en permanence</text>
+    <!-- membrane avec beaucoup de récepteurs -->
+    <rect x="40" y="170" width="310" height="40" rx="6" fill="#eaf9ff" stroke="#055c78" stroke-width="1.4"/>
+    <!-- 4 canaux -->
+    <g fill="#0782a8">
+      <rect x="70" y="160" width="9" height="50" rx="3"/><rect x="100" y="160" width="9" height="50" rx="3"/>
+      <rect x="150" y="160" width="9" height="50" rx="3"/><rect x="180" y="160" width="9" height="50" rx="3"/>
+      <rect x="230" y="160" width="9" height="50" rx="3"/><rect x="260" y="160" width="9" height="50" rx="3"/>
+      <rect x="300" y="160" width="9" height="50" rx="3"/><rect x="320" y="160" width="9" height="50" rx="3"/>
+    </g>
+    <!-- barres alcool bloquant -->
+    <g fill="#fde2e2" stroke="#b91c1c" stroke-width="1.1">
+      <rect x="78" y="150" width="24" height="12" rx="3"/><rect x="158" y="150" width="24" height="12" rx="3"/>
+      <rect x="238" y="150" width="24" height="12" rx="3"/>
+    </g>
+    <text x="195" y="100" text-anchor="middle" font-size="8.3" fill="#5a3010">Compensation : le cerveau FABRIQUE</text>
+    <text x="195" y="114" text-anchor="middle" font-size="8.3" font-weight="800" fill="#a04800">+ de récepteurs NMDA + + de sensibilité</text>
+    <text x="195" y="132" text-anchor="middle" font-size="8" fill="#2a6a80">→ fonctionne « à peu près normalement »</text>
+
+    <!-- fleche -->
+    <text x="385" y="140" text-anchor="middle" font-size="26" font-weight="900" fill="#0782a8">➜</text>
+
+    <!-- panneau droit : sevrage -->
+    <rect x="402" y="34" width="350" height="196" rx="13" fill="#fff5f5" stroke="#b91c1c" stroke-width="2"/>
+    <text x="577" y="56" text-anchor="middle" font-size="11" font-weight="900" fill="#b91c1c">À l'arrêt brutal (sevrage)</text>
+    <text x="577" y="74" text-anchor="middle" font-size="8.5" fill="#04222a">Plus d'alcool = frein levé…</text>
+    <rect x="422" y="170" width="310" height="40" rx="6" fill="#fde8e8" stroke="#b91c1c" stroke-width="1.4"/>
+    <!-- meme nb de canaux, tous ouverts, pas de barre -->
+    <g fill="#b91c1c">
+      <rect x="452" y="160" width="9" height="50" rx="3"/><rect x="482" y="160" width="9" height="50" rx="3"/>
+      <rect x="532" y="160" width="9" height="50" rx="3"/><rect x="562" y="160" width="9" height="50" rx="3"/>
+      <rect x="612" y="160" width="9" height="50" rx="3"/><rect x="642" y="160" width="9" height="50" rx="3"/>
+      <rect x="692" y="160" width="9" height="50" rx="3"/><rect x="712" y="160" width="9" height="50" rx="3"/>
+    </g>
+    <!-- Ca2+ qui rentre en masse -->
+    <g fill="#fff" stroke="#b91c1c" stroke-width="1.3">
+      <circle cx="471" cy="140" r="8"/><circle cx="546" cy="138" r="8"/><circle cx="626" cy="140" r="8"/><circle cx="701" cy="138" r="8"/>
+    </g>
+    <text x="471" y="143" text-anchor="middle" font-size="6.5" font-weight="800" fill="#b91c1c">Ca²⁺</text>
+    <text x="577" y="100" text-anchor="middle" font-size="8.3" fill="#5a3010">…mais récepteurs toujours TROP nombreux</text>
+    <text x="577" y="116" text-anchor="middle" font-size="8.3" font-weight="800" fill="#b91c1c">+ glutamate libre = SUREXCITATION</text>
+    <text x="577" y="134" text-anchor="middle" font-size="8" fill="#7a1010">→ entrée massive de Ca²⁺ → excitotoxicité</text>
+  </svg>
+  </div>
+  <div class="hlr">Résultat du sevrage non encadré : <strong>crises d'épilepsie, tremblements, agitation, angoisse extrême, delirium tremens</strong>. C'est pour cela que le sevrage doit être <strong>progressif et médicalement encadré</strong>.</div>
+</div>
+
+<div class="card">
+  <div class="ct">⚠ Le danger du sevrage (glutamate)</div>
+  <div class="hl"><strong>Pendant la conso chronique :</strong> l'alcool freine en permanence le glutamate → le cerveau compense en <strong>augmentant le nombre de récepteurs NMDA</strong> et leur sensibilité (pour fonctionner « à peu près normalement »).</div>
+  <div class="hlr"><strong>À l'arrêt brutal :</strong> on lève le frein → beaucoup de glutamate libre <strong>+</strong> trop de récepteurs → <strong>surexcitation</strong> → entrée massive de Ca²⁺ → <strong>excitotoxicité</strong> : crises d'épilepsie, tremblements, agitation, angoisse extrême, <strong>delirium tremens</strong>, sudation, troubles de mémoire. <em>D'où un sevrage qui doit être progressif et encadré.</em></div>
+</div>
+
+<div class="sh">🧠 Effets sur le SNC, structure par structure</div>
+<div class="card">
+  <div class="g2">
+    <div class="hl"><strong>🌀 Cervelet</strong> (coordination/équilibre) — neurones GABAergiques = <strong>cellules de Purkinje</strong>. Aigu : <strong>ataxie</strong> (↓ coordination), <strong>dysmétrie</strong> (erreurs de trajectoire), mouvements tremblants, perturbation du <strong>nystagmus</strong> (saccades oculaires).</div>
+    <div class="hl2"><strong>🧩 Cortex</strong> (substance grise, contrôle des fonctions). Alcool → <strong>désinhibition</strong> (plus bavard, plus confiant), jugement médiocre, ↑ résistance à la douleur (inhibition sensorielle). Riche en neurones GABA + glutamate.</div>
+    <div class="hl"><strong>🧠 Système limbique — Hippocampe</strong> (avec l'amygdale) : nombreux récepteurs NMDA → inhibés par l'alcool → <strong>black-out</strong>. Dérégulation → émotions exagérées (violence, rires, pleurs).</div>
+    <div class="hl2"><strong>⚙️ Complexe hypothalamo-hypophysaire :</strong> perturbe la <strong>vasopressine</strong> (→ besoin de dormir), induit la vasodilatation (sensation de chaleur) et <strong>inhibe l'ADH</strong> (hormone antidiurétique) → moins de réabsorption d'eau au rein → plus d'urine.</div>
+    <div class="hlr"><strong>🫁 Tronc cérébral</strong> (fonctions végétatives) : inhibe les centres <strong>cardio-respiratoires</strong> → coma voire mort. Inhibe aussi le <strong>centre vomitif</strong> : en aigu, plus de réflexe de vomissement protecteur → conso massive possible jusqu'à la mort.</div>
+  </div>
+</div>
+
+<div class="sh">🍼 Complications majeures</div>
+<div class="card">
+  <div class="ct">🔥 Binge drinking</div>
+  <div class="hl"><strong>Définition :</strong> grande quantité d'alcool sur un temps court ; concerne surtout les <strong>jeunes/adolescents</strong>. Conséquences : aggravation de l'anxiété, altération cognitivo-comportementale, troubles mémoire/concentration/fatigue, <strong>inhibe la neurogénèse</strong> ; une exposition <strong>précoce et répétée ↑ le risque de dépendance à l'âge adulte</strong>, comportements à risque, coma éthylique. <strong>Impact plus important chez les femmes.</strong></div>
+</div>
+
+<div class="card">
+  <div class="ct">🤰 Syndrome d'alcoolisation fœtale (SAF)</div>
+  <div class="hl"><strong>Définition :</strong> ensemble de <strong>malformations physiques + atteintes mentales</strong> dues à l'exposition prénatale à l'alcool. <strong>1 naissance / 1000 par an en France.</strong> Une étude de 2010 montrait que 23% des femmes enceintes consommaient encore de l'alcool malgré les préconisations.</div>
+  <div class="g2">
+    <div class="hl2"><strong>Fenêtres de vulnérabilité :</strong><br>• <strong>3ᵉ–8ᵉ semaine</strong> = <strong>ontogénèse</strong> (différenciation des cellules embryonnaires) → vulnérabilité <strong>maximale</strong>.<br>• <strong>Dès le 3ᵉ mois</strong> (fœtus) → seul le <strong>SNC</strong> reste vulnérable. Si l'alcool intervient pendant la <strong>migration neuronale</strong>, il perturbe les structures et donc les fonctions. Structures les plus vulnérables : <strong>cortex, hippocampe, cervelet</strong>.</div>
+    <div class="hl"><strong>Tableau clinique (variable) :</strong><br>• 80% : <strong>retard de croissance</strong> in utero et à la naissance.<br>• <strong>Dysmorphies crânio-faciales</strong> : visage plat, nez court « en trompette », menton étroit, oreilles basses, front plat, lèvre supérieure fine, yeux en amande.<br>• 10–30% : malformations congénitales (cardiopathie, squelette, spina bifida).<br>• 1% : déficience du SNC + atteintes neuro-comportementales.</div>
+  </div>
+  <div class="hlr">⚠ <strong>Effet tératogène dès UN épisode unique de forte alcoolisation</strong> (pas seulement chronique). <strong>Il n'existe AUCUN seuil sans risque.</strong></div>
+</div>
+
+<div class="card">
+  <div class="ct">🧠 Syndrome de Korsakoff (SK)</div>
+  <div class="hl"><strong>Trouble neurologique chronique et irréversible</strong>, dû à une <strong>carence en vitamine B1 (thiamine)</strong>.</div>
+  <div class="hl2"><strong>Pourquoi cette carence ?</strong> L'alcool freine l'absorption des nutriments ET fournit beaucoup d'énergie quand il est dégradé → les cellules « rassasiées » ne déclenchent plus la faim → <strong>défaut d'alimentation + défaut d'absorption</strong> → carence en thiamine.</div>
+  <div class="g2">
+    <div class="hl"><strong>Symptômes :</strong> amnésie <strong>rétrograde</strong> ET <strong>antérograde</strong>, radotages, <strong>fabulations</strong>, troubles visuels, hallucinations.</div>
+    <div class="hl2"><strong>Atteintes cérébrales :</strong> perte neuronale corticale, <strong>élargissement des ventricules</strong>, atrophie des <strong>corps mamillaires</strong> et du <strong>thalamus</strong> (circuit de <strong>Papez</strong>), atrophie du <strong>corps calleux</strong> et du <strong>cervelet</strong>.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="ct">🫀 Complications sur le reste du corps (récap)</div>
+  <div class="g3">
+    <div class="hl"><strong>Gastro-intestinal :</strong> troubles d'absorption des nutriments, irritation de la muqueuse, inflammation, ulcère, cancer.</div>
+    <div class="hl2"><strong>Cardiovasculaire :</strong> ↑ hypertension, cardiomyopathies, ↑ taille du cœur (cellules cardiaques plus grosses).</div>
+    <div class="hlr"><strong>Foie :</strong> ne dégrade plus les lipides → <strong>foie gras → hépatite → cirrhose</strong> (aboutissement de l'inflammation).</div>
+  </div>
+</div>
+
+<div class="sh">🐭 Modèles animaux de l'alcool</div>
+<div class="card">
+  <p style="font-size:.88rem;color:var(--mu);margin-bottom:8px">Modèles <em>in vivo</em>, de plus en plus encadrés par des <strong>comités d'éthique</strong> (bien-être animal). On part des organismes les plus simples (gènes/voies entièrement connus) vers les plus proches de l'humain.</p>
+  <div class="g2">
+    <div class="hl"><strong>Non-vertébrés</strong> (voies de signalisation et gènes <strong>entièrement connus</strong>) :<br>• <em>Drosophila melanogaster</em> : mouches exposées à des vapeurs d'alcool → dès <strong>30 s</strong> hyperactivité, troubles de coordination, déplacements désorganisés ; au bout de ~20 min elles semblent récupérer… en réalité la plupart sont <strong>au fond du tube, en perte de connaissance</strong>.<br>• <em>C. elegans</em></div>
+    <div class="hl2"><strong>Vertébrés :</strong><br>• <strong>Zebrafish</strong> : exposition → modifications anatomiques (yeux + petits et + écartés, œdème de la cavité cardiaque, queue + courte).<br>• Larve de grenouille · <strong>rongeurs</strong> · primates non-humains (rare).</div>
+  </div>
+  <div class="hl"><strong>Souches de rongeurs :</strong> certaines ont une <strong>préférence naturelle</strong> à l'alcool (souche <em>préférente</em>), d'autres non (<em>non-préférente</em>).</div>
+  <div class="hl2"><strong>Modèle de binge drinking (rats non-préférents, P28-P42) :</strong> accès libre eau/nourriture + alcool à intervalles réguliers pendant 15 j. Deux profils : « binge » vs faible consommation. Devenus <strong>adultes</strong>, ré-exposés (vapeurs d'alcool plusieurs semaines) : chez certains contrôles ET surtout chez les ex-« binge », la consommation <strong>double voire triple</strong> → <strong>alcoolo-dépendance</strong> bien plus marquée chez ceux ayant un passé de binge. Les profils binge ont aussi un niveau d'<strong>anxiété plus élevé</strong>.</div>
+  <div class="hl"><strong>Modèles du SAF :</strong><br>• <strong>Aviaire</strong> (embryon de poulet, Kiecker 2016) : exposition à 2 j → bec plus plat, absence de comportement oculaire, <strong>défaut de migration des cellules neurales</strong> (chez le contrôle : accumulation antérieure + formation de l'œil ; chez l'exposé : pas de formation de l'œil) → retard de structuration et déficits fonctionnels.<br>• <strong>Rongeur</strong> (Sulik 2014) : exposition au 7ᵉ jour de gestation (≈ milieu de la 3ᵉ semaine chez l'humain) → dysmorphies crânio-faciales similaires (lèvre supérieure fine/absente, fente palatine), atrophie du <strong>corps calleux</strong> et de l'<strong>hippocampe</strong> (IRM), atteintes comportementales (hyperactivité, retard, problèmes auditifs, mémoire/apprentissage) → <strong>tout le phénotype du SAF</strong> reproduit.</div>
+</div>
+
+<!-- ════════════════════════ TD2 : TSA ════════════════════════ -->
+<div class="sep"></div>
+<div class="sh">🧩 TD2 · Le Trouble du Spectre de l'Autisme (TSA)</div>
+<div class="card">
+  <div class="ct">📜 Historique</div>
+  <div class="path">
+    <div class="step"><div style="min-width:62px;font-weight:900;color:var(--A)">1911</div><div><strong>Bleuler</strong> décrit chez des adultes schizophrènes une « évasion de la réalité » avec prédominance de la vie intérieure → il nomme cela <strong>autisme</strong>.</div></div>
+    <div class="step"><div style="min-width:62px;font-weight:900;color:var(--A)">1943</div><div><strong>Kanner</strong> : première description clinique de l'<strong>autisme infantile</strong>, associé à une perturbation innée du contact affectif.</div></div>
+    <div class="step"><div style="min-width:62px;font-weight:900;color:var(--A)">1944</div><div>Création du terme « <strong>Autisme Infantile Précoce</strong> » + <strong>Asperger</strong> décrit la « psychopathie autistique ».</div></div>
+    <div class="step"><div style="min-width:62px;font-weight:900;color:var(--A)">après 1980</div><div>Séparation schizophrénie/psychose infantile ↔ autisme ; concept de <strong>TED</strong> (trouble envahissant du développement) puis de <strong>TSA</strong>. <strong>Reconnu comme handicap en France depuis 1996.</strong></div></div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="ct">📊 Épidémiologie (France)</div>
+  <div class="kv-g">
+    <div class="kv"><div class="kvl">Dans le monde</div><div class="kvv">67 millions de personnes</div></div>
+    <div class="kv"><div class="kvl">En France</div><div class="kvv">~700 000 (dont 100 000 &lt; 20 ans)</div></div>
+    <div class="kv"><div class="kvl">Prévalence naissances</div><div class="kvv">1 / 100 → ~8 000 / an</div></div>
+    <div class="kv"><div class="kvl">Non scolarisés</div><div class="kvv">80 %</div></div>
+    <div class="kv"><div class="kvl">Déficience intellectuelle</div><div class="kvv">70 %</div></div>
+    <div class="kv"><div class="kvl">Adultes autonomes</div><div class="kvv">5 à 10 %</div></div>
+    <div class="kv"><div class="kvl">Sex-ratio global</div><div class="kvv">4 garçons : 1 fille</div></div>
+    <div class="kv"><div class="kvl">Sans retard mental</div><div class="kvv">6 garçons : 1 fille</div></div>
+  </div>
+  <div class="hl2"><strong>Pourquoi le ratio penche vers les garçons ?</strong> Les manifestations diffèrent selon le sexe : les filles compensent davantage par <strong>mimétisme</strong> et présentent une <strong>hypersensibilité</strong> sensorielle, alors que les garçons sont plutôt en <strong>hyposensibilité</strong>. Le diagnostic est donc <strong>plus difficile chez les filles</strong> (seulement ~30 % des professionnels savent poser ce diagnostic en France) → peut expliquer en partie le sex-ratio.</div>
+</div>
+
+<div class="card">
+  <div class="ct">📖 Définition (OMS) — étymologie : « enfermement sur soi-même »</div>
+  <div class="hli">L'autisme est un <strong>trouble envahissant du développement (TED)</strong>, à développement anormal ou déficient, <strong>manifesté avant 3 ans</strong>, perturbant chacun des 3 domaines de la <strong>triade autistique</strong>.</div>
+</div>
+
+<div class="sb">
+<svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+  <text x="350" y="22" text-anchor="middle" font-size="14" font-weight="900" fill="#0782a8">LA TRIADE AUTISTIQUE</text>
+  <!-- triangle vertices: top, bottom-left, bottom-right -->
+  <circle cx="350" cy="115" r="78" fill="#dcf7ff" stroke="#0782a8" stroke-width="2.5"/>
+  <text x="350" y="100" text-anchor="middle" font-size="11" font-weight="900" fill="#0782a8">① Interactions</text>
+  <text x="350" y="116" text-anchor="middle" font-size="11" font-weight="900" fill="#0782a8">sociales</text>
+  <text x="350" y="135" text-anchor="middle" font-size="8" fill="#2a6a80">réciprocité, contact,</text>
+  <text x="350" y="147" text-anchor="middle" font-size="8" fill="#2a6a80">relations aux pairs</text>
+
+  <circle cx="180" cy="245" r="78" fill="#dcf7ff" fill-opacity=".75" stroke="#36b8d8" stroke-width="2.2"/>
+  <text x="180" y="232" text-anchor="middle" font-size="11" font-weight="900" fill="#0782a8">② Communication</text>
+  <text x="180" y="248" text-anchor="middle" font-size="9" fill="#04222a">verbale & non verbale</text>
+  <text x="180" y="266" text-anchor="middle" font-size="8" fill="#2a6a80">retard/absence de langage,</text>
+  <text x="180" y="278" text-anchor="middle" font-size="8" fill="#2a6a80">conversation difficile</text>
+
+  <circle cx="520" cy="245" r="78" fill="#dcf7ff" fill-opacity=".75" stroke="#36b8d8" stroke-width="2.2"/>
+  <text x="520" y="228" text-anchor="middle" font-size="11" font-weight="900" fill="#0782a8">③ Comportements</text>
+  <text x="520" y="244" text-anchor="middle" font-size="9" fill="#04222a">restreints & répétitifs</text>
+  <text x="520" y="262" text-anchor="middle" font-size="8" fill="#2a6a80">rituels rigides, intérêts</text>
+  <text x="520" y="274" text-anchor="middle" font-size="8" fill="#2a6a80">limités, stéréotypies</text>
+
+  <text x="350" y="305" text-anchor="middle" font-size="9" font-style="italic" fill="#055c78">Formes variées · niveaux de gravité différents · fluctuent selon l'âge — autant de TSA que de personnes</text>
+</svg>
+</div>
+
+<div class="card">
+  <div class="ct">👶 Premiers signes & diagnostic</div>
+  <div class="g2">
+    <div class="hl"><strong>Premiers signes (18–36 mois)</strong> — repérés par parents/entourage, diagnostic souvent <strong>plus tardif</strong> :<br>① hyperactivité · ② jouer selon ses propres règles · ③ défaut de contact (visuel) · ④ dépression · ⑤ problèmes de sommeil · ⑥ langage tardif · ⑦ intolérance à certains stimuli (bruits).</div>
+    <div class="hl2"><strong>Critères diagnostiques (CIM-10, 2008 ; DSM-5, 2013)</strong> :<br>• ≥ <strong>1</strong> anomalie qualitative du <strong>langage/communication</strong> (retard/absence de langage, conversation impossible, langage idiosyncrasique).<br>• ≥ <strong>2</strong> anomalies des <strong>interactions sociales réciproques</strong> (contact visuel/mimiques, réciprocité émotionnelle, relations aux pairs, partage d'intérêts).<br>• ≥ <strong>1</strong> comportement/intérêt <strong>restreint, répétitif, stéréotypé</strong> (rituels rigides, fixation sur des parties d'objets).</div>
+  </div>
+  <div class="hlw"><strong>Étiologie :</strong> les TSA étant mieux compris depuis peu, leur étiologie reste <strong>complexe et encore incomprise</strong>.</div>
+</div>
+
+<div class="sh">🧠 Un cerveau différent ?</div>
+<div class="card">
+  <div class="ct">📈 Volume cérébral (Courchesne et al., 2007)</div>
+  <div class="g2">
+    <div class="hl"><strong>Développement précoce et rapide :</strong> chez les TSA, le cerveau atteint une <strong>grande taille plus tôt</strong>. Poids cérébral en moyenne <strong>+15 %</strong> vs neurotypique.</div>
+    <div class="hl2"><strong>Trajectoire atypique :</strong> ce poids reste <strong>constant</strong> toute la vie, alors que chez le neurotypique il augmente progressivement puis décline (maturation → dégénérescence liée à l'âge). Ce développement précoce pourrait expliquer une organisation/activité neuronale différente.</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="ct">🔬 IRMf — traitement du langage</div>
+  <div class="hl"><strong>Mêmes aires activées, mais différemment :</strong> chez le TSA, lors d'une tâche de compréhension du langage, on observe <strong>↑ activité du gyrus frontal supérieur</strong> (aire de Wernicke — traitement auditif du langage, cognition sociale) et <strong>↓ activité du gyrus temporal supérieur</strong> (aire de Broca — compréhension/production du langage).</div>
+  <div class="hl2"><strong>Pas d'anomalie neuronale isolée mise en évidence</strong>, mais une <strong>désorganisation des couches corticales</strong> et des différences régionales (voir ci-dessous).</div>
+</div>
+
+<div class="sb">
+<svg viewBox="0 0 760 200" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+  <text x="380" y="18" text-anchor="middle" font-size="13" font-weight="900" fill="#0782a8">DIFFÉRENCES RÉGIONALES → SYMPTÔMES</text>
+  <rect x="14" y="32" width="178" height="150" rx="12" fill="#dcf7ff" stroke="#0782a8" stroke-width="2"/>
+  <text x="103" y="54" text-anchor="middle" font-size="10.5" font-weight="900" fill="#0782a8">Lobe FRONTAL</text>
+  <text x="103" y="76" text-anchor="middle" font-size="8.5" fill="#04222a">+67 % de neurones</text>
+  <text x="103" y="90" text-anchor="middle" font-size="8.5" fill="#04222a">… mais plus PETITS</text>
+  <text x="103" y="114" text-anchor="middle" font-size="8.3" fill="#055c78" font-weight="700">→ défauts d'engagement</text>
+  <text x="103" y="128" text-anchor="middle" font-size="8.3" fill="#055c78" font-weight="700">dans les tâches</text>
+
+  <rect x="200" y="32" width="178" height="150" rx="12" fill="#dcf7ff" fill-opacity=".75" stroke="#36b8d8" stroke-width="2"/>
+  <text x="289" y="54" text-anchor="middle" font-size="10.5" font-weight="900" fill="#0782a8">Ganglions de la base</text>
+  <text x="289" y="80" text-anchor="middle" font-size="8.5" fill="#04222a">Plasticité & activité</text>
+  <text x="289" y="94" text-anchor="middle" font-size="8.5" fill="#04222a">synaptique particulières</text>
+  <text x="289" y="118" text-anchor="middle" font-size="8.3" fill="#055c78" font-weight="700">→ comportements restreints</text>
+  <text x="289" y="132" text-anchor="middle" font-size="8.3" fill="#055c78" font-weight="700">& répétitifs</text>
+
+  <rect x="386" y="32" width="178" height="150" rx="12" fill="#dcf7ff" fill-opacity=".75" stroke="#36b8d8" stroke-width="2"/>
+  <text x="475" y="54" text-anchor="middle" font-size="10.5" font-weight="900" fill="#0782a8">Lobe TEMPORAL</text>
+  <text x="475" y="80" text-anchor="middle" font-size="8.5" fill="#04222a">Neurones MOINS</text>
+  <text x="475" y="94" text-anchor="middle" font-size="8.5" fill="#04222a">nombreux</text>
+  <text x="475" y="118" text-anchor="middle" font-size="8.3" fill="#055c78" font-weight="700">→ problèmes de</text>
+  <text x="475" y="132" text-anchor="middle" font-size="8.3" fill="#055c78" font-weight="700">communication</text>
+
+  <rect x="572" y="32" width="176" height="150" rx="12" fill="#dcf7ff" stroke="#055c78" stroke-width="2"/>
+  <text x="660" y="54" text-anchor="middle" font-size="10.5" font-weight="900" fill="#0782a8">Hippocampe</text>
+  <text x="660" y="68" text-anchor="middle" font-size="10.5" font-weight="900" fill="#0782a8">& Amygdale</text>
+  <text x="660" y="90" text-anchor="middle" font-size="8.3" fill="#04222a">+ nombreux, + petits,</text>
+  <text x="660" y="103" text-anchor="middle" font-size="8.3" fill="#04222a">moins de dendrites</text>
+  <text x="660" y="124" text-anchor="middle" font-size="8.3" fill="#055c78" font-weight="700">→ apprentissage, mémoire</text>
+  <text x="660" y="138" text-anchor="middle" font-size="8.3" fill="#055c78" font-weight="700">& régulation émotionnelle</text>
+</svg>
+</div>
+
+<div class="sh">🐭 Modèles animaux du TSA</div>
+<div class="card">
+  <div class="ct">🧬 (a) Modèle transgénique — KO FMR1</div>
+  <div class="hl"><strong>Principe :</strong> on <strong>désactive le gène FMR1</strong> (« KO » = knock-out), impliqué dans la régulation de l'<strong>activité synaptique</strong> → inhibition de la protéine correspondante.</div>
+  <div class="hl2"><strong>Résultats :</strong> perturbation des interactions sociales et de la communication, comportements stéréotypés, + <strong>↑ densité des épines dendritiques</strong> corticales → trop d'informations reçues par neurone → déséquilibre → perturbation du fonctionnement neuronal.</div>
+</div>
+
+<div class="card">
+  <div class="ct">🌍 (b) Modèles induits par l'environnement</div>
+  <div class="g2">
+    <div class="hl"><strong>Perturbation de l'environnement :</strong> activation du système immunitaire maternel, stress prénatal.</div>
+    <div class="hl2"><strong>Exposition in utero à des composés pharmacologiques :</strong> pesticides (glyphosate), agents pharmacologiques (<strong>valproate</strong>).</div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="ct">💊 (c) Modèle valproate (VPA)</div>
+  <div class="hl"><strong>Le valproate de sodium / acide valproïque (DÉPAKINE)</strong> est antiépileptique, stabilisateur d'humeur et anti-migraineux. <strong>Interdit pendant la grossesse</strong> et chez les femmes en âge de procréer : pris pendant la grossesse, il multiplie par <strong>4</strong> le risque de TSA chez le fœtus (<strong>molécule tératogène</strong>) — il régule l'expression génétique et module l'excitabilité neuronale via le <strong>système GABAergique</strong>.</div>
+  <div class="hl2"><strong>Test des 3 compartiments (souris) :</strong> un compartiment avec un individu <em>familier</em>, un avec un <em>nouvel</em> individu, un <em>centre</em> vide. Les <strong>contrôles</strong> répartissent leur temps également partout. Les <strong>souris « VPA »</strong> (exposées à J2) passent plus de temps au <strong>centre</strong> et avec l'individu <strong>familier</strong> ; et quand le choix est « isolé vs familier », elles préfèrent rester <strong>seules</strong>.</div>
+  <div class="hl">L'exposition au valproate <strong>↓ les comportements sociaux</strong>, <strong>↑ la latence des interactions</strong> (surtout à E12, fermeture du tube neural), avec faible activité exploratoire et <strong>hyperactivité locomotrice stéréotypée</strong>.</div>
+  <div class="hli">🔑 <strong>Fil conducteur des deux TD :</strong> qu'il soit génétique (FMR1) ou environnemental (VPA, alcool), un dérèglement du <strong>système GABAergique</strong> revient comme un mécanisme central — chez l'autisme comme dans les effets de l'alcool sur le cerveau.</div>
+</div>
+
+</section>
+
+
 <section id="s7" class="sec">
 <div class="prob-wrap">
   <h2>📊 Probabilités de révision</h2>
@@ -5433,7 +6091,7 @@ function filterA(year, btn) {
 </section>
 
 <script>
-const themes = ['t1','t2','t3','t4','t5','t6','t7','t7'];
+const themes = ['t1','t2','t3','t4','t5','t6','t9','t7','t8'];
 
 function go(id, idx) {
   // Hide all sections
