@@ -333,53 +333,366 @@ svg{max-width:100%;overflow:visible;}
 </div>
 
 <div class="card">
-  <div class="ct">📋 5 catégories comportementales évaluées (Planchez et al., 2019)</div>
-  <p style="font-size:.88rem;color:var(--mu);margin-bottom:8px">Pour évaluer la dépression chez l'animal, on ne peut pas demander "tu es triste ?" — on observe des <em>comportements</em> analogues aux symptômes humains. Ce schéma montre les 5 dimensions évaluées et les tests associés. L'anhédonie (perte de plaisir) est le symptôme le plus central et le mieux modélisé : si un rat préfère moins l'eau sucrée, c'est un signe de perte de plaisir.</p>
+  <div class="ct">📋 Vue d'ensemble — 5 catégories comportementales (Planchez et al., 2019)</div>
+  <p style="font-size:.88rem;color:var(--mu);margin-bottom:8px">On ne peut pas demander à une souris si elle est triste. On observe donc des <em>comportements homologues</em> aux symptômes humains, regroupés en 5 grandes dimensions. Chacune est évaluée par des tests comportementaux standardisés détaillés ci-dessous.</p>
   <div class="sb">
-  <svg viewBox="0 0 760 190" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
-    <text x="380" y="18" text-anchor="middle" font-size="13" font-weight="900" fill="#e84d2a">ÉVALUATION COMPORTEMENTALE CHEZ LE RONGEUR</text>
-    <!-- 5 colonnes -->
-    <rect x="10" y="30" width="136" height="148" rx="12" fill="#fff0ea" stroke="#e84d2a" stroke-width="2"/>
-    <text x="78" y="54" text-anchor="middle" font-size="12" font-weight="900" fill="#e84d2a">DÉSESPOIR</text>
-    <text x="78" y="72" text-anchor="middle" font-size="9" fill="#2a120a">• Test nage forcée</text>
-    <text x="78" y="86" text-anchor="middle" font-size="9" fill="#2a120a">• Suspension caudale</text>
-    <text x="78" y="108" text-anchor="middle" font-size="8" fill="#9a4830">⚠ Résignation</text>
-    <text x="78" y="120" text-anchor="middle" font-size="8" fill="#9a4830">ou fatigue ?</text>
-    <text x="78" y="160" text-anchor="middle" font-size="8" font-style="italic" fill="#c93818">Remis en question</text>
-
-    <rect x="156" y="30" width="136" height="148" rx="12" fill="#fff0ea" stroke="#f7845a" stroke-width="2"/>
-    <text x="224" y="54" text-anchor="middle" font-size="12" font-weight="900" fill="#e84d2a">APATHIE</text>
-    <text x="224" y="72" text-anchor="middle" font-size="9" fill="#2a120a">• Construction du nid</text>
-    <text x="224" y="86" text-anchor="middle" font-size="9" fill="#2a120a">• Splash test (toilettage)</text>
-    <text x="224" y="100" text-anchor="middle" font-size="9" fill="#2a120a">• Soins maternels</text>
-    <text x="224" y="114" text-anchor="middle" font-size="9" fill="#2a120a">• Intérêt social</text>
-    <text x="224" y="128" text-anchor="middle" font-size="9" fill="#2a120a">• Intérêt nouvel objet</text>
-
-    <rect x="302" y="30" width="136" height="148" rx="12" fill="#fff0ea" stroke="#c93818" stroke-width="2"/>
-    <text x="370" y="54" text-anchor="middle" font-size="12" font-weight="900" fill="#e84d2a">ANHÉDONIE</text>
-    <text x="370" y="72" text-anchor="middle" font-size="9" fill="#2a120a">• Préférence sucrose</text>
-    <text x="370" y="86" text-anchor="middle" font-size="9" fill="#2a120a">• Test du cookie</text>
-    <text x="370" y="100" text-anchor="middle" font-size="9" fill="#2a120a">(biberon bleu=eau,</text>
-    <text x="370" y="114" text-anchor="middle" font-size="9" fill="#2a120a">vert=sucre)</text>
-
-    <rect x="448" y="30" width="136" height="148" rx="12" fill="#fff0ea" stroke="#f7845a" stroke-width="2"/>
-    <text x="516" y="47" text-anchor="middle" font-size="12" font-weight="900" fill="#e84d2a">AVERSION</text>
-    <text x="516" y="60" text-anchor="middle" font-size="12" font-weight="900" fill="#e84d2a">SOCIALE</text>
-    <text x="516" y="80" text-anchor="middle" font-size="9" fill="#2a120a">• Test rencontre sociale</text>
-    <text x="516" y="94" text-anchor="middle" font-size="9" fill="#2a120a">• Novel Intruder Test</text>
-    <text x="516" y="108" text-anchor="middle" font-size="9" fill="#2a120a">• Budget-temps (24-48h)</text>
-
-    <rect x="594" y="30" width="152" height="148" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
-    <text x="670" y="54" text-anchor="middle" font-size="12" font-weight="900" fill="#92400e">ANXIÉTÉ</text>
-    <text x="670" y="72" text-anchor="middle" font-size="9" fill="#2a120a">• Open field</text>
-    <text x="670" y="86" text-anchor="middle" font-size="9" fill="#2a120a">• Novelty-Suppressed Feeding</text>
-    <text x="670" y="100" text-anchor="middle" font-size="9" fill="#2a120a">• Dark/light box</text>
-    <text x="670" y="114" text-anchor="middle" font-size="9" fill="#2a120a">• Labyrinthe en croix</text>
+  <svg viewBox="0 0 760 175" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+    <text x="380" y="16" text-anchor="middle" font-size="12" font-weight="900" fill="#e84d2a">ÉVALUATION COMPORTEMENTALE CHEZ LE RONGEUR (Planchez et al., 2019)</text>
+    <rect x="10" y="25" width="136" height="140" rx="12" fill="#fff0ea" stroke="#e84d2a" stroke-width="2"/>
+    <text x="78" y="46" text-anchor="middle" font-size="11" font-weight="900" fill="#e84d2a">DÉSESPOIR</text>
+    <text x="78" y="62" text-anchor="middle" font-size="8.5" fill="#2a120a">Résignation face à une</text>
+    <text x="78" y="74" text-anchor="middle" font-size="8.5" fill="#2a120a">situation aversive</text>
+    <text x="78" y="92" text-anchor="middle" font-size="8.5" fill="#7c2d12">• Nage forcée (FST)</text>
+    <text x="78" y="106" text-anchor="middle" font-size="8.5" fill="#7c2d12">• Suspension caudale (TST)</text>
+    <text x="78" y="128" text-anchor="middle" font-size="7.5" fill="#9a4830" font-style="italic">⚠ Remis en question :</text>
+    <text x="78" y="140" text-anchor="middle" font-size="7.5" fill="#9a4830" font-style="italic">résignation ou fatigue</text>
+    <text x="78" y="152" text-anchor="middle" font-size="7.5" fill="#9a4830" font-style="italic">musculaire ?</text>
+    <rect x="156" y="25" width="136" height="140" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="2"/>
+    <text x="224" y="46" text-anchor="middle" font-size="11" font-weight="900" fill="#c2410c">APATHIE</text>
+    <text x="224" y="62" text-anchor="middle" font-size="8.5" fill="#431407">Déficit cpts orientés</text>
+    <text x="224" y="74" text-anchor="middle" font-size="8.5" fill="#431407">vers un but</text>
+    <text x="224" y="92" text-anchor="middle" font-size="8.5" fill="#7c2d12">• Splash test</text>
+    <text x="224" y="106" text-anchor="middle" font-size="8.5" fill="#7c2d12">• Construction du nid</text>
+    <text x="224" y="120" text-anchor="middle" font-size="8.5" fill="#7c2d12">• Soins maternels</text>
+    <text x="224" y="134" text-anchor="middle" font-size="8.5" fill="#7c2d12">• Intérêt social</text>
+    <text x="224" y="148" text-anchor="middle" font-size="8.5" fill="#7c2d12">• Intérêt nouvel objet</text>
+    <rect x="302" y="25" width="136" height="140" rx="12" fill="#fef2f2" stroke="#ef4444" stroke-width="2.5"/>
+    <text x="370" y="46" text-anchor="middle" font-size="11" font-weight="900" fill="#b91c1c">ANHÉDONIE</text>
+    <text x="370" y="62" text-anchor="middle" font-size="8.5" fill="#450a0a">↓ réponse aux stimuli</text>
+    <text x="370" y="74" text-anchor="middle" font-size="8.5" fill="#450a0a">plaisants</text>
+    <text x="370" y="92" text-anchor="middle" font-size="8.5" fill="#7c2d12">• Préférence sucrose</text>
+    <text x="370" y="106" text-anchor="middle" font-size="8.5" fill="#7c2d12">• Test du cookie</text>
+    <text x="370" y="120" text-anchor="middle" font-size="8.5" fill="#7c2d12">• Biberon bleu=eau</text>
+    <text x="370" y="134" text-anchor="middle" font-size="8.5" fill="#7c2d12">vert=sucre</text>
+    <text x="370" y="155" text-anchor="middle" font-size="7.5" fill="#b91c1c" font-weight="700">⭐ Symptôme central</text>
+    <rect x="448" y="25" width="136" height="140" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="516" y="40" text-anchor="middle" font-size="11" font-weight="900" fill="#5b21b6">AVERSION</text>
+    <text x="516" y="53" text-anchor="middle" font-size="11" font-weight="900" fill="#5b21b6">SOCIALE</text>
+    <text x="516" y="70" text-anchor="middle" font-size="8.5" fill="#2e1065">Peur d'être observé /</text>
+    <text x="516" y="82" text-anchor="middle" font-size="8.5" fill="#2e1065">jugé négativement</text>
+    <text x="516" y="100" text-anchor="middle" font-size="8.5" fill="#5b21b6">• Rencontre sociale</text>
+    <text x="516" y="114" text-anchor="middle" font-size="8.5" fill="#5b21b6">• Novel Intruder Test</text>
+    <text x="516" y="128" text-anchor="middle" font-size="8.5" fill="#5b21b6">• Budget-temps 24-48h</text>
+    <rect x="594" y="25" width="152" height="140" rx="12" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+    <text x="670" y="46" text-anchor="middle" font-size="11" font-weight="900" fill="#92400e">ANXIÉTÉ</text>
+    <text x="670" y="62" text-anchor="middle" font-size="8.5" fill="#451a03">Peur d'un danger absent</text>
+    <text x="670" y="74" text-anchor="middle" font-size="8.5" fill="#451a03">(sans stimulus réel)</text>
+    <text x="670" y="92" text-anchor="middle" font-size="8.5" fill="#92400e">• Open field</text>
+    <text x="670" y="106" text-anchor="middle" font-size="8.5" fill="#92400e">• NSF (Novelty-Sup. Feed.)</text>
+    <text x="670" y="120" text-anchor="middle" font-size="8.5" fill="#92400e">• Dark/light box</text>
+    <text x="670" y="134" text-anchor="middle" font-size="8.5" fill="#92400e">• Labyrinthe en croix+</text>
   </svg>
   </div>
 </div>
 
+<div class="card">
+  <div class="ct">😔 DÉSESPOIR — Tests détaillés</div>
+  <p style="font-size:.88rem;color:var(--mu);margin-bottom:10px">On évalue la <strong>résignation</strong> face à une situation aversive inévitable. L'animal apathique cesse de se débattre plus vite — mais ces tests sont remis en cause (voir ci-dessous).</p>
+  <div class="sb">
+  <svg viewBox="0 0 760 185" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+    <text x="380" y="16" text-anchor="middle" font-size="12" font-weight="900" fill="#e84d2a">TESTS DU DÉSESPOIR</text>
+    <!-- Test nage forcée -->
+    <rect x="10" y="25" width="360" height="150" rx="12" fill="#fff0ea" stroke="#e84d2a" stroke-width="2"/>
+    <text x="190" y="44" text-anchor="middle" font-size="11" font-weight="900" fill="#e84d2a">🏊 Test de nage forcée (FST - Porsolt)</text>
+    <!-- cylindre eau -->
+    <rect x="80" y="60" width="70" height="90" rx="8" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2"/>
+    <text x="115" y="82" text-anchor="middle" font-size="9" fill="#1e40af">Cylindre</text>
+    <text x="115" y="95" text-anchor="middle" font-size="9" fill="#1e40af">plein d'eau</text>
+    <!-- souris normale -->
+    <ellipse cx="115" cy="130" rx="14" ry="9" fill="#f97316" stroke="#c2410c" stroke-width="1.5"/>
+    <text x="115" y="133" text-anchor="middle" font-size="8" fill="#fff" font-weight="700">🐭</text>
+    <!-- légende -->
+    <text x="195" y="68" font-size="9" fill="#064e3b">Souris placée dans cylindre</text>
+    <text x="195" y="82" font-size="9" fill="#064e3b">d'eau → ne peut pas s'échapper</text>
+    <text x="195" y="100" font-size="9" fill="#b91c1c" font-weight="700">Souris normale :</text>
+    <text x="195" y="113" font-size="9" fill="#374151">nage, s'agite, cherche à fuir</text>
+    <text x="195" y="130" font-size="9" fill="#b91c1c" font-weight="700">Souris dépressive :</text>
+    <text x="195" y="143" font-size="9" fill="#374151">immobilité rapide (résignation)</text>
+    <text x="195" y="156" font-size="8" fill="#9a4830" font-style="italic">↑ temps immobile = ↑ désespoir</text>
+    <text x="30" y="168" font-size="8" fill="#9a4830" font-style="italic">⚠ Critique : immobilité = résignation ou épuisement musculaire ?</text>
+    <!-- Test suspension caudale -->
+    <rect x="385" y="25" width="360" height="150" rx="12" fill="#fff0ea" stroke="#c93818" stroke-width="2"/>
+    <text x="565" y="44" text-anchor="middle" font-size="11" font-weight="900" fill="#c93818">🐭 Test de suspension caudale (TST)</text>
+    <!-- crochet + queue -->
+    <line x1="565" y1="60" x2="565" y2="80" stroke="#374151" stroke-width="3"/>
+    <line x1="545" y1="60" x2="585" y2="60" stroke="#374151" stroke-width="3"/>
+    <ellipse cx="565" cy="105" rx="18" ry="12" fill="#f97316" stroke="#c2410c" stroke-width="1.5" transform="rotate(180,565,105)"/>
+    <line x1="565" y1="80" x2="565" y2="93" stroke="#92400e" stroke-width="2"/>
+    <text x="565" y="108" text-anchor="middle" font-size="11">🐭</text>
+    <text x="430" y="68" font-size="9" fill="#064e3b">Souris suspendue</text>
+    <text x="430" y="81" font-size="9" fill="#064e3b">par la queue (inversée)</text>
+    <text x="430" y="99" font-size="9" fill="#b91c1c" font-weight="700">Souris normale :</text>
+    <text x="430" y="112" font-size="9" fill="#374151">s'agite pour remonter</text>
+    <text x="430" y="126" font-size="9" fill="#b91c1c" font-weight="700">Souris dépressive :</text>
+    <text x="430" y="139" font-size="9" fill="#374151">immobilité rapide</text>
+    <text x="430" y="156" font-size="8" fill="#9a4830" font-style="italic">Même critique : résignation ou fatigue ?</text>
+  </svg>
+  </div>
+  <div class="hlr">⚠ <strong>Limite importante :</strong> Ces tests sont remis en cause car l'immobilité peut refléter de la <em>fatigue musculaire</em> plutôt que de la résignation. Les antidépresseurs les plus récents ne réduisent pas toujours l'immobilité dans ces tests, questionnant leur validité prédictive.</div>
+</div>
+
+<div class="card">
+  <div class="ct">😑 APATHIE — Tests détaillés</div>
+  <p style="font-size:.88rem;color:var(--mu);margin-bottom:10px">L'apathie = déficit dans les comportements <strong>orientés vers un but</strong>. On évalue 5 comportements stéréotypés innés et obligatoires pour la survie. En cas d'apathie, ces comportements sont perturbés ou abolis. Le cours insiste surtout sur le <strong>splash test</strong> et la <strong>construction du nid</strong>.</p>
+  <div class="sb">
+  <svg viewBox="0 0 760 210" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+    <text x="380" y="16" text-anchor="middle" font-size="12" font-weight="900" fill="#c2410c">TESTS DE L'APATHIE</text>
+    <!-- Splash test -->
+    <rect x="10" y="24" width="360" height="130" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="2.5"/>
+    <text x="190" y="43" text-anchor="middle" font-size="11" font-weight="900" fill="#c2410c">💦 Splash test (toilettage)</text>
+    <!-- spray -->
+    <rect x="30" y="65" width="30" height="50" rx="5" fill="#7dd3fc" stroke="#0284c7" stroke-width="1.5"/>
+    <text x="45" y="86" text-anchor="middle" font-size="8" fill="#0c4a6e">spray</text>
+    <text x="45" y="98" text-anchor="middle" font-size="8" fill="#0c4a6e">gras</text>
+    <!-- flèche spray -->
+    <line x1="60" y1="90" x2="90" y2="90" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <!-- souris -->
+    <ellipse cx="115" cy="90" rx="22" ry="15" fill="#fed7aa" stroke="#c2410c" stroke-width="1.5"/>
+    <text x="115" y="95" text-anchor="middle" font-size="14">🐭</text>
+    <text x="160" y="60" font-size="9" fill="#431407">On asperge la souris d'une</text>
+    <text x="160" y="73" font-size="9" fill="#431407">solution sucrée/grasse</text>
+    <text x="160" y="89" font-size="9" fill="#b91c1c" font-weight="700">Souris normale :</text>
+    <text x="160" y="102" font-size="9" fill="#374151">se lèche immédiatement</text>
+    <text x="160" y="115" font-size="9" fill="#b91c1c" font-weight="700">Souris apathique :</text>
+    <text x="160" y="128" font-size="9" fill="#374151">ne se toilette pas (ou très tard)</text>
+    <text x="190" y="146" text-anchor="middle" font-size="8" fill="#9a4830" font-style="italic">↓ fréquence de toilettage = ↑ apathie</text>
+    <!-- Construction du nid -->
+    <rect x="385" y="24" width="360" height="130" rx="12" fill="#fff7ed" stroke="#fb923c" stroke-width="2"/>
+    <text x="565" y="43" text-anchor="middle" font-size="11" font-weight="900" fill="#c2410c">🪹 Construction du nid</text>
+    <!-- nid normal -->
+    <ellipse cx="480" cy="100" rx="35" ry="22" fill="#a3e635" stroke="#4d7c0f" stroke-width="1.5"/>
+    <text x="480" y="104" text-anchor="middle" font-size="9" fill="#14532d" font-weight="700">Nid ✓</text>
+    <text x="480" y="128" text-anchor="middle" font-size="8" fill="#15803d">Score élevé</text>
+    <!-- nid apathique -->
+    <line x1="600" y1="85" x2="650" y2="85" stroke="#d1d5db" stroke-width="2"/>
+    <line x1="605" y1="90" x2="645" y2="90" stroke="#d1d5db" stroke-width="1"/>
+    <text x="625" y="110" text-anchor="middle" font-size="9" fill="#b91c1c">Coton éparpillé</text>
+    <text x="625" y="128" text-anchor="middle" font-size="8" fill="#b91c1c">Score faible ✗</text>
+    <text x="565" y="59" text-anchor="middle" font-size="8.5" fill="#431407">On fournit du coton à la souris</text>
+    <text x="565" y="71" text-anchor="middle" font-size="8.5" fill="#431407">et on évalue le nid construit</text>
+    <text x="565" y="146" text-anchor="middle" font-size="8" fill="#9a4830" font-style="italic">Score 0-5 selon forme/compacité du nid</text>
+    <!-- Les 5 comportements -->
+    <rect x="10" y="162" width="730" height="44" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
+    <text x="380" y="178" text-anchor="middle" font-size="9.5" font-weight="900" fill="#c2410c">5 comportements stéréotypés évalués chez le rongeur en cas d'apathie :</text>
+    <text x="380" y="197" text-anchor="middle" font-size="9" fill="#431407">① Construction du nid  ② Nettoyage/toilettage (splash test)  ③ Soins maternels  ④ Intérêt social  ⑤ Intérêt pour un nouvel objet</text>
+  </svg>
+  </div>
+</div>
+
+<div class="card">
+  <div class="ct">🍬 ANHÉDONIE — Tests détaillés</div>
+  <p style="font-size:.88rem;color:var(--mu);margin-bottom:10px">L'anhédonie = incapacité à éprouver du plaisir. C'est le <strong>symptôme le plus central</strong> de la dépression et le mieux modélisé chez l'animal. On exploite le fait que les rongeurs <em>adorent normalement</em> le sucre.</p>
+  <div class="sb">
+  <svg viewBox="0 0 760 195" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+    <text x="380" y="16" text-anchor="middle" font-size="12" font-weight="900" fill="#b91c1c">TESTS DE L'ANHÉDONIE</text>
+    <!-- Test préférence sucrose / biberons -->
+    <rect x="10" y="24" width="370" height="162" rx="12" fill="#fef2f2" stroke="#ef4444" stroke-width="2.5"/>
+    <text x="195" y="43" text-anchor="middle" font-size="11" font-weight="900" fill="#b91c1c">🧪 Test de préférence au sucrose (biberon)</text>
+    <!-- biberon bleu eau -->
+    <rect x="50" y="65" width="28" height="70" rx="6" fill="#bfdbfe" stroke="#3b82f6" stroke-width="2"/>
+    <text x="64" y="82" text-anchor="middle" font-size="7" fill="#1d4ed8" font-weight="700">💧</text>
+    <text x="64" y="93" text-anchor="middle" font-size="7" fill="#1d4ed8">EAU</text>
+    <text x="64" y="148" text-anchor="middle" font-size="8" fill="#1d4ed8">Bleu</text>
+    <!-- biberon vert sucre -->
+    <rect x="120" y="65" width="28" height="70" rx="6" fill="#bbf7d0" stroke="#22c55e" stroke-width="2"/>
+    <text x="134" y="82" text-anchor="middle" font-size="7" fill="#15803d" font-weight="700">🍬</text>
+    <text x="134" y="93" text-anchor="middle" font-size="7" fill="#15803d">SUCRE</text>
+    <text x="134" y="148" text-anchor="middle" font-size="8" fill="#15803d">Vert</text>
+    <!-- souris -->
+    <text x="95" y="130" text-anchor="middle" font-size="22">🐭</text>
+    <!-- flèche vers vert normal -->
+    <line x1="105" y1="120" x2="128" y2="105" stroke="#15803d" stroke-width="2" stroke-dasharray="4,2"/>
+    <text x="170" y="60" font-size="9" fill="#450a0a">Deux biberons en libre accès :</text>
+    <text x="170" y="74" font-size="9" fill="#1d4ed8">🔵 Bleu = eau simple</text>
+    <text x="170" y="88" font-size="9" fill="#15803d">🟢 Vert = eau sucrée (sucrose)</text>
+    <text x="170" y="108" font-size="9" fill="#b91c1c" font-weight="700">Souris normale :</text>
+    <text x="170" y="121" font-size="9" fill="#374151">préfère le vert (sucré)</text>
+    <text x="170" y="135" font-size="9" fill="#b91c1c" font-weight="700">Souris anhédonique :</text>
+    <text x="170" y="148" font-size="9" fill="#374151">indifférente aux deux biberons</text>
+    <text x="170" y="162" font-size="8" fill="#9a4830" font-style="italic">Ne cherche plus la récompense sucrée</text>
+    <text x="195" y="178" text-anchor="middle" font-size="8" fill="#9a4830" font-style="italic">Mesure : % consommation sucrose / (sucrose + eau)</text>
+    <!-- Test cookie -->
+    <rect x="390" y="24" width="360" height="162" rx="12" fill="#fef2f2" stroke="#dc2626" stroke-width="2"/>
+    <text x="570" y="43" text-anchor="middle" font-size="11" font-weight="900" fill="#b91c1c">🍪 Test du cookie</text>
+    <text x="450" y="60" font-size="9" fill="#450a0a">Morceau de gâteau/cookie placé</text>
+    <text x="450" y="73" font-size="9" fill="#450a0a">dans la cage de la souris</text>
+    <!-- cookie -->
+    <circle cx="680" cy="100" r="28" fill="#fbbf24" stroke="#d97706" stroke-width="2"/>
+    <text x="680" y="105" text-anchor="middle" font-size="20">🍪</text>
+    <!-- souris indifférente -->
+    <text x="580" y="105" text-anchor="middle" font-size="18">🐭</text>
+    <!-- flèche avec X -->
+    <line x1="595" y1="100" x2="645" y2="100" stroke="#b91c1c" stroke-width="2" stroke-dasharray="4,2"/>
+    <text x="620" y="93" text-anchor="middle" font-size="11" fill="#b91c1c">✗</text>
+    <text x="450" y="92" font-size="9" fill="#b91c1c" font-weight="700">Souris normale :</text>
+    <text x="450" y="105" font-size="9" fill="#374151">se précipite sur le gâteau</text>
+    <text x="450" y="120" font-size="9" fill="#b91c1c" font-weight="700">Souris anhédonique :</text>
+    <text x="450" y="133" font-size="9" fill="#374151">ne s'y intéresse plus (ou</text>
+    <text x="450" y="146" font-size="9" fill="#374151">latence très longue)</text>
+    <text x="570" y="175" text-anchor="middle" font-size="8" fill="#9a4830" font-style="italic">⭐ Symptôme central — le plus facile à mesurer</text>
+  </svg>
+  </div>
+</div>
+
+<div class="card">
+  <div class="ct">😰 ANXIÉTÉ — Tests détaillés</div>
+  <p style="font-size:.88rem;color:var(--mu);margin-bottom:10px">L'anxiété = état émotionnel causé par la <strong>crainte d'un danger absent</strong>. Les tests exploitent le conflit entre l'exploration naturelle (curiosité) et la peur de l'espace ouvert/éclairé chez le rongeur.</p>
+  <div class="sb">
+  <svg viewBox="0 0 760 280" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+    <text x="380" y="16" text-anchor="middle" font-size="12" font-weight="900" fill="#92400e">TESTS DE L'ANXIÉTÉ</text>
+    <!-- Open field -->
+    <rect x="10" y="24" width="230" height="240" rx="12" fill="#fffbeb" stroke="#d97706" stroke-width="2"/>
+    <text x="125" y="43" text-anchor="middle" font-size="10.5" font-weight="900" fill="#92400e">🏟️ Open Field</text>
+    <!-- arène carrée -->
+    <rect x="35" y="55" width="150" height="130" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+    <rect x="75" y="90" width="70" height="60" rx="4" fill="#fde68a" stroke="#d97706" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <text x="110" y="123" text-anchor="middle" font-size="8" fill="#92400e">Zone</text>
+    <text x="110" y="134" text-anchor="middle" font-size="8" fill="#92400e">centrale</text>
+    <text x="110" y="145" text-anchor="middle" font-size="8" fill="#92400e">⚠ anxiogène</text>
+    <!-- souris normale au centre -->
+    <text x="55" y="180" text-anchor="middle" font-size="8" fill="#15803d" font-weight="700">Normal:</text>
+    <text x="55" y="192" text-anchor="middle" font-size="8" fill="#15803d">explore</text>
+    <text x="55" y="203" text-anchor="middle" font-size="8" fill="#15803d">le centre</text>
+    <!-- souris anxieuse au bord -->
+    <text x="170" y="180" text-anchor="middle" font-size="8" fill="#b91c1c" font-weight="700">Anxieux:</text>
+    <text x="170" y="192" text-anchor="middle" font-size="8" fill="#b91c1c">longe les</text>
+    <text x="170" y="203" text-anchor="middle" font-size="8" fill="#b91c1c">parois</text>
+    <text x="125" y="225" text-anchor="middle" font-size="8" fill="#9a4830" font-style="italic">↓ temps centre = ↑ anxiété</text>
+    <text x="125" y="237" text-anchor="middle" font-size="8" fill="#9a4830" font-style="italic">Mesure aussi locomotion</text>
+    <text x="125" y="253" text-anchor="middle" font-size="8" fill="#9a4830" font-style="italic">(activité psychomotrice)</text>
+    <!-- Dark/Light box -->
+    <rect x="250" y="24" width="240" height="240" rx="12" fill="#fffbeb" stroke="#b45309" stroke-width="2"/>
+    <text x="370" y="43" text-anchor="middle" font-size="10.5" font-weight="900" fill="#92400e">🌓 Dark / Light Box</text>
+    <!-- boîte divisée -->
+    <rect x="270" y="58" width="100" height="110" rx="0" fill="#1e1b4b"/>
+    <rect x="370" y="58" width="100" height="110" rx="0" fill="#fef08a" stroke="#ca8a04" stroke-width="1"/>
+    <text x="320" y="115" text-anchor="middle" font-size="9" fill="#e0e7ff">SOMBRE</text>
+    <text x="420" y="105" text-anchor="middle" font-size="9" fill="#713f12">ÉCLAIRÉ</text>
+    <text x="420" y="118" text-anchor="middle" font-size="9" fill="#713f12">☀️</text>
+    <!-- passage -->
+    <rect x="367" y="88" width="6" height="50" rx="2" fill="#d97706"/>
+    <text x="370" y="183" text-anchor="middle" font-size="8" fill="#b91c1c" font-weight="700">Anxieux : reste dans le sombre</text>
+    <text x="370" y="196" text-anchor="middle" font-size="8" fill="#15803d" font-weight="700">Normal : explore les deux</text>
+    <text x="370" y="215" text-anchor="middle" font-size="8" fill="#9a4830" font-style="italic">Exploite l'aversion naturelle</text>
+    <text x="370" y="228" text-anchor="middle" font-size="8" fill="#9a4830" font-style="italic">du rongeur pour la lumière</text>
+    <text x="370" y="248" text-anchor="middle" font-size="8" fill="#9a4830" font-style="italic">↑ temps sombre = ↑ anxiété</text>
+    <!-- NSF -->
+    <rect x="500" y="24" width="245" height="240" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
+    <text x="622" y="43" text-anchor="middle" font-size="10.5" font-weight="900" fill="#92400e">🍽️ Novelty-Suppressed Feeding</text>
+    <!-- arène avec nourriture -->
+    <rect x="520" y="58" width="205" height="120" rx="6" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+    <!-- nourriture au centre -->
+    <circle cx="622" cy="118" r="12" fill="#fbbf24" stroke="#d97706" stroke-width="1.5"/>
+    <text x="622" y="122" text-anchor="middle" font-size="10">🍖</text>
+    <!-- souris au bord -->
+    <text x="540" y="100" text-anchor="middle" font-size="16">🐭</text>
+    <!-- flèche hésitation -->
+    <line x1="553" y1="107" x2="600" y2="118" stroke="#b91c1c" stroke-width="1.5" stroke-dasharray="3,2"/>
+    <text x="560" y="122" text-anchor="middle" font-size="8" fill="#b91c1c">?</text>
+    <text x="622" y="200" text-anchor="middle" font-size="8.5" fill="#431407">Souris à jeun dans un</text>
+    <text x="622" y="213" text-anchor="middle" font-size="8.5" fill="#431407">nouvel environnement</text>
+    <text x="622" y="226" text-anchor="middle" font-size="8.5" fill="#431407">avec nourriture au centre</text>
+    <text x="622" y="244" text-anchor="middle" font-size="8" fill="#b91c1c" font-weight="700">Anxieux → latence longue</text>
+    <text x="622" y="256" text-anchor="middle" font-size="8" fill="#b91c1c" font-weight="700">avant de manger</text>
+  </svg>
+  </div>
+</div>
+
+<div class="card">
+  <div class="ct">🫂 AVERSION SOCIALE + autres mesures</div>
+  <div class="g2">
+    <div>
+      <div class="hl"><strong>🐾 Test de rencontre sociale</strong><br>
+      On place la souris-test dans une cage avec une petite cage grillagée au centre (contenant ou non un congénère inconnu). On mesure le temps passé à s'approcher de la cage. Une souris normale est curieuse et s'approche. Une souris présentant de l'aversion sociale évite la cage-congénère.</div>
+      <div class="hl2"><strong>👥 Novel Intruder Test (irritabilité)</strong><br>
+      Un individu inconnu (intrus) est introduit dans la cage de la souris-résidente. On mesure les comportements d'agression et de défense. Évalue l'irritabilité et l'hyperréactivité sociale souvent présentes dans la dépression.</div>
+    </div>
+    <div>
+      <div class="hli"><strong>📹 Budget-temps (24-48h)</strong><br>
+      On filme en continu les sujets sur 24 à 48h et on comptabilise le temps passé dans chaque activité : alimentation, exploration, activités psychomotrices (grooming), immobilité. Permet d'évaluer les <strong>perturbations alimentaires</strong> et les variations de l'activité globale. Version EEG = mesure du sommeil.</div>
+      <div class="hlg"><strong>🧠 Déficits cognitifs</strong><br>
+      Déficit mémoire/apprentissage mesuré par :<br>
+      • <strong>Reconnaissance du nouvel objet</strong> : souris normale passe plus de temps avec l'objet inconnu<br>
+      • <strong>Piscine de Morris</strong> : apprentissage spatial, mémoire spatiale<br>
+      • <strong>Labyrinthe en Y</strong> : alternance spontanée, mémoire de travail</div>
+    </div>
+  </div>
+</div>
+
 <div class="sh">💉 Modèles d'induction de la dépression</div>
+
+<div class="card">
+  <div class="ct">🧬 Vue d'ensemble — Types d'induction</div>
+  <p style="font-size:.88rem;color:var(--mu);margin-bottom:10px">Deux grandes familles de méthodes permettent d'induire expérimentalement la dépression. Le cours insiste surtout sur les <strong>modèles de stress</strong>, plus proches de l'étiologie humaine.</p>
+  <div class="sb">
+  <svg viewBox="0 0 760 230" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+    <text x="380" y="16" text-anchor="middle" font-size="12" font-weight="900" fill="#1a56db">MÉTHODES D'INDUCTION DE LA DÉPRESSION</text>
+    <!-- Biologique -->
+    <rect x="10" y="24" width="360" height="198" rx="10" fill="#e8f0ff" stroke="#1a56db" stroke-width="2"/>
+    <text x="190" y="43" text-anchor="middle" font-size="11" font-weight="900" fill="#1040c0">🧬 Inductions biologiques</text>
+    <text x="190" y="56" text-anchor="middle" font-size="8" font-style="italic" fill="#3860a0">(moins insistés dans le cours)</text>
+    <!-- LPS -->
+    <rect x="20" y="62" width="340" height="26" rx="5" fill="#fff" stroke="#a8caff" stroke-width="1"/>
+    <text x="30" y="75" font-size="8.5" font-weight="800" fill="#1040c0">💉 Injection LPS</text>
+    <text x="30" y="84" font-size="7.5" fill="#050e30">Réponse inflammatoire → ↑ cytokines → symptômes dépressifs</text>
+    <!-- Bulbectomie -->
+    <rect x="20" y="92" width="340" height="26" rx="5" fill="#fff" stroke="#a8caff" stroke-width="1"/>
+    <text x="30" y="105" font-size="8.5" font-weight="800" fill="#1040c0">🔪 Bulbectomie olfactive</text>
+    <text x="30" y="114" font-size="7.5" fill="#050e30">Ablation bulbes olfactifs → atteintes SNC limbiques</text>
+    <!-- Corticostérone -->
+    <rect x="20" y="122" width="340" height="26" rx="5" fill="#fff" stroke="#a8caff" stroke-width="1"/>
+    <text x="30" y="135" font-size="8.5" font-weight="800" fill="#1040c0">🧪 Consommation corticostérone</text>
+    <text x="30" y="144" font-size="7.5" fill="#050e30">Eau de boisson → mimique hypercorticisme chronique</text>
+    <!-- Génétiques -->
+    <rect x="20" y="152" width="163" height="26" rx="5" fill="#fff" stroke="#a8caff" stroke-width="1"/>
+    <text x="30" y="165" font-size="8.5" font-weight="800" fill="#1040c0">🧬 Modèles génétiques</text>
+    <text x="30" y="174" font-size="7.5" fill="#050e30">KO de gènes ciblés</text>
+    <!-- Optogénétiques -->
+    <rect x="188" y="152" width="172" height="26" rx="5" fill="#fff" stroke="#a8caff" stroke-width="1"/>
+    <text x="198" y="165" font-size="8.5" font-weight="800" fill="#1040c0">🔬 Optogénétiques</text>
+    <text x="198" y="174" font-size="7.5" fill="#050e30">Protéine photo-sensible → activ./inhibit.</text>
+    <!-- note bas -->
+    <text x="190" y="196" text-anchor="middle" font-size="7.5" font-style="italic" fill="#3860a0">→ Ces modèles existent, le cours insiste moins dessus</text>
+    <text x="190" y="208" text-anchor="middle" font-size="7.5" font-style="italic" fill="#3860a0">que sur les modèles de stress ci-contre</text>
+    <!-- Stress -->
+    <rect x="385" y="24" width="365" height="198" rx="10" fill="#fff0ea" stroke="#e84d2a" stroke-width="2.5"/>
+    <text x="567" y="43" text-anchor="middle" font-size="11" font-weight="900" fill="#e84d2a">⚡ Modèles de stress</text>
+    <text x="567" y="56" text-anchor="middle" font-size="8" font-weight="700" fill="#b91c1c">← Insistance du cours (étiologie + proche de l'humain)</text>
+    <!-- Stress adulte -->
+    <rect x="395" y="62" width="345" height="80" rx="6" fill="#fff" stroke="#fca5a5" stroke-width="1"/>
+    <text x="405" y="78" font-size="9.5" font-weight="800" fill="#e84d2a">Stress adulte — 3 modèles</text>
+    <text x="405" y="93" font-size="8.5" fill="#050e30">• UCMS — stresseurs légers, répétés, imprédictibles</text>
+    <text x="415" y="105" font-size="8" fill="#6b7280">(sons prédateurs, contrainte, litière, cycles J/N…)</text>
+    <text x="405" y="118" font-size="8.5" fill="#050e30">• Défaite sociale — répétition de défaites agonistiques</text>
+    <text x="405" y="131" font-size="8.5" fill="#050e30">• Impuissance apprise — conditionnement → résignation</text>
+    <!-- Stress juvénile -->
+    <rect x="395" y="148" width="345" height="42" rx="6" fill="#fff" stroke="#fca5a5" stroke-width="1"/>
+    <text x="405" y="163" font-size="9.5" font-weight="800" fill="#e84d2a">Stress juvénile — répercussions à l'âge adulte</text>
+    <text x="405" y="177" font-size="8.5" fill="#050e30">• Séparation maternelle  • Déficit de soins maternels</text>
+    <!-- notes prof -->
+    <text x="567" y="202" text-anchor="middle" font-size="7.5" font-style="italic" fill="#b91c1c">Prof : céphalopodes &amp; crustacés (UCMS 3 sem.) / Poissons zèbres (UCMS 10j)</text>
+  </svg>
+  </div>
+</div>
+
+<div class="card">
+  <div class="ct">🧪 Zoom — Inductions biologiques</div>
+  <div class="g2">
+    <div>
+      <div class="hl"><strong>💉 Injection LPS (LipoPolySaccharide)</strong><br>
+      Composant de la paroi bactérienne → déclenche une réponse immunitaire innée → ↑ cytokines pro-inflammatoires → activation IDO → ↓ tryptophane → ↓ sérotonine + kynurénines toxiques. Lien direct avec l'<em>hypothèse neuroinflammation</em>.</div>
+      <div class="hl2"><strong>🔪 Bulbectomie olfactive</strong><br>
+      Ablation chirurgicale des bulbes olfactifs. Entraîne des atteintes du SNC au-delà du seul olfactif (connexions limbiques). Produit des comportements anhédoniques, une hyperactivité locomotrice et une hyperréactivité émotionnelle. Modèle sensible aux antidépresseurs chroniques (critère de validité thérapeutique ✓).</div>
+    </div>
+    <div>
+      <div class="hli"><strong>🧪 Consommation de corticostérone</strong><br>
+      La corticostérone = équivalent du cortisol chez les rongeurs. Administrée dans l'eau de boisson → mimique un hypercorticisme chronique. L'hypothalamus et l'axe HHA sont directement perturbés → modifications de l'activité du SNC → comportements anxio-dépressifs. Permet de tester la partie "aval" de l'axe HHA sans stress comportemental.</div>
+      <div class="hlg"><strong>🔬 Modèles optogénétiques</strong><br>
+      On fait exprimer, dans des neurones cibles, une protéine sensible à la lumière (channelrhodopsine). Selon la longueur d'onde émise : <strong>activation</strong> ou <strong>inhibition</strong> du neurone. Permet de disséquer les circuits neuronaux de la dépression (ex. inhiber sélectivement l'ATV, activer l'amygdale).</div>
+    </div>
+  </div>
+</div>
+
 <div class="card">
   <div class="ct">🔥 Modèle UCMS — Stress Chronique Variable Imprédictible</div>
   <div class="g2">
@@ -450,63 +763,24 @@ svg{max-width:100%;overflow:visible;}
   <div class="hlw">⚠ L'impuissance apprise n'est pas innée, elle résulte d'un <strong>apprentissage / conditionnement</strong>. Elle peut se généraliser à de nouveaux environnements.</div>
 </div>
 
-<div class="sh">🧬 Neurobiologie de la dépression</div>
+<div class="sh">🧠 TD — Circuits neuronaux & Hypothèses neurobiologiques</div>
 <div class="card">
-  <div class="ct">⚗️ Cascade BDNF — Voie des antidépresseurs</div>
-  <div class="hli">💡 <strong>Pourquoi on parle de ça ici ?</strong> Le BDNF (Brain-Derived Neurotrophic Factor) est une protéine qui fait pousser et survivre les neurones — c'est l'engrais du cerveau. Dans la dépression, le stress chronique tue des neurones hippocampiques en bloquant ce BDNF. Les antidépresseurs fonctionnent en grande partie en <em>restaurant</em> ce BDNF. Ce schéma explique donc <strong>pourquoi les antidépresseurs mettent 2-4 semaines à agir</strong> : il faut le temps de faire repousser des neurones.</div>
-  <div class="hli">🔑 <strong>Les intermédiaires en clair :</strong> AMPc = messager chimique intracellulaire · PKA = enzyme activée par l'AMPc · CREB = interrupteur qui active les gènes dans le noyau · Histone = protéine autour de laquelle l'ADN s'enroule (méthyler une histone = verrouiller l'accès au gène)</div>
-  <p style="font-size:.88rem;color:var(--mu);margin-bottom:8px">Ce schéma montre deux voies parallèles qui agissent toutes les deux sur le BDNF, mais en sens inverse. La voie verte (antidépresseurs) : augmente la sérotonine/NA → active CREB via AMPc → ↑ BDNF → neurogenèse. La voie rouge (stress chronique) : le cortisol méthyle les histones → bloque CREB → ↓ BDNF → atrophie hippocampique. Les antidépresseurs réparent ce que le stress chronique a cassé — d'où le délai thérapeutique de 2-4 semaines (il faut le temps de la neurogenèse).</p>
-  <div class="sb">
-  <svg viewBox="0 0 760 200" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
-    <defs>
-      <marker id="ar1" markerWidth="4" markerHeight="3" refX="4" refY="1.5" orient="auto"><polygon points="0 0,4 2,0 3" fill="#e84d2a"/></marker>
-      <marker id="arg" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#22c55e"/></marker>
-      <marker id="arre" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#ef4444"/></marker>
-    </defs>
-    <!-- Voie 5HT/NA (haut) -->
-    <text x="380" y="15" text-anchor="middle" font-size="12" font-weight="900" fill="#22c55e">VOIE ANTIDÉPRESSEURS (↑ BDNF)</text>
-    <rect x="10" y="25" width="100" height="50" rx="9" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
-    <text x="60" y="47" text-anchor="middle" font-size="10" font-weight="800" fill="#065f46">5-HT / NA</text>
-    <text x="60" y="62" text-anchor="middle" font-size="8.5" fill="#064e3b">Antidépresseurs</text>
-    <line x1="110" y1="50" x2="155" y2="50" stroke="#22c55e" stroke-width="2" marker-end="url(#arg)"/>
-    <rect x="155" y="25" width="105" height="50" rx="9" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
-    <text x="207" y="47" text-anchor="middle" font-size="9.5" font-weight="800" fill="#065f46">Protéines G</text>
-    <text x="207" y="62" text-anchor="middle" font-size="8.5" fill="#064e3b">AMPc → PKA</text>
-    <line x1="260" y1="50" x2="305" y2="50" stroke="#22c55e" stroke-width="2" marker-end="url(#arg)"/>
-    <rect x="305" y="25" width="90" height="50" rx="9" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
-    <text x="350" y="47" text-anchor="middle" font-size="10" font-weight="800" fill="#065f46">↑ CREB</text>
-    <text x="350" y="62" text-anchor="middle" font-size="8.5" fill="#064e3b">Acétylation histone</text>
-    <line x1="395" y1="50" x2="440" y2="50" stroke="#22c55e" stroke-width="2" marker-end="url(#arg)"/>
-    <rect x="440" y="15" width="110" height="70" rx="9" fill="#dcfce7" stroke="#16a34a" stroke-width="2.5"/>
-    <text x="495" y="42" text-anchor="middle" font-size="13" font-weight="900" fill="#15803d">↑ BDNF</text>
-    <text x="495" y="58" text-anchor="middle" font-size="8.5" fill="#14532d">Neurogenèse ↑</text>
-    <text x="495" y="72" text-anchor="middle" font-size="8.5" fill="#14532d">Plasticité ✓</text>
-
-    <!-- Voie Cortisol (bas) -->
-    <text x="380" y="115" text-anchor="middle" font-size="12" font-weight="900" fill="#ef4444">VOIE STRESS CHRONIQUE (↓ BDNF)</text>
-    <rect x="10" y="125" width="110" height="55" rx="9" fill="#fff5f5" stroke="#ef4444" stroke-width="2"/>
-    <text x="65" y="147" text-anchor="middle" font-size="10" font-weight="800" fill="#b91c1c">Cortisol ↑</text>
-    <text x="65" y="163" text-anchor="middle" font-size="8.5" fill="#7f1d1d">stress chronique</text>
-    <line x1="120" y1="152" x2="165" y2="152" stroke="#ef4444" stroke-width="2" marker-end="url(#arre)"/>
-    <rect x="165" y="125" width="140" height="55" rx="9" fill="#fff5f5" stroke="#ef4444" stroke-width="1.5"/>
-    <text x="235" y="147" text-anchor="middle" font-size="9" font-weight="800" fill="#b91c1c">Méthylation histone</text>
-    <text x="235" y="163" text-anchor="middle" font-size="8.5" fill="#7f1d1d">Inhibition CREB</text>
-    <line x1="305" y1="152" x2="350" y2="152" stroke="#ef4444" stroke-width="2" marker-end="url(#arre)"/>
-    <rect x="350" y="125" width="110" height="55" rx="9" fill="#fee2e2" stroke="#ef4444" stroke-width="2.5"/>
-    <text x="405" y="150" text-anchor="middle" font-size="13" font-weight="900" fill="#b91c1c">↓ BDNF</text>
-    <text x="405" y="168" text-anchor="middle" font-size="8.5" fill="#7f1d1d">↓ Neurogenèse hippo.</text>
-
-    <!-- Note -->
-    <rect x="580" y="120" width="170" height="75" rx="10" fill="#fffbeb" stroke="#f59e0b" stroke-width="1.5"/>
-    <text x="665" y="140" text-anchor="middle" font-size="9.5" font-weight="800" fill="#92400e">BDNF = facteur clé</text>
-    <text x="665" y="155" text-anchor="middle" font-size="9" fill="#78350f">↑ par 5-HT et NA</text>
-    <text x="665" y="169" text-anchor="middle" font-size="9" fill="#78350f">↓ par glucocorticoïdes</text>
-    <text x="665" y="183" text-anchor="middle" font-size="9" fill="#78350f">Réversible sous traitement !</text>
-  </svg>
-  </div>
+  <div class="ct">🔗 Circuits neuronaux de la dépression</div>
   <div class="g2">
-    <div class="hl"><strong>Cascade BDNF complète :</strong><br>5-HT/NA → Protéines G → AMPc → PKA → ↑ CREB (acétylation histone) → <strong>↑ BDNF</strong> → Amélioration connexion neuronale et résilience cellulaire</div>
-    <div class="hlr"><strong>En état dépressif :</strong><br>Stress chronique → Axe HPA activé → ↑ Cortisol → Méthylation histone → Inhibition CREB → <strong>↓ BDNF</strong> → ↓ Neurogenèse hippocampique</div>
+    <div>
+      <div class="hli">Dans la dépression, le <strong>système limbique</strong> est altéré → circuit de la récompense impacté. Mis en évidence par <em>stimulation intracrânienne</em> et <em>neuroimagerie</em>.</div>
+      <div class="hl"><strong>Circuit de la récompense (3 structures) :</strong><br>
+      • <strong>ATV</strong> (Aire Tegmentale Ventrale) — production dopamine<br>
+      • <strong>Noyau accumbens</strong> (striatum ventral) — récompense/plaisir<br>
+      • <strong>Cortex préfrontal</strong> — prise de décision, contrôle émotionnel<br>
+      → Altération des voies <em>méso-corticale</em> et <em>méso-limbique</em> dans la dépression (↓ libération DA au niveau cortical et limbique)</div>
+    </div>
+    <div>
+      <div class="hl2"><strong>3 hypothèses actuelles (non exclusives) :</strong><br>
+      ① <strong>Hypothèse monoaminergique</strong> : ↓ fonctions monoaminergiques → dépression<br>
+      ② <strong>Hypothèse neurotrophique</strong> : ↓ BDNF → ↓ neurogenèse → symptômes dépressifs<br>
+      ③ <strong>Hypothèse glucocorticoïdes + neuroinflammation</strong> : stress chronique → ↑ cortisol → désensibilisation GR → ↑ cytokines → IDO → kynurénines toxiques</div>
+    </div>
   </div>
 </div>
 
@@ -548,105 +822,57 @@ svg{max-width:100%;overflow:visible;}
   </div>
 </div>
 
+<div class="card" style="border:2px dashed #94a3b8;background:#f8fafc;">
+  <div class="ct" style="color:#64748b">🔬 Gène 5-HTTLPR — note hors cours</div>
+  <div class="hlw">⚠️ <strong>Hors cours</strong> — Ce contenu (polymorphisme 5-HTTLPR, allèle S/L, interaction G×E) n'apparaît <strong>ni dans le CM ni dans le TD de Bacque-Cazenave, ni dans le CM de Baudron</strong>. Il n'est dans aucun de tes cours UE21. À ne pas apprendre.</div>
+</div>
+
 <div class="card">
-  <div class="ct">🧬 Gène 5-HTTLPR — Transporteur de la Sérotonine</div>
+  <div class="ct">🔢 Les 3 hypothèses neurobiologiques — Vue d'ensemble (TD)</div>
+  <p style="font-size:.88rem;color:var(--mu);margin-bottom:10px">Ces 3 hypothèses sont <strong>non exclusives</strong> et complémentaires. Elles sont développées chacune en détail dans les cards suivantes.</p>
   <div class="sb">
-  <svg viewBox="0 0 760 200" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
-    <text x="380" y="18" text-anchor="middle" font-size="13" font-weight="900" fill="#e84d2a">GÈNE 5-HTTLPR × ÉVÉNEMENTS DE VIE STRESSANTS</text>
-    <!-- Allèles -->
-    <rect x="20" y="30" width="160" height="80" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
-    <text x="100" y="56" text-anchor="middle" font-size="13" font-weight="900" fill="#15803d">Allèle L (Long)</text>
-    <text x="100" y="75" text-anchor="middle" font-size="9.5" fill="#064e3b">Réponse normale</text>
-    <text x="100" y="90" text-anchor="middle" font-size="9" fill="#064e3b">à l'amygdale</text>
-    <rect x="200" y="30" width="160" height="80" rx="12" fill="#fff5f5" stroke="#ef4444" stroke-width="2.5"/>
-    <text x="280" y="56" text-anchor="middle" font-size="13" font-weight="900" fill="#b91c1c">Allèle S (Short)</text>
-    <text x="280" y="73" text-anchor="middle" font-size="9.5" fill="#7f1d1d">HYPERÉMOTIVITÉ</text>
-    <text x="280" y="88" text-anchor="middle" font-size="9" fill="#7f1d1d">↑ Amygdale si menace</text>
-    <!-- Résultats enfants -->
-    <rect x="20" y="125" width="340" height="65" rx="10" fill="#fff0ea" stroke="#f7845a" stroke-width="1.5"/>
-    <text x="190" y="145" text-anchor="middle" font-size="10" font-weight="800" fill="#e84d2a">Enfants SS (Battaglia 2005)</text>
-    <text x="190" y="162" text-anchor="middle" font-size="9" fill="#2a120a">Hypersensibles aux visages neutres ou agressifs</text>
-    <text x="190" y="177" text-anchor="middle" font-size="9" fill="#2a120a">(amplitude N400 amygdale + élevée)</text>
-    <!-- Risque adultes -->
-    <rect x="390" y="30" width="350" height="160" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
-    <text x="565" y="52" text-anchor="middle" font-size="11" font-weight="800" fill="#92400e">Interaction Gène × Environnement</text>
-    <text x="565" y="72" text-anchor="middle" font-size="9.5" fill="#78350f">SLE = Stressful Life Events</text>
-    <text x="565" y="92" text-anchor="middle" font-size="10" font-weight="800" fill="#b91c1c">Femme SS + SLE → risque dépression 8×↑</text>
-    <text x="565" y="112" text-anchor="middle" font-size="10" font-weight="800" fill="#c93818">Homme SS + SLE → risque dépression 4×↑</text>
-    <text x="565" y="138" text-anchor="middle" font-size="9" fill="#78350f">Sans SLE : quasiment pas de risque</text>
-    <text x="565" y="155" text-anchor="middle" font-size="9" fill="#78350f">même chez les porteurs SS</text>
-    <text x="565" y="178" text-anchor="middle" font-size="9" font-weight="800" fill="#92400e">→ Gène SEUL ne suffit pas !</text>
+  <svg viewBox="0 0 760 175" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+    <text x="380" y="16" text-anchor="middle" font-size="12" font-weight="900" fill="#1a56db">3 HYPOTHÈSES NEUROBIOLOGIQUES DE LA DÉPRESSION (non exclusives)</text>
+    <!-- Hyp 1 -->
+    <rect x="10" y="26" width="230" height="140" rx="12" fill="#fff0ea" stroke="#e84d2a" stroke-width="2.5"/>
+    <text x="125" y="48" text-anchor="middle" font-size="10.5" font-weight="900" fill="#e84d2a">① Monoaminergique</text>
+    <line x1="20" y1="56" x2="230" y2="56" stroke="#e84d2a" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="125" y="73" text-anchor="middle" font-size="9" fill="#2a120a">↓ fonctions monoaminergiques</text>
+    <text x="125" y="87" text-anchor="middle" font-size="9" fill="#2a120a">→ dépression</text>
+    <text x="125" y="107" text-anchor="middle" font-size="8.5" font-weight="700" fill="#e84d2a">Monoamines concernées :</text>
+    <text x="125" y="120" text-anchor="middle" font-size="8.5" fill="#2a120a">Sérotonine (5-HT)</text>
+    <text x="125" y="133" text-anchor="middle" font-size="8.5" fill="#2a120a">Dopamine (DA)</text>
+    <text x="125" y="146" text-anchor="middle" font-size="8.5" fill="#2a120a">Noradrénaline (NA)</text>
+    <text x="125" y="161" text-anchor="middle" font-size="7.5" font-style="italic" fill="#9a4830">→ Base des ISRS, IMAO</text>
+    <!-- Hyp 2 -->
+    <rect x="265" y="26" width="230" height="140" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="2.5"/>
+    <text x="380" y="48" text-anchor="middle" font-size="10.5" font-weight="900" fill="#15803d">② Neurotrophique</text>
+    <line x1="275" y1="56" x2="485" y2="56" stroke="#22c55e" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="380" y="73" text-anchor="middle" font-size="9" fill="#064e3b">↓ BDNF hippocampique</text>
+    <text x="380" y="87" text-anchor="middle" font-size="9" fill="#064e3b">→ ↓ neurogenèse → symptômes</text>
+    <text x="380" y="107" text-anchor="middle" font-size="8.5" font-weight="700" fill="#15803d">Mécanisme stress :</text>
+    <text x="380" y="120" text-anchor="middle" font-size="8.5" fill="#064e3b">Cortisol → méthylation</text>
+    <text x="380" y="133" text-anchor="middle" font-size="8.5" fill="#064e3b">histone → bloque CREB</text>
+    <text x="380" y="146" text-anchor="middle" font-size="8.5" fill="#064e3b">→ ↓ BDNF</text>
+    <text x="380" y="161" text-anchor="middle" font-size="7.5" font-style="italic" fill="#15803d">→ Explique délai 2-4 sem. AD</text>
+    <!-- Hyp 3 -->
+    <rect x="520" y="26" width="230" height="140" rx="12" fill="#fff7ed" stroke="#f97316" stroke-width="2.5"/>
+    <text x="635" y="40" text-anchor="middle" font-size="10.5" font-weight="900" fill="#c2410c">③ Glucocorticoïdes</text>
+    <text x="635" y="54" text-anchor="middle" font-size="10.5" font-weight="900" fill="#c2410c">+ Neuroinflammation</text>
+    <line x1="530" y1="62" x2="740" y2="62" stroke="#f97316" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="635" y="78" text-anchor="middle" font-size="9" fill="#431407">Stress chronique → ↑ cortisol</text>
+    <text x="635" y="92" text-anchor="middle" font-size="9" fill="#431407">→ désensibilisation GR</text>
+    <text x="635" y="106" text-anchor="middle" font-size="9" fill="#431407">→ ↑ cytokines → IDO</text>
+    <text x="635" y="120" text-anchor="middle" font-size="9" fill="#431407">→ kynurénines toxiques</text>
+    <text x="635" y="134" text-anchor="middle" font-size="8.5" fill="#431407">+ ↓ tryptophane (→ ↓ 5-HT)</text>
+    <text x="635" y="148" text-anchor="middle" font-size="8.5" fill="#431407">+ mort neuronale</text>
+    <text x="635" y="161" text-anchor="middle" font-size="7.5" font-style="italic" fill="#c2410c">→ Lien stress-dépression</text>
   </svg>
   </div>
 </div>
 
 <div class="card">
-  <div class="ct">💊 Évolution clinique & Traitement</div>
-  <div class="sb">
-  <svg viewBox="0 0 820 115" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
-    <defs><marker id="arT2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><polygon points="0 0,10 4,0 8" fill="#e84d2a"/></marker></defs>
-    <!-- EDM -->
-    <rect x="10" y="28" width="112" height="58" rx="10" fill="#fff5f5" stroke="#ef4444" stroke-width="2"/>
-    <text x="66" y="52" text-anchor="middle" font-size="10" font-weight="900" fill="#b91c1c">EDM</text>
-    <text x="66" y="67" text-anchor="middle" font-size="8.5" fill="#7f1d1d">Diagnostiqué</text>
-    <text x="66" y="80" text-anchor="middle" font-size="8" fill="#7f1d1d">→ traitement</text>
-    <line x1="122" y1="57" x2="148" y2="57" stroke="#e84d2a" stroke-width="2" marker-end="url(#arT2)"/>
-    <!-- Phase 1 Attaque -->
-    <rect x="148" y="22" width="158" height="70" rx="10" fill="#fff0ea" stroke="#e84d2a" stroke-width="2"/>
-    <text x="227" y="44" text-anchor="middle" font-size="10" font-weight="900" fill="#e84d2a">1. ATTAQUE</text>
-    <text x="227" y="58" text-anchor="middle" font-size="8.5" fill="#2a120a">6 – 12 semaines</text>
-    <text x="227" y="72" text-anchor="middle" font-size="8" fill="#9a4830">Objectif : rémission</text>
-    <text x="227" y="84" text-anchor="middle" font-size="8" fill="#9a4830">(disparition symptômes)</text>
-    <line x1="306" y1="57" x2="332" y2="57" stroke="#e84d2a" stroke-width="2" marker-end="url(#arT2)"/>
-    <!-- Phase 2 Consolidation -->
-    <rect x="332" y="22" width="168" height="70" rx="10" fill="#fff0ea" stroke="#f7845a" stroke-width="2"/>
-    <text x="416" y="44" text-anchor="middle" font-size="10" font-weight="900" fill="#e84d2a">2. CONSOLIDATION</text>
-    <text x="416" y="58" text-anchor="middle" font-size="8.5" fill="#2a120a">16 – 20 semaines</text>
-    <text x="416" y="72" text-anchor="middle" font-size="8" fill="#9a4830">Objectif : éviter rechutes</text>
-    <text x="416" y="84" text-anchor="middle" font-size="8" fill="#9a4830">(même épisode)</text>
-    <line x1="500" y1="57" x2="526" y2="57" stroke="#e84d2a" stroke-width="2" marker-end="url(#arT2)"/>
-    <!-- Phase 3 Maintenance -->
-    <rect x="526" y="22" width="168" height="70" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
-    <text x="610" y="44" text-anchor="middle" font-size="10" font-weight="900" fill="#065f46">3. MAINTENANCE</text>
-    <text x="610" y="58" text-anchor="middle" font-size="8.5" fill="#064e3b">Si ≥ 3 EDM / 4 ans</text>
-    <text x="610" y="72" text-anchor="middle" font-size="8" fill="#064e3b">Objectif : prévenir récidives</text>
-    <text x="610" y="84" text-anchor="middle" font-size="8" fill="#064e3b">(nouvel épisode)</text>
-    <!-- Durée totale -->
-    <rect x="706" y="22" width="108" height="70" rx="10" fill="#ede5ff" stroke="#c4a8ff" stroke-width="1.5"/>
-    <text x="760" y="44" text-anchor="middle" font-size="9" font-weight="900" fill="#5010b0">Durée totale</text>
-    <text x="760" y="58" text-anchor="middle" font-size="10" font-weight="900" fill="#e84d2a">4 à 9 mois</text>
-    <text x="760" y="73" text-anchor="middle" font-size="8" fill="#9a4830">Rémission complète</text>
-    <text x="760" y="85" text-anchor="middle" font-size="8" fill="#9a4830">ou partielle</text>
-  </svg>
-  </div>
-  <div class="hl"><strong>Lien dépression ↔ douleur :</strong> La 5-HT et la NA sont impliquées dans la régulation de l'humeur ET dans la régulation de la perception de la douleur via les voies descendantes qui modulent les signaux médullaires. D'où les expressions somatiques douloureuses dans la dépression.</div>
-</div>
-
-<!-- ADDITION TD BACQUE : circuits, monoamines, ISRS, P11, cytokines -->
-
-<div class="sh">🧠 TD — Circuits neuronaux & Hypothèses neurobiologiques</div>
-<div class="card">
-  <div class="ct">🔗 Circuits neuronaux de la dépression</div>
-  <div class="g2">
-    <div>
-      <div class="hli">Dans la dépression, le <strong>système limbique</strong> est altéré → circuit de la récompense impacté. Mis en évidence par <em>stimulation intracrânienne</em> et <em>neuroimagerie</em>.</div>
-      <div class="hl"><strong>Circuit de la récompense (3 structures) :</strong><br>
-      • <strong>ATV</strong> (Aire Tegmentale Ventrale) — production dopamine<br>
-      • <strong>Noyau accumbens</strong> (striatum ventral) — récompense/plaisir<br>
-      • <strong>Cortex préfrontal</strong> — prise de décision, contrôle émotionnel<br>
-      → Altération des voies <em>méso-corticale</em> et <em>méso-limbique</em> dans la dépression (↓ libération DA au niveau cortical et limbique)</div>
-    </div>
-    <div>
-      <div class="hl2"><strong>3 hypothèses actuelles (non exclusives) :</strong><br>
-      ① <strong>Hypothèse monoaminergique</strong> : ↓ fonctions monoaminergiques → dépression<br>
-      ② <strong>Hypothèse neurotrophique</strong> : ↓ BDNF → ↓ neurogenèse → symptômes dépressifs<br>
-      ③ <strong>Hypothèse glucocorticoïdes + neuroinflammation</strong> : stress chronique → ↑ cortisol → désensibilisation GR → ↑ cytokines → IDO → kynurénines toxiques</div>
-    </div>
-  </div>
-</div>
-
-<div class="card">
-  <div class="ct">⚗️ Hypothèse monoaminergique — Les deux familles</div>
+  <div class="ct">① Hypothèse monoaminergique — Les deux familles</div>
   <div class="hli">Les <strong>monoamines</strong> sont des neurotransmetteurs dérivés d'acides aminés (AA), libérés dans le SNC. Ils permettent le cheminement d'influx de neurone en neurone. Deux familles : <strong>catécholamines</strong> (dérivées de la tyrosine) et <strong>tryptamines</strong> (dérivées du tryptophane).</div>
   <div class="g2">
     <div>
@@ -737,7 +963,33 @@ svg{max-width:100%;overflow:visible;}
 </div>
 
 <div class="card">
-  <div class="ct">🔄 Mécanismes de nettoyage de la sérotonine</div>
+  <div class="ct">🧩 Comment l'hypothèse monoaminergique s'articule — les deux niveaux</div>
+  <div class="hli">L'hypothèse dit : <strong>diminution des fonctions monoaminergiques → dépression</strong> (formulation du TD, volontairement large). Ton cours <strong>ne précise pas pourquoi</strong> il y aurait moins de sérotonine libérée (baisse de synthèse ? libération réduite ? les deux ?). Ce qui est développé dans le TD c'est : comment les médicaments compensent ce déficit (MAO/SERT), et quelles sont les conséquences intracellulaires de ce déficit (P11 → BDNF).</div>
+  <div class="g2">
+    <div>
+      <div class="hl"><strong>📍 Niveau 1 — Comment les médicaments compensent le déficit (MAO & SERT)</strong><br>
+      Que le déficit en 5-HT vienne d'une synthèse insuffisante ou d'une libération réduite, deux mécanismes d'élimination de la fente sont connus et constituent des cibles thérapeutiques :<br>
+      • <strong>MAO</strong> dégrade les monoamines dans la fente → les <strong>IMAO</strong> (iproniazide) la bloquent → ↑ 5-HT disponible<br>
+      • <strong>SERT</strong> recapture la sérotonine vers le présynaptique → les <strong>ISRS</strong> (fluoxétine) le bloquent → ↑ 5-HT disponible<br>
+      ⚠ Ce que dit le cours : <em>"la baisse de la synthèse des monoamines crée la dépression"</em> — sans préciser davantage la cause exacte.</div>
+    </div>
+    <div>
+      <div class="hl2"><strong>📍 Niveau 2 — Conséquences intracellulaires du déficit (P11 → BDNF)</strong><br>
+      Quand la 5-HT est insuffisante dans la fente, les récepteurs <strong>5-HT₁B</strong> postsynaptiques ne sont pas assez activés :<br>
+      → ↓ activation 5-HT₁B → ↓ protéine P11 → ↓ recrutement de 5-HT₁B en membrane → ↓ cascade intracellulaire → ↓ BDNF → ↓ neurogenèse → symptômes dépressifs<br>
+      → Ce n'est pas un mécanisme séparé — c'est la conséquence <em>en aval</em> du manque de 5-HT.<br>
+      → Explique pourquoi les ISRS mettent <strong>2 à 4 semaines</strong> à agir : restaurer BDNF et la neurogenèse prend du temps.</div>
+      <div class="hlw">⚠ <strong>Résumé de la chaîne complète :</strong><br>
+      ↓ fonctions monoaminergiques (cause exacte non précisée dans le cours)<br>
+      → ↓ 5-HT dans la fente → IMAO/ISRS compensent ce déficit<br>
+      → ↓ activation 5-HT₁B → ↓ P11 → ↓ BDNF → ↓ neurogenèse → symptômes<br>
+      ISRS → ↑ 5-HT → ↑ P11 → ↑ BDNF → effet thérapeutique (2-4 sem.)</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="ct">🔄 Niveau 1 — MAO & SERT : les deux mécanismes d'élimination de la sérotonine</div>
   <div class="g2">
     <div class="hl"><strong>1. Dégradation par MAO :</strong> MonoAmine Oxydase → dégrade DA, NA, adrénaline ET sérotonine dans la fente synaptique → produit <strong>5-HIAA</strong> (5-HydroxyIndolAcétique Acid)</div>
     <div class="hl2"><strong>2. Recapture :</strong> Transporteur SERT (Serotonin Reuptake Transporter) → recapture sérotonine vers le présynaptique → soit dégradée (MAO → 5-HIAA) · soit ré-encapsulée dans vésicules de stockage<br>
@@ -746,7 +998,7 @@ svg{max-width:100%;overflow:visible;}
 </div>
 
 <div class="card">
-  <div class="ct">💊 ISRS et cascade P11 → BDNF</div>
+  <div class="ct">🔬 Niveau 2 — Cascade P11 → BDNF : conséquences intracellulaires</div>
   <div class="hli">💡 <strong>P11 c'est quoi ?</strong> C'est une protéine "chaperone" dont le seul rôle est d'amener et maintenir les récepteurs à la sérotonine (5-HT₁B) à la surface de la cellule. Sans elle, ces récepteurs restent à l'intérieur de la cellule et ne peuvent pas capter la sérotonine. Dans la dépression, P11 diminue → moins de récepteurs disponibles → même si la sérotonine est là, elle ne peut pas se fixer. Les ISRS restaurent P11 indirectement.</div>
   <p style="font-size:.88rem;color:var(--mu);margin-bottom:8px">Ce schéma est spécifique aux ISRS et au rôle de la <strong>protéine P11</strong>. Mécanisme : l'ISRS ↑ sérotonine dans la fente → active le récepteur 5-HT₁B post-synaptique → cascade intracellulaire → ↑ P11 → P11 recrute et maintient encore plus de récepteurs 5-HT₁B en membrane → ↑ BDNF. C'est un cercle vertueux. Dans la dépression c'est l'inverse : ↓ 5-HT → ↓ P11 → ↓ 5-HT₁B disponibles → ↓ BDNF → cercle vicieux. La boîte rouge en bas montre ce cercle vicieux.</p>
   <div class="sb">
@@ -800,8 +1052,28 @@ svg{max-width:100%;overflow:visible;}
 </div>
 
 <div class="card">
-  <div class="ct">🔥 Hypothèse neuroinflammation — Cytokines & IDO</div>
-  <div class="hli">💡 <strong>Pourquoi on parle de ça ?</strong> Cette hypothèse répond à une question clé : pourquoi le stress chronique mène à la dépression via une voie <em>inflammatoire</em> ? IDO est une enzyme qui "vole" le tryptophane (la matière première de la sérotonine) pour fabriquer des déchets toxiques (kynurénines) à la place. Résultat : moins de sérotonine + des neurones qui meurent. C'est la 3ème grande hypothèse de la dépression, complémentaire des deux autres.</div>
+  <div class="ct">② Hypothèse neurotrophique — BDNF</div>
+  <div class="hli">Hypothèse plus récente, <strong>moins de données</strong> selon la prof. L'essentiel : le BDNF est impliqué dans la dépression, mais le lien direct n'est <strong>pas encore totalement clair</strong>.</div>
+  <div class="g2">
+    <div>
+      <div class="hl"><strong>BDNF — ce que dit le cours :</strong><br>
+      Protéine clé des <strong>neurotrophines</strong> — nécessaire à la survie des neurones, à la croissance et à la plasticité cérébrale. Impliqué dans l'apprentissage et la mémoire, notamment à l'hippocampe. Plus il y a de BDNF, plus le volume cortical est maintenu.</div>
+      <div class="hl2"><strong>Dans la dépression :</strong><br>
+      • <strong>Hippocampe</strong> : ↓ BDNF → ↓ neurogenèse → ↓ volume hippocampique<br>
+      • <strong>Noyau accumbens</strong> : ↑ BDNF dans les modèles animaux de dépression (rôle pas clair)<br>
+      → "Le rôle direct BDNF ↔ dépression n'est pas très clair mais il est impliqué"<br><em style="font-size:.85em;color:var(--mu)">(formulation exacte du TD)</em></div>
+    </div>
+    <div>
+      <div class="hli"><strong>Lien avec le stress (transition vers hypothèse ③) :</strong><br>
+      Le stress → ↑ cortisol → peut influencer la neuroplasticité et le BDNF. C'est ce lien qui amène la prof à enchaîner sur l'hypothèse ③.</div>
+      <div class="hlw" style="border:2px dashed #94a3b8;background:#f8fafc;color:#475569">⚠ <strong>Hors cours :</strong> Les mécanismes AMPc/PKA/CREB/méthylation d'histone pour expliquer comment le stress réduit le BDNF ne sont <strong>pas dans ton TD sur cette hypothèse</strong>. Ils apparaissent dans le CM Bacque (section neurobiologie) mais pas dans le cadre de l'hypothèse ②.</div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <div class="ct">③ Hypothèse glucocorticoïdes & neuroinflammation — Cytokines & IDO</div>
+  <div class="hli">Le stress chronique dérègle l'axe HHA, ce qui entraîne une surproduction chronique de cortisol. Ces glucocorticoïdes en excès deviennent pro-inflammatoires et activent une enzyme clé, l'IDO, qui détourne le tryptophane de la synthèse de sérotonine pour produire des déchets neurotoxiques.</div>
   <div class="g2">
     <div>
       <div class="hl"><strong>Mécanisme :</strong><br>
@@ -818,91 +1090,6 @@ svg{max-width:100%;overflow:visible;}
       • Noyau accumbens : ↑ BDNF (modèles dépression animale) → comportements dépressifs<br>
       → Rôle complexe selon la région !</div>
     </div>
-  </div>
-</div>
-
-<div class="sh">🃏 Flashcards — TD Dépression (Bacque)</div>
-<div class="fc-g">
-  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
-    <div class="fc-f"><div class="fq">Circuit</div><div class="ft">Récompense — 3 structures</div><div class="fh">👆 Retourner</div></div>
-    <div class="fc-b"><div class="fd">ATV (Aire Tegmentale Ventrale) · Noyau accumbens (striatum ventral) · Cortex préfrontal. Altéré dans la dépression : ↓ DA dans voies méso-limbique et méso-corticale.</div></div>
-  </div></div>
-  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
-    <div class="fc-f"><div class="fq">Biosynthèse</div><div class="ft">Tyrosine → DA → NA</div><div class="fh">👆 Retourner</div></div>
-    <div class="fc-b"><div class="fd">Tyrosine (AA) →(hydroxylase)→ DOPA →(décarboxylase)→ Dopamine →(dopamine β-hydroxylase)→ Noradrénaline →(PNMT)→ Adrénaline</div></div>
-  </div></div>
-  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
-    <div class="fc-f"><div class="fq">Protéine</div><div class="ft">Rôle de P11</div><div class="fh">👆 Retourner</div></div>
-    <div class="fc-b"><div class="fd">Protéine P11 : recrute et maintient les récepteurs 5-HT₁B au niveau de la membrane post-synaptique. ↓ P11 dans dépression → ↓ 5-HT₁B membranaires → ↓ BDNF. ISRS → ↑ P11 → restauration.</div></div>
-  </div></div>
-  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
-    <div class="fc-f"><div class="fq">Hypothèse</div><div class="ft">IDO & Kynurénines</div><div class="fh">👆 Retourner</div></div>
-    <div class="fc-b"><div class="fd">Stress chronique → ↑ cortisol → désensibilisation GR → ↑ cytokines → IDO activée → tryptophane → kynurénines toxiques → mort neuronale + ↓ tryptophane disponible pour synthèse sérotonine.</div></div>
-  </div></div>
-</div>
-
-<div class="sh">🃏 Flashcards — Dépression</div>
-<div class="fc-g">
-  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
-    <div class="fc-f"><div class="fq">Symptôme obligatoire</div><div class="ft">Anhédonie</div><div class="fh">👆 Cliquer pour retourner</div></div>
-    <div class="fc-b"><div class="fd">Difficulté à éprouver du plaisir. Les sources habituelles de plaisir laissent indifférent. Avec une grande souffrance physique. Symptôme OBLIGATOIRE pour le diagnostic TDC (avec humeur dépressive).</div></div>
-  </div></div>
-  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
-    <div class="fc-f"><div class="fq">Définition</div><div class="ft">Anesthésie affective</div><div class="fh">👆 Cliquer pour retourner</div></div>
-    <div class="fc-b"><div class="fd">Incapacité à ressentir des émotions. Toute situation laisse indifférent, y compris les interactions sociales. "Je ne suis plus capable d'aimer, même mes enfants me laissent froid." Différent de l'anhédonie.</div></div>
-  </div></div>
-  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
-    <div class="fc-f"><div class="fq">Modèle animal</div><div class="ft">3 critères de validité</div><div class="fh">👆 Cliquer</div></div>
-    <div class="fc-b"><div class="fd">1. Atteintes similaires à l'Homme<br>2. Étiologie similaire<br>3. Similitude thérapeutique<br>(mêmes effets des antidépresseurs)</div></div>
-  </div></div>
-  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
-    <div class="fc-f"><div class="fq">Neurobiologie</div><div class="ft">BDNF</div><div class="fh">👆 Cliquer</div></div>
-    <div class="fc-b"><div class="fd">Brain-Derived Neurotrophic Factor. ↑ par 5-HT/NA via AMPc/PKA/CREB. ↓ par cortisol (méthylation histone). Inhibe la neurogenèse hippocampique en état dépressif. Réversible sous traitement AD.</div></div>
-  </div></div>
-</div>
-
-<div class="sh">🧬 Génétique de la dépression — Gène SERT &amp; interaction G×E</div>
-<div class="card">
-  <div class="ct">🔗 Le polymorphisme 5-HTTLPR (gène du transporteur SERT)</div>
-  <div class="hli">Le gène <strong>SLC6A4</strong> code pour le transporteur de la sérotonine (SERT). Il existe un polymorphisme dans sa région promotrice appelé <strong>5-HTTLPR</strong> avec deux allèles : <strong>L (Long)</strong> et <strong>S (Short)</strong>. L'allèle S réduit l'expression du transporteur → moins de recapture → hyperactivité sérotoninergique initiale mais désensibilisation à long terme.</div>
-  <p style="font-size:.88rem;color:var(--mu);margin-bottom:8px">Le schéma se lit en trois parties : à gauche les deux allèles avec leurs effets biologiques, en bas à gauche la preuve chez l'enfant (plus grande réactivité de l'amygdale aux visages menaçants), et à droite le cœur du cours : c'est l'<strong>interaction G×E</strong> (gène × environnement) qui compte. L'allèle S seul ne suffit pas — il faut aussi des événements de vie stressants (SLE). C'est le même modèle que la diathèse-stress.</p>
-  <div class="sb">
-  <svg viewBox="0 0 760 280" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
-    <defs><marker id="arG1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#e84d2a"/></marker></defs>
-    <text x="380" y="18" text-anchor="middle" font-size="13" font-weight="900" fill="#e84d2a">POLYMORPHISME 5-HTTLPR — ALLÈLES &amp; CONSÉQUENCES</text>
-    <!-- Allèle L -->
-    <rect x="20" y="30" width="170" height="75" rx="12" fill="#f0fdf4" stroke="#22c55e" stroke-width="2.5"/>
-    <text x="105" y="55" text-anchor="middle" font-size="12" font-weight="900" fill="#15803d">Allèle L (Long)</text>
-    <text x="105" y="72" text-anchor="middle" font-size="9.5" fill="#064e3b">Expression SERT normale</text>
-    <text x="105" y="87" text-anchor="middle" font-size="9.5" fill="#064e3b">Recapture 5-HT normale</text>
-    <!-- Allèle S -->
-    <rect x="210" y="30" width="170" height="75" rx="12" fill="#fff5f5" stroke="#ef4444" stroke-width="2.5"/>
-    <text x="295" y="55" text-anchor="middle" font-size="12" font-weight="900" fill="#b91c1c">Allèle S (Short)</text>
-    <text x="295" y="72" text-anchor="middle" font-size="9.5" fill="#7f1d1d">↓ Expression SERT</text>
-    <text x="295" y="87" text-anchor="middle" font-size="9.5" fill="#7f1d1d">Hyperémotivité · ↑ Amygdale</text>
-    <!-- Enfants SS Battaglia 2005 -->
-    <rect x="20" y="125" width="360" height="55" rx="10" fill="#fff0ea" stroke="#f7845a" stroke-width="1.5"/>
-    <text x="200" y="148" text-anchor="middle" font-size="10" font-weight="800" fill="#e84d2a">Enfants SS — Battaglia et al. 2005</text>
-    <text x="200" y="163" text-anchor="middle" font-size="9" fill="#2a120a">Hypersensibles aux visages neutres ou agressifs</text>
-    <text x="200" y="176" text-anchor="middle" font-size="9" fill="#2a120a">(amplitude N400 amygdale plus élevée)</text>
-    <!-- Interaction G x E -->
-    <rect x="400" y="30" width="340" height="160" rx="12" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
-    <text x="570" y="54" text-anchor="middle" font-size="11" font-weight="900" fill="#92400e">Interaction Gène × Environnement</text>
-    <text x="570" y="73" text-anchor="middle" font-size="9.5" fill="#78350f">SLE = Stressful Life Events (événements de vie stressants)</text>
-    <line x1="400" y1="88" x2="740" y2="88" stroke="#f59e0b" stroke-width="1"/>
-    <text x="570" y="106" text-anchor="middle" font-size="11" font-weight="900" fill="#b91c1c">Femme SS + SLE → risque dépression × 8</text>
-    <text x="570" y="122" text-anchor="middle" font-size="11" font-weight="900" fill="#c93818">Homme SS + SLE → risque dépression × 4</text>
-    <line x1="400" y1="133" x2="740" y2="133" stroke="#f59e0b" stroke-width="1"/>
-    <text x="570" y="150" text-anchor="middle" font-size="9.5" fill="#78350f">Sans SLE : quasiment pas de risque même chez SS</text>
-    <text x="570" y="166" text-anchor="middle" font-size="10" font-weight="900" fill="#92400e">→ Le gène seul ne suffit pas !</text>
-    <!-- Arrow SS to interaction -->
-    <line x1="295" y1="105" x2="295" y2="120" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,3"/>
-    <!-- Conclusion -->
-    <rect x="20" y="200" width="720" height="60" rx="10" fill="#f6f1ff" stroke="#c4a8ff" stroke-width="1.5"/>
-    <text x="380" y="222" text-anchor="middle" font-size="10" font-weight="800" fill="#5010b0">Conclusion : dépression = trouble multifactoriel</text>
-    <text x="380" y="238" text-anchor="middle" font-size="7.5" fill="#170a30">Génotype SS → vulnérabilité biologique. Sans SLE : risque faible.</text>
-    <text x="380" y="253" text-anchor="middle" font-size="7.5" fill="#170a30">C'est l'INTERACTION gène × environnement qui détermine le risque.</text>
-  </svg>
   </div>
 </div>
 
@@ -949,76 +1136,6 @@ svg{max-width:100%;overflow:visible;}
   <div class="hl"><strong>Lien dépression ↔ douleur :</strong> La 5-HT et la NA sont impliquées dans la régulation de l'humeur ET dans la régulation de la perception de la douleur via les voies descendantes modulant les signaux médullaires. D'où les expressions somatiques douloureuses dans la dépression (et l'intérêt des IRSNA comme antidépresseurs).</div>
 </div>
 
-<div class="sh">🐕 Modèle d'impuissance apprise — Protocole Seligman &amp; Maier</div>
-<div class="card">
-  <div class="ct">📖 Définition &amp; principe</div>
-  <div class="hli">Un animal est <strong>impuissant</strong> face à une situation aversive si la probabilité de réagir est identique à la probabilité d'absence de réponse. <strong>L'impuissance n'est pas innée</strong> : elle résulte d'un apprentissage (conditionnement). Notion de cognition importante → l'individu perçoit que ses actes sont sans effet sur l'environnement → résignation, baisse de motivation.</div>
-  <p style="font-size:.88rem;color:var(--mu);margin-bottom:8px">Ce schéma détaillé montre les deux phases du protocole. Ce qui est crucial : G2 et G3 reçoivent <em>exactement les mêmes chocs</em> — c'est donc bien l'incontrôlabilité (et non la douleur) qui cause l'impuissance. En phase 2, quand tous les groupes peuvent fuir, G3 ne fuit plus — il a "appris" que ses actions ne servent à rien. C'est le modèle animal de la résignation et de l'absence de motivation dans la dépression.</p>
-  <div class="sb">
-  <svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
-    <defs><marker id="arI" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><polygon points="0 0,10 4,0 8" fill="#e84d2a"/></marker></defs>
-    <text x="380" y="18" text-anchor="middle" font-size="12" font-weight="900" fill="#e84d2a">PROTOCOLE SELIGMAN &amp; MAIER — 2 PHASES</text>
-    <!-- PHASE 1 -->
-    <rect x="15" y="30" width="345" height="138" rx="12" fill="#fff0ea" stroke="#e84d2a" stroke-width="2"/>
-    <text x="187" y="50" text-anchor="middle" font-size="11" font-weight="900" fill="#e84d2a">PHASE 1 — Exposition aux chocs</text>
-    <!-- G1 -->
-    <rect x="28" y="60" width="98" height="96" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
-    <text x="77" y="82" text-anchor="middle" font-size="9.5" font-weight="800" fill="#15803d">G1 — Contrôle</text>
-    <text x="77" y="98" text-anchor="middle" font-size="8.5" fill="#064e3b">Pas de choc</text>
-    <text x="77" y="112" text-anchor="middle" font-size="8.5" fill="#064e3b">électrique</text>
-    <text x="77" y="147" text-anchor="middle" font-size="8" fill="#064e3b">Groupe référence</text>
-    <!-- G2 -->
-    <rect x="138" y="60" width="105" height="96" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
-    <text x="190" y="78" text-anchor="middle" font-size="9" font-weight="800" fill="#92400e">G2 — Contrôlé</text>
-    <text x="190" y="93" text-anchor="middle" font-size="8" fill="#78350f">Choc électrique</text>
-    <text x="190" y="106" text-anchor="middle" font-size="8" fill="#78350f">+ bouton stop</text>
-    <text x="190" y="119" text-anchor="middle" font-size="8" fill="#78350f">+ signal lumineux</text>
-    <text x="190" y="147" text-anchor="middle" font-size="8" fill="#78350f">Peut s'échapper</text>
-    <!-- G3 -->
-    <rect x="255" y="60" width="98" height="96" rx="8" fill="#fff5f5" stroke="#ef4444" stroke-width="2.5"/>
-    <text x="304" y="78" text-anchor="middle" font-size="9" font-weight="800" fill="#b91c1c">G3 — Subi</text>
-    <text x="304" y="93" text-anchor="middle" font-size="8" fill="#7f1d1d">Choc électrique</text>
-    <text x="304" y="106" text-anchor="middle" font-size="8" fill="#7f1d1d">sans contrôle</text>
-    <text x="304" y="119" text-anchor="middle" font-size="8" fill="#7f1d1d">ni signal</text>
-    <text x="304" y="147" text-anchor="middle" font-size="8" fill="#b91c1c">Impuissance apprise</text>
-    <!-- Flèche entre phases -->
-    <line x1="362" y1="99" x2="392" y2="99" stroke="#e84d2a" stroke-width="2.5" marker-end="url(#arI)"/>
-    <text x="377" y="91" text-anchor="middle" font-size="8" fill="#e84d2a">puis</text>
-    <!-- PHASE 2 -->
-    <rect x="392" y="30" width="353" height="138" rx="12" fill="#f6f1ff" stroke="#c4a8ff" stroke-width="2"/>
-    <text x="568" y="50" text-anchor="middle" font-size="11" font-weight="900" fill="#5010b0">PHASE 2 — Test de fuite</text>
-    <text x="568" y="65" text-anchor="middle" font-size="8.5" fill="#170a30">Même dispositif MAIS un mur permet de fuir vers le côté B (sans choc)</text>
-    <!-- Résultats -->
-    <rect x="403" y="76" width="100" height="80" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
-    <text x="453" y="96" text-anchor="middle" font-size="9.5" font-weight="800" fill="#15803d">G1 → Fuit ✓</text>
-    <text x="453" y="112" text-anchor="middle" font-size="8" fill="#064e3b">Jamais eu de chocs</text>
-    <text x="453" y="126" text-anchor="middle" font-size="8" fill="#064e3b">→ explore</text>
-    <text x="453" y="147" text-anchor="middle" font-size="8" fill="#064e3b">normalement</text>
-    <rect x="515" y="76" width="105" height="80" rx="8" fill="#fffbeb" stroke="#f59e0b" stroke-width="2"/>
-    <text x="567" y="96" text-anchor="middle" font-size="9.5" font-weight="800" fill="#92400e">G2 → Fuit ✓</text>
-    <text x="567" y="112" text-anchor="middle" font-size="8" fill="#78350f">Fuit au signal</text>
-    <text x="567" y="126" text-anchor="middle" font-size="8" fill="#78350f">ou après le choc</text>
-    <text x="567" y="147" text-anchor="middle" font-size="8" fill="#78350f">→ latence courte</text>
-    <rect x="632" y="76" width="102" height="80" rx="8" fill="#fff5f5" stroke="#ef4444" stroke-width="2.5"/>
-    <text x="683" y="96" text-anchor="middle" font-size="9.5" font-weight="800" fill="#b91c1c">G3 → Reste ✗</text>
-    <text x="683" y="112" text-anchor="middle" font-size="8" fill="#7f1d1d">Résignation</text>
-    <text x="683" y="126" text-anchor="middle" font-size="8" fill="#7f1d1d">→ latence longue</text>
-    <text x="683" y="147" text-anchor="middle" font-size="8" fill="#b91c1c">ou ne fuit pas</text>
-    <!-- Conclusion dépression -->
-    <rect x="15" y="180" width="730" height="52" rx="10" fill="#fff0ea" stroke="#f7845a" stroke-width="1.5"/>
-    <text x="380" y="200" text-anchor="middle" font-size="10" font-weight="900" fill="#e84d2a">Liens avec la dépression</text>
-    <text x="380" y="216" text-anchor="middle" font-size="8.5" fill="#2a120a">Passivité · Résignation · Baisse de motivation → symptômes dépressifs.</text>
-    <text x="380" y="228" text-anchor="middle" font-size="8.5" fill="#2a120a">L'impuissance se généralise. Apprentissage antérieur → changement radical de comportement.</text>
-    <!-- Modèle souris -->
-    <rect x="15" y="243" width="730" height="68" rx="10" fill="#ede5ff" stroke="#c4a8ff" stroke-width="1.5"/>
-    <text x="380" y="262" text-anchor="middle" font-size="10" font-weight="900" fill="#5010b0">Adaptation chez la souris (conditions A / B / C)</text>
-    <text x="380" y="278" text-anchor="middle" font-size="8.5" fill="#170a30">A : son + fuite possible → latence courte ✓</text>
-    <text x="380" y="292" text-anchor="middle" font-size="8.5" fill="#170a30">B : pas de son, fuite impossible 24h → latence longue ✗ (impuissance apprise)</text>
-    <text x="380" y="306" text-anchor="middle" font-size="8.5" fill="#170a30">C : son + choc contrôlé → latence courte ✓ — Condition B significativement plus longue que A et C (p &lt; 0,05)</text>
-  </svg>
-  </div>
-</div>
-
 <div class="sh">👶 Stress juvénile — Modèles d'induction précoce</div>
 <div class="card">
   <div class="ct">🌱 Impact du stress précoce sur la dépression à l'âge adulte</div>
@@ -1037,33 +1154,141 @@ svg{max-width:100%;overflow:visible;}
       Stress précoce → ↑ CRH → ↑ ACTH → ↑ cortisol chronique → désensibilisation récepteurs glucocorticoïdes → ↑ neuroinflammation (cytokines) → ↑ IDO → kynurénines toxiques → mort neuronale → symptômes dépressifs (rejoint l'hypothèse glucocorticoïdes vue en CM).</div>
     </div>
   </div>
+
+  <div class="ct" style="margin-top:14px">🔁 Mécanismes — Stress juvénile → dépression adulte</div>
+  <div class="sb">
+  <svg viewBox="0 0 760 188" xmlns="http://www.w3.org/2000/svg" width="100%" style="font-family:Nunito,sans-serif;display:block;">
+    <defs>
+      <marker id="arJ" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#7c3aed"/></marker>
+      <marker id="arJR" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#b91c1c"/></marker>
+    </defs>
+    <!-- Étape 1 -->
+    <rect x="10" y="14" width="130" height="80" rx="8" fill="#fdf4ff" stroke="#7c3aed" stroke-width="2"/>
+    <text x="75" y="32" text-anchor="middle" font-size="9.5" font-weight="900" fill="#7c3aed">Stress juvénile</text>
+    <text x="75" y="48" text-anchor="middle" font-size="8.5" fill="#4c1d95">🍼 Séparation</text>
+    <text x="75" y="62" text-anchor="middle" font-size="8.5" fill="#4c1d95">maternelle</text>
+    <text x="75" y="77" text-anchor="middle" font-size="8.5" fill="#4c1d95">🐾 Déficit soins</text>
+    <text x="75" y="91" text-anchor="middle" font-size="8.5" fill="#4c1d95">maternels</text>
+    <line x1="140" y1="54" x2="170" y2="54" stroke="#7c3aed" stroke-width="2" marker-end="url(#arJ)"/>
+    <!-- Étape 2 -->
+    <rect x="173" y="14" width="140" height="80" rx="8" fill="#fff0ea" stroke="#f97316" stroke-width="2"/>
+    <text x="243" y="32" text-anchor="middle" font-size="9.5" font-weight="900" fill="#c2410c">Axe HPA perturbé</text>
+    <text x="243" y="48" text-anchor="middle" font-size="8.5" fill="#7c2d12">↑↑ CRH hypothalamus</text>
+    <text x="243" y="62" text-anchor="middle" font-size="8.5" fill="#7c2d12">↑ ACTH hypophyse</text>
+    <text x="243" y="76" text-anchor="middle" font-size="8.5" fill="#7c2d12">↑ Cortisol / CORT</text>
+    <line x1="313" y1="54" x2="343" y2="54" stroke="#7c3aed" stroke-width="2" marker-end="url(#arJ)"/>
+    <!-- Étape 3 -->
+    <rect x="346" y="14" width="170" height="80" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2"/>
+    <text x="431" y="32" text-anchor="middle" font-size="9.5" font-weight="900" fill="#15803d">Épigénétique</text>
+    <text x="431" y="48" text-anchor="middle" font-size="8.5" fill="#064e3b">Méthylation gène GR</text>
+    <text x="431" y="62" text-anchor="middle" font-size="8.5" fill="#064e3b">(récepteur glucocorticoïdes)</text>
+    <text x="431" y="76" text-anchor="middle" font-size="8.5" fill="#064e3b">↓ expression GR</text>
+    <text x="431" y="90" text-anchor="middle" font-size="8.5" fill="#064e3b">→ perte feedback négatif</text>
+    <line x1="516" y1="54" x2="546" y2="54" stroke="#7c3aed" stroke-width="2" marker-end="url(#arJ)"/>
+    <!-- Étape 4 -->
+    <rect x="549" y="14" width="200" height="80" rx="8" fill="#fef2f2" stroke="#ef4444" stroke-width="2"/>
+    <text x="649" y="32" text-anchor="middle" font-size="9.5" font-weight="900" fill="#b91c1c">Adulte vulnérable</text>
+    <text x="649" y="48" text-anchor="middle" font-size="8.5" fill="#7f1d1d">Hyperréactivité au stress</text>
+    <text x="649" y="62" text-anchor="middle" font-size="8.5" fill="#7f1d1d">↑ Cytokines → IDO</text>
+    <text x="649" y="76" text-anchor="middle" font-size="8.5" fill="#7f1d1d">↓ BDNF hippocampique</text>
+    <text x="649" y="90" text-anchor="middle" font-size="8.5" fill="#7f1d1d">Comportements dépressifs</text>
+    <!-- Note bas -->
+    <rect x="10" y="104" width="730" height="30" rx="8" fill="#ede9fe" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="380" y="122" text-anchor="middle" font-size="9" fill="#4c1d95">⚠ Modèle <strong>diathèse-stress</strong> : le stress juvénile crée une vulnérabilité biologique (diathèse). Elle s'exprime surtout en présence de stress ultérieurs.</text>
+    <text x="380" y="137" text-anchor="middle" font-size="8.5" fill="#4c1d95">Interaction : Génétique (sensibilité) × Environnement précoce (stress juvénile) × Environnement tardif (SLE adultes)</text>
+    <!-- séparation maternelle détail -->
+    <rect x="10" y="145" width="355" height="38" rx="8" fill="#f5f3ff" stroke="#a855f7" stroke-width="1.5"/>
+    <text x="187" y="161" text-anchor="middle" font-size="9" font-weight="800" fill="#7c3aed">🍼 Séparation maternelle en détail</text>
+    <text x="187" y="176" text-anchor="middle" font-size="8.5" fill="#4c1d95">Quelques h/j de séparation → stress chronique précoce → hyperréactivité HPA adulte → anxiété + comportements dépressifs</text>
+    <!-- déficit soins maternels détail -->
+    <rect x="375" y="145" width="375" height="38" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="1.5"/>
+    <text x="562" y="161" text-anchor="middle" font-size="9" font-weight="800" fill="#15803d">🐾 Déficit soins maternels en détail</text>
+    <text x="562" y="176" text-anchor="middle" font-size="8.5" fill="#064e3b">↓ léchage + portage → ↑ méthylation gène GR → ↓ feedback négatif HPA → ↑ cortisol chronique adulte</text>
+  </svg>
+  </div>
 </div>
 
-<div class="sh">🃏 Flashcards — Génétique &amp; Modèles animaux (Bacque)</div>
+
+<div class="sh">🃏 Flashcards — Dépression (CM + TD Bacque-Cazenave)</div>
+<div style="margin:8px 0 6px;font-size:.8rem;color:var(--mu)">📘 CM — Épidémiologie, DSM-5, Sémiologie</div>
 <div class="fc-g">
   <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
-    <div class="fc-f"><div class="fq">Gène SERT</div><div class="ft">Allèle S vs L — conséquences</div><div class="fh">👆 Retourner</div></div>
-    <div class="fc-b"><div class="fd"><strong>Allèle S (Short) :</strong> ↓ expression SERT → moins de recapture 5-HT → hyperémotivité, hyperactivité amygdale. Sans événement stressant (SLE) : risque faible. Avec SLE : risque dépression ×8 (femme) ou ×4 (homme). <strong>Allèle L (Long) :</strong> expression normale, pas de surrisque.</div></div>
+    <div class="fc-f"><div class="fq">DSM-5</div><div class="ft">Trouble Dépressif Caractérisé</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">≥5 symptômes sur 2 semaines dont <strong>obligatoirement</strong> humeur dépressive OU anhédonie. Altération fonctionnelle. Différent de la période antérieure. Pas attribuable à un deuil récent.</div></div>
   </div></div>
   <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
-    <div class="fc-f"><div class="fq">Impuissance apprise</div><div class="ft">Protocole Seligman &amp; Maier</div><div class="fh">👆 Retourner</div></div>
-    <div class="fc-b"><div class="fd">Phase 1 : G1 (contrôle), G2 (choc + bouton stop), G3 (choc subi sans contrôle). Phase 2 (test fuite mur) : G1 et G2 fuient, G3 reste (résignation). Chez la souris : condition B (fuite impossible) → latence fuite significativement plus longue que A et C. Généralisation de l'impuissance.</div></div>
+    <div class="fc-f"><div class="fq">Symptôme obligatoire</div><div class="ft">Anhédonie</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">Difficulté à éprouver du plaisir. Les sources habituelles de plaisir laissent indifférent. Symptôme OBLIGATOIRE pour le diagnostic TDC (avec humeur dépressive). ≠ Anesthésie affective (incapacité totale à ressentir des émotions).</div></div>
   </div></div>
   <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
-    <div class="fc-f"><div class="fq">3 hypothèses</div><div class="ft">Neurobiologie de la dépression</div><div class="fh">👆 Retourner</div></div>
-    <div class="fc-b"><div class="fd">① <strong>Monoaminergique</strong> : ↓ 5-HT/DA/NA → dépression. ② <strong>Neurotrophique</strong> : ↓ BDNF → ↓ neurogenèse (hippocampe). ③ <strong>Glucocorticoïdes + neuroinflammation</strong> : stress chronique → ↑ cortisol → désensibilisation GR → ↑ cytokines → IDO → kynurénines toxiques. Non exclusives !</div></div>
+    <div class="fc-f"><div class="fq">Humeur vs Émotion</div><div class="ft">Définitions</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd"><strong>Humeur</strong> = enchaînement <em>durable</em> d'émotions négatives (longévité, non spontané). <strong>Émotion</strong> = ponctuelle et variable. La dépression touche l'humeur, pas juste les émotions.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">TDC vs Persistant</div><div class="ft">Différence de durée</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd"><strong>TDC</strong> : ≥5 symptômes sur ≥2 semaines. <strong>Trouble Dépressif Persistant</strong> : mêmes symptômes, durée ≥2 ans.</div></div>
+  </div></div>
+</div>
+<div style="margin:8px 0 6px;font-size:.8rem;color:var(--mu)">🐭 CM — Modèles animaux</div>
+<div class="fc-g">
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Modèle animal</div><div class="ft">3 critères de validité</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">① Atteintes cognitives/morphologiques similaires à l'Homme<br>② Étiologie similaire<br>③ Similitude thérapeutique (antidépresseurs ont mêmes effets)<br>⚠ Reproduction <em>partielle</em> uniquement — aucun modèle parfait.</div></div>
   </div></div>
   <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
     <div class="fc-f"><div class="fq">UCMS</div><div class="ft">Unpredictable Chronic Mild Stress</div><div class="fh">👆 Retourner</div></div>
-    <div class="fc-b"><div class="fd">Exposition à des stresseurs légers, répétés et imprédictibles (sons prédateurs, contrainte, inclinaison cage, changement litière, décalage cycles J/N). 15 jours chez rongeurs. Pas de douleur physique. Induit un pattern de symptômes dépressifs (anhédonie, apathie, anxiété). Se rapproche de l'étiologie humaine.</div></div>
-  </div></div>
-  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
-    <div class="fc-f"><div class="fq">Phases traitement TDC</div><div class="ft">3 phases et leurs durées</div><div class="fh">👆 Retourner</div></div>
-    <div class="fc-b"><div class="fd">① <strong>Attaque</strong> (6-12 sem) : atteindre la rémission. ② <strong>Consolidation</strong> (16-20 sem) : éviter les rechutes (même épisode). ③ <strong>Maintenance</strong> (si ≥3 EDM / 4 ans) : prévenir les récidives (nouvel épisode). Durée totale : 4 à 9 mois.</div></div>
+    <div class="fc-b"><div class="fd">Stresseurs légers, répétés, imprédictibles (sons prédateurs, contrainte, inclinaison cage, litière modifiée, décalage J/N). ≥15j chez rongeurs, 10j poissons zèbres, 3 sem. crustacés. Pas de douleur physique. 2 phases : stress → évaluation comportementale. L'imprédictibilité est clé (empêche l'adaptation).</div></div>
   </div></div>
   <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
     <div class="fc-f"><div class="fq">Défaite sociale</div><div class="ft">Modèle animal dépression</div><div class="fh">👆 Retourner</div></div>
-    <div class="fc-b"><div class="fd">Souris agressive vs souris non-agressive. Répétition de défaites agonistiques. Au bout de ~3 semaines : induction de dépression chez la souris "perdante". Évalue : évitement social, apathie, anhédonie. Modèle très utilisé car proche de la situation humaine (stress social chronique).</div></div>
+    <div class="fc-b"><div class="fd">Souris agressive (souche connue) vs souris non-agressive. Répétition de défaites agonistiques. Après ~3 semaines : induction de dépression chez la souris vaincue. Évalue : évitement social, apathie, anhédonie.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Impuissance apprise</div><div class="ft">Protocole Seligman &amp; Maier</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd"><strong>Phase 1</strong> : G1 contrôle / G2 choc + bouton stop + signal lumineux / G3 choc subi sans contrôle. <strong>Phase 2</strong> (test fuite) : G1 et G2 fuient, G3 reste (résignation). <strong>Souris A/B/C</strong> : signal sonore (10s). Condition B (fuite impossible) → latence fuite significativement + longue que A et C (p&lt;0,05). L'impuissance n'est pas innée — c'est un apprentissage.</div></div>
+  </div></div>
+</div>
+<div style="margin:8px 0 6px;font-size:.8rem;color:var(--mu)">🔬 TD — Circuits neuronaux &amp; Hypothèses neurobiologiques</div>
+<div class="fc-g">
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Circuit récompense</div><div class="ft">3 structures</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">① ATV (Aire Tegmentale Ventrale) — production dopamine<br>② Noyau accumbens (striatum ventral) — récompense/plaisir<br>③ Cortex préfrontal — décision, contrôle émotionnel<br>Dans la dépression : ↓ DA dans voies méso-limbique et méso-corticale.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">3 hypothèses</div><div class="ft">Neurobiologie de la dépression</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">① <strong>Monoaminergique</strong> : ↓ fonctions 5-HT/DA/NA → dépression<br>② <strong>Neurotrophique</strong> : ↓ BDNF → ↓ neurogenèse hippocampique → symptômes dépressifs<br>③ <strong>Glucocorticoïdes + neuroinflammation</strong> : stress chronique → ↑ cortisol → désensibilisation GR → ↑ cytokines → IDO → kynurénines toxiques<br>⚠ Non exclusives !</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Biosynthèse</div><div class="ft">Tyrosine → DA → NA</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">Tyrosine (AA) →(hydroxylase)→ DOPA →(décarboxylase)→ <strong>Dopamine</strong> →(β-hydroxylase)→ <strong>Noradrénaline</strong> →(PNMT)→ Adrénaline</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">4 voies DA</div><div class="ft">Voies dopaminergiques</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">A · Nigrostriée (motricité)<br>B · Mésolimbique (cpts émotionnels) ← altérée dans dépression<br>C · Méso-corticale (émotions/fonctions exec.) ← altérée dans dépression<br>D · Tubéro-infundibulaire (régulation hormonale)</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Sérotonine</div><div class="ft">Tryptophane → 5-HT + récepteurs</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">Tryptophane →(hydroxylase)→ 5-HTP →(décarboxylase)→ <strong>Sérotonine</strong>. Corps cellulaires : noyaux du <strong>Raphé</strong> (mésencéphale, bulbe, pont). 7 familles de récepteurs (5-HT₁ à 5-HT₇) — sauf 5-HT₃ (canal ionique), tous GPCR. Autorécepteurs (5-HT₁A/B/D) inhibent la libération.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">MAO &amp; SERT</div><div class="ft">Nettoyage de la sérotonine</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd"><strong>MAO</strong> (MonoAmine Oxydase) : dégrade 5-HT/DA/NA dans la fente → 5-HIAA. <strong>SERT</strong> : recapture 5-HT → présynapse → dégradée (MAO) ou ré-encapsulée. <strong>IMAO</strong> (iproniazide) bloque MAO → ↑ 5-HT. <strong>ISRS</strong> (fluoxétine) bloque SERT → ↑ 5-HT.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Protéine P11</div><div class="ft">Rôle &amp; lien BDNF</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">P11 recrute et maintient les récepteurs 5-HT₁B en membrane postsynaptique. <strong>Dans la dépression</strong> : ↓ 5-HT → ↓ activation 5-HT₁B → ↓ P11 → ↓ recrutement 5-HT₁B → ↓ BDNF → ↓ neurogenèse. <strong>ISRS</strong> : ↑ 5-HT → ↑ P11 → restauration. NB : cytokines modulen aussi P11.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">BDNF</div><div class="ft">Rôle &amp; dépression</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">Brain-Derived Neurotrophic Factor — protéine clé des neurotrophines. ↑ par 5-HT/NA (via AMPc/PKA/CREB/acétylation histone). ↓ par cortisol (méthylation histone → bloque CREB). <strong>Hippocampe</strong> : ↓ BDNF → ↓ neurogenèse → ↓ volume. <strong>Noyau accumbens</strong> : ↑ BDNF dans modèles animaux (rôle complexe).</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Hypothèse glucocorticoïdes</div><div class="ft">IDO &amp; Kynurénines</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">Stress chronique → ↑ cortisol chronique → désensibilisation GR (trop sollicités → n'inhibent plus) → perte du feedback négatif → cortisol maintenu → ↑ cytokines pro-inflammatoires → IDO activée → tryptophane → <strong>kynurénines toxiques</strong> (mort neuronale) + ↓ tryptophane pour 5-HT.</div></div>
+  </div></div>
+  <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
+    <div class="fc-f"><div class="fq">Phases traitement TDC</div><div class="ft">3 phases et leurs durées</div><div class="fh">👆 Retourner</div></div>
+    <div class="fc-b"><div class="fd">① <strong>Attaque</strong> (6-12 sem) : atteindre la rémission (disparition symptômes)<br>② <strong>Consolidation</strong> (16-20 sem) : éviter les rechutes (même épisode)<br>③ <strong>Maintenance</strong> (si ≥3 EDM / 4 ans) : prévenir les récidives (nouvel épisode)<br>Durée totale : 4 à 9 mois.</div></div>
   </div></div>
 </div>
 
@@ -1847,7 +2072,7 @@ svg{max-width:100%;overflow:visible;}
       Le stress traumatique laisse des <strong>marques épigénétiques</strong> (méthylation de l'ADN, modifications des histones) sur des gènes clés :<br>
       • Gène du récepteur aux glucocorticoïdes (NR3C1) : hyperméthylation → ↓ expression GR → ↓ rétrocontrôle négatif → axe HPA dysrégulé<br>
       • Transmission possible à la génération suivante (<strong>transmission transgénérationnelle</strong>) : études sur enfants de survivants de la Shoah (Yehuda et al.)</div>
-      <div class="hl2"><strong>Système sérotoninergique :</strong> Le polymorphisme du gène du transporteur de la sérotonine (<strong>5-HTTLPR</strong>, allèle court "s") est un facteur de vulnérabilité : ↑ réactivité de l'amygdale aux stimuli négatifs → ↑ risque de PTSD après trauma. Base des traitements par <strong>ISRS</strong> (inhibiteurs sélectifs de la recapture de la sérotonine = 1re ligne de traitement pharmacologique du PTSD).</div>
+      <div class="hl2" style="border-left:3px dashed #94a3b8;opacity:.7"><strong>Système sérotoninergique :</strong> <em style="color:#64748b">[⚠ hors cours — non trouvé dans le CM Baudron]</em> Le polymorphisme du gène du transporteur de la sérotonine (5-HTTLPR, allèle court "s") serait un facteur de vulnérabilité au PTSD. Base des traitements par <strong>ISRS</strong> (inhibiteurs sélectifs de la recapture de la sérotonine = 1re ligne de traitement pharmacologique du PTSD).</div>
     </div>
     <div>
       <div class="hl"><strong>Système endocannabinoïde :</strong><br>
@@ -2062,7 +2287,7 @@ svg{max-width:100%;overflow:visible;}
   </div></div>
   <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
     <div class="fc-f"><div class="fq">Épigénétique</div><div class="ft">PTSD & transmission</div><div class="fh">👆 Retourner</div></div>
-    <div class="fc-b"><div class="fd">Hyperméthylation du gène NR3C1 (récepteur GR) → ↓ expression GR → ↓ rétrocontrôle HPA. Transmission transgénérationnelle possible (études Yehuda sur enfants de survivants Shoah). 5-HTTLPR allèle "s" = vulnérabilité sérotoninergique au PTSD.</div></div>
+    <div class="fc-b"><div class="fd">Hyperméthylation du gène NR3C1 (récepteur GR) → ↓ expression GR → ↓ rétrocontrôle HPA. Transmission transgénérationnelle possible (études Yehuda sur enfants de survivants Shoah). <em>[⚠ 5-HTTLPR allèle "s" : hors cours Baudron]</em></div></div>
   </div></div>
   <div class="fc" onclick="this.classList.toggle('flip')"><div class="fc-i">
     <div class="fc-f"><div class="fq">Antéhypophyse</div><div class="ft">5 couples facteur → hormone</div><div class="fh">👆 Retourner</div></div>
